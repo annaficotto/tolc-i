@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOLC Trainer — Profilo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="app.html" class="navbar-brand">
+        <span class="bracket">[</span>TOLC<span class="bracket">]</span>
+      </a>
+      <div class="navbar-actions">
+        <span class="text-sm text-mono text-muted" id="nav-username"></span>
+        <a href="app.html" class="btn btn-ghost text-sm">← App</a>
+        <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
+        <button class="btn btn-outline text-sm" id="btn-logout">Esci</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Alert globale -->
+  <div class="container">
+    <div class="alert" id="profile-alert" style="margin-top:1rem"></div>
+  </div>
+
+  <main class="container fade-in" style="padding-top:2rem;padding-bottom:4rem">
+
+    <!-- ── Header Profilo ──────────────────────────────── -->
+    <div class="flex-between mb-lg" style="flex-wrap:wrap;gap:1rem">
+      <div>
+        <h1>👤 <span id="profile-username">—</span></h1>
+        <p class="text-sm text-muted mt-sm">
+          Account creato il <span id="profile-created">—</span>
+        </p>
+      </div>
+      <div class="flex gap-sm" style="flex-wrap:wrap">
+        <button class="btn btn-outline" id="btn-reset-errors">🗑 Reset errori</button>
+        <button class="btn btn-outline" id="btn-change-password">🔑 Cambia password</button>
+        <button class="btn btn-outline" id="btn-reset-progress">↺ Reset progresso</button>
+        <button class="btn btn-danger" id="btn-delete-account">✕ Elimina account</button>
+      </div>
+    </div>
+
+    <!-- ── Stats principali ────────────────────────────── -->
+    <div class="card card-accent mb-lg">
+      <h3 class="mb-md">📊 Statistiche</h3>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value text-accent" id="stat-total">0</div>
+          <div class="stat-label">Totale risp.</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color:var(--success)" id="stat-correct">0</div>
+          <div class="stat-label">Corrette</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color:var(--danger)" id="stat-wrong">0</div>
+          <div class="stat-label">Errate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value text-accent" id="stat-pct">0%</div>
+          <div class="stat-label">Precisione</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color:var(--accent2)" id="stat-page">9</div>
+          <div class="stat-label">Ultima pagina</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color:var(--warn)" id="stat-errors">0</div>
+          <div class="stat-label">Errori attivi</div>
+        </div>
+      </div>
+
+      <!-- Progress bar precisione -->
+      <div class="mt-md">
+        <div class="flex-between mb-sm">
+          <span class="text-sm text-muted">Precisione globale</span>
+          <span class="text-sm text-mono text-accent" id="stat-pct-label">0%</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div class="progress-bar-fill" id="stat-progress-bar" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Errori attivi ────────────────────────────────── -->
+    <div class="card mb-lg">
+      <h3 class="mb-md">❌ Errori attivi</h3>
+      <div id="error-categories">
+        <div class="spinner"></div>
+      </div>
+    </div>
+
+    <!-- ── Storico sessioni ─────────────────────────────── -->
+    <div class="card">
+      <h3 class="mb-md">📅 Ultime sessioni</h3>
+      <div id="session-history">
+        <div class="spinner"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════
+       MODALI
+  ══════════════════════════════════════════════════ -->
+
+  <!-- Modal: Reset Progresso -->
+  <div class="modal-overlay" id="modal-reset-progress">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>↺ Reset Progresso</h3>
+      </div>
+      <p class="text-sm text-muted mb-lg">
+        Questa azione azzererà tutto il tuo progresso, le statistiche, gli errori e la storia sessioni. Non è reversibile.
+      </p>
+      <div class="flex gap-sm">
+        <button class="btn btn-danger" id="btn-confirm-reset-progress">Conferma Reset</button>
+        <button class="btn btn-outline" id="btn-cancel-reset-progress">Annulla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Cambia Password -->
+  <div class="modal-overlay" id="modal-change-password">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>🔑 Cambia Password</h3>
+        <button class="btn btn-ghost" id="btn-close-pwd-modal" onclick="document.getElementById('modal-change-password').classList.remove('open')">✕</button>
+      </div>
+      <div class="form-group">
+        <label for="input-old-pwd">Vecchia Password</label>
+        <input type="password" id="input-old-pwd" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+      <div class="form-group">
+        <label for="input-new-pwd">Nuova Password</label>
+        <input type="password" id="input-new-pwd" placeholder="almeno 6 caratteri" autocomplete="new-password" />
+      </div>
+      <div class="form-group">
+        <label for="input-conf-pwd">Conferma Nuova Password</label>
+        <input type="password" id="input-conf-pwd" placeholder="ripeti la nuova" autocomplete="new-password" />
+      </div>
+      <div class="alert" id="pwd-alert"></div>
+      <div class="flex gap-sm mt-md">
+        <button class="btn btn-primary" id="btn-confirm-change-pwd">Salva</button>
+        <button class="btn btn-outline" id="btn-cancel-change-pwd">Annulla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Elimina Account -->
+  <div class="modal-overlay" id="modal-delete-account">
+    <div class="modal card-danger" style="border-top:3px solid var(--danger)">
+      <div class="modal-header">
+        <h3 style="color:var(--danger)">⚠ Elimina Account</h3>
+      </div>
+      <p class="text-sm text-muted mb-md">
+        Questa azione è <strong>permanente e irreversibile</strong>. Tutti i tuoi dati verranno cancellati.
+      </p>
+      <div class="form-group">
+        <label for="input-delete-pwd">Conferma con la tua password</label>
+        <input type="password" id="input-delete-pwd" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+      <div class="alert" id="delete-alert"></div>
+      <div class="flex gap-sm mt-md">
+        <button class="btn btn-danger" id="btn-confirm-delete">Elimina definitivamente</button>
+        <button class="btn btn-outline" id="btn-cancel-delete">Annulla</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Scripts ────────────────────────────────────────── -->
+  <script src="js/auth.js"></script>
+  <script src="js/profile.js"></script>
+  <script>
+    // Sync icona tema
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.getElementById('theme-toggle');
+      if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
+
+      // Sync stat-pct-label con stat-pct
+      const pctEl = document.getElementById('stat-pct');
+      const pctLabel = document.getElementById('stat-pct-label');
+      if (pctEl && pctLabel) {
+        const observer = new MutationObserver(() => {
+          pctLabel.textContent = pctEl.textContent;
+        });
+        observer.observe(pctEl, { childList: true, characterData: true, subtree: true });
+      }
+    });
+  </script>
+</body>
+</html>

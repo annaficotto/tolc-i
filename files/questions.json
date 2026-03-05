@@ -1,0 +1,373 @@
+{
+  "_comment": "questions.json — File domande TOLC. Aggiungi qui le tue domande reali.",
+  "_format": {
+    "questions": "sourcePage = pagina del libro da cui la domanda è estratta. choices.nextPage = pagina spiegazione.",
+    "explanations": "sourcePage = pagina della spiegazione. isCorrect = se questa scelta era corretta. nextPage = prossima domanda."
+  },
+
+  "questions": [
+    {
+      "id": "Q1",
+      "sourcePage": 9,
+      "question": "Un treno percorre 240 km in 2 ore. Se la velocità viene aumentata del 20%, in quanto tempo percorrerà la stessa distanza?",
+      "category": "matematica",
+      "choices": [
+        { "label": "A", "text": "1 ora e 30 minuti", "nextPage": 76 },
+        { "label": "B", "text": "1 ora e 40 minuti", "nextPage": 77 },
+        { "label": "C", "text": "2 ore e 24 minuti", "nextPage": 78 },
+        { "label": "D", "text": "1 ora e 48 minuti", "nextPage": 79 }
+      ]
+    },
+    {
+      "id": "Q2",
+      "sourcePage": 30,
+      "question": "Se A > B e B > C, quale delle seguenti affermazioni è sicuramente vera?",
+      "category": "logica",
+      "choices": [
+        { "label": "A", "text": "A > C", "nextPage": 82 },
+        { "label": "B", "text": "C > A", "nextPage": 83 },
+        { "label": "C", "text": "A = C", "nextPage": 84 },
+        { "label": "D", "text": "Non si può stabilire", "nextPage": 85 }
+      ]
+    },
+    {
+      "id": "Q3",
+      "sourcePage": 45,
+      "question": "Qual è la derivata di f(x) = 3x² + 2x − 5?",
+      "category": "matematica",
+      "choices": [
+        { "label": "A", "text": "6x + 2", "nextPage": 90 },
+        { "label": "B", "text": "3x + 2", "nextPage": 91 },
+        { "label": "C", "text": "6x − 5", "nextPage": 92 },
+        { "label": "D", "text": "x² + 2", "nextPage": 93 }
+      ]
+    },
+    {
+      "id": "Q4",
+      "sourcePage": 60,
+      "question": "In una classe di 30 studenti, il 40% ha superato l'esame. Quanti studenti NON hanno superato?",
+      "category": "matematica",
+      "choices": [
+        { "label": "A", "text": "12 studenti", "nextPage": 100 },
+        { "label": "B", "text": "18 studenti", "nextPage": 101 },
+        { "label": "C", "text": "20 studenti", "nextPage": 102 },
+        { "label": "D", "text": "15 studenti", "nextPage": 103 }
+      ]
+    },
+    {
+      "id": "Q5",
+      "sourcePage": 72,
+      "question": "Quale delle seguenti è una proprietà dell'algoritmo di ordinamento Merge Sort?",
+      "category": "informatica",
+      "choices": [
+        { "label": "A", "text": "Complessità O(n²) nel caso peggiore", "nextPage": 110 },
+        { "label": "B", "text": "Complessità O(n log n) nel caso peggiore", "nextPage": 111 },
+        { "label": "C", "text": "Non è un algoritmo stabile", "nextPage": 112 },
+        { "label": "D", "text": "Richiede O(1) memoria aggiuntiva", "nextPage": 113 }
+      ]
+    },
+    {
+      "id": "Q6",
+      "sourcePage": 88,
+      "question": "Qual è il valore di log₂(64)?",
+      "category": "matematica",
+      "choices": [
+        { "label": "A", "text": "4", "nextPage": 120 },
+        { "label": "B", "text": "8", "nextPage": 121 },
+        { "label": "C", "text": "6", "nextPage": 122 },
+        { "label": "D", "text": "32", "nextPage": 123 }
+      ]
+    },
+    {
+      "id": "Q7",
+      "sourcePage": 105,
+      "question": "In fisica, la formula F = ma descrive la seconda legge di Newton. Se F = 20 N e m = 4 kg, qual è l'accelerazione?",
+      "category": "fisica",
+      "choices": [
+        { "label": "A", "text": "5 m/s²", "nextPage": 130 },
+        { "label": "B", "text": "80 m/s²", "nextPage": 131 },
+        { "label": "C", "text": "0.2 m/s²", "nextPage": 132 },
+        { "label": "D", "text": "16 m/s²", "nextPage": 133 }
+      ]
+    },
+    {
+      "id": "Q8",
+      "sourcePage": 120,
+      "question": "Tutti i programmatori bevono caffè. Mario è un programmatore. Cosa si può concludere?",
+      "category": "logica",
+      "choices": [
+        { "label": "A", "text": "Mario beve caffè", "nextPage": 140 },
+        { "label": "B", "text": "Mario potrebbe bere caffè", "nextPage": 141 },
+        { "label": "C", "text": "Mario non beve caffè", "nextPage": 142 },
+        { "label": "D", "text": "Non si può concludere nulla", "nextPage": 143 }
+      ]
+    },
+    {
+      "id": "Q9",
+      "sourcePage": 135,
+      "question": "Quale struttura dati usa il principio LIFO (Last In, First Out)?",
+      "category": "informatica",
+      "choices": [
+        { "label": "A", "text": "Coda (Queue)", "nextPage": 150 },
+        { "label": "B", "text": "Pila (Stack)", "nextPage": 151 },
+        { "label": "C", "text": "Lista collegata", "nextPage": 152 },
+        { "label": "D", "text": "Albero binario", "nextPage": 153 }
+      ]
+    },
+    {
+      "id": "Q10",
+      "sourcePage": 150,
+      "question": "Qual è la somma degli angoli interni di un pentagono?",
+      "category": "geometria",
+      "choices": [
+        { "label": "A", "text": "360°", "nextPage": 160 },
+        { "label": "B", "text": "540°", "nextPage": 161 },
+        { "label": "C", "text": "720°", "nextPage": 162 },
+        { "label": "D", "text": "450°", "nextPage": 163 }
+      ]
+    }
+  ],
+
+  "explanations": [
+    {
+      "sourcePage": 76,
+      "isCorrect": false,
+      "text": "Sbagliato. La velocità originale è 240/2 = 120 km/h. Aumentata del 20% → 144 km/h. Tempo = 240/144 = 1h 40min.",
+      "nextPage": 30
+    },
+    {
+      "sourcePage": 77,
+      "isCorrect": true,
+      "text": "Corretto! Velocità originale: 240÷2 = 120 km/h. Nuova velocità: 120 × 1.2 = 144 km/h. Tempo = 240÷144 = 5/3 ore = 1h 40min.",
+      "nextPage": 45
+    },
+    {
+      "sourcePage": 78,
+      "isCorrect": false,
+      "text": "Sbagliato. Hai probabilmente diviso invece di moltiplicare. La velocità aumentata del 20% è 144 km/h, non 100 km/h.",
+      "nextPage": 30
+    },
+    {
+      "sourcePage": 79,
+      "isCorrect": false,
+      "text": "Sbagliato. Ricontrolla il calcolo: 240÷144 = 1.6667 ore = 1h 40min, non 1h 48min.",
+      "nextPage": 30
+    },
+    {
+      "sourcePage": 82,
+      "isCorrect": true,
+      "text": "Corretto! Per la proprietà transitiva: se A > B e B > C, allora necessariamente A > C.",
+      "nextPage": 45
+    },
+    {
+      "sourcePage": 83,
+      "isCorrect": false,
+      "text": "Sbagliato. Se A > B > C, allora A è il maggiore, non C.",
+      "nextPage": 30
+    },
+    {
+      "sourcePage": 84,
+      "isCorrect": false,
+      "text": "Sbagliato. A non può essere uguale a C perché A > B > C implica che tutti e tre sono distinti e ordinati.",
+      "nextPage": 30
+    },
+    {
+      "sourcePage": 85,
+      "isCorrect": false,
+      "text": "Sbagliato. Grazie alla transitività dell'ordinamento, si può sempre concludere A > C.",
+      "nextPage": 30
+    },
+    {
+      "sourcePage": 90,
+      "isCorrect": true,
+      "text": "Corretto! Derivata di 3x² = 6x; derivata di 2x = 2; derivata di −5 = 0. Totale: f'(x) = 6x + 2.",
+      "nextPage": 60
+    },
+    {
+      "sourcePage": 91,
+      "isCorrect": false,
+      "text": "Sbagliato. La derivata di 3x² è 6x (non 3x). Ricorda: d/dx[axⁿ] = n·axⁿ⁻¹.",
+      "nextPage": 45
+    },
+    {
+      "sourcePage": 92,
+      "isCorrect": false,
+      "text": "Sbagliato. La derivata di una costante (−5) è 0, non −5. E la derivata di 2x è 2, non 0.",
+      "nextPage": 45
+    },
+    {
+      "sourcePage": 93,
+      "isCorrect": false,
+      "text": "Sbagliato. La derivata riduce di uno il grado del polinomio. Il termine principale 3x² diventa 6x.",
+      "nextPage": 45
+    },
+    {
+      "sourcePage": 100,
+      "isCorrect": false,
+      "text": "Sbagliato. Il 40% ha superato → 12 studenti hanno superato. Quelli che NON hanno superato sono 30 − 12 = 18.",
+      "nextPage": 60
+    },
+    {
+      "sourcePage": 101,
+      "isCorrect": true,
+      "text": "Corretto! 40% di 30 = 12 studenti promossi. Bocciati: 30 − 12 = 18 studenti.",
+      "nextPage": 72
+    },
+    {
+      "sourcePage": 102,
+      "isCorrect": false,
+      "text": "Sbagliato. Il 40% ha superato (12 studenti), non il 33%. I bocciati sono 18.",
+      "nextPage": 60
+    },
+    {
+      "sourcePage": 103,
+      "isCorrect": false,
+      "text": "Sbagliato. 15 sarebbe il 50% della classe. Il 60% non ha superato = 18 studenti.",
+      "nextPage": 60
+    },
+    {
+      "sourcePage": 110,
+      "isCorrect": false,
+      "text": "Sbagliato. O(n²) è la complessità di algoritmi come Bubble Sort. Merge Sort garantisce O(n log n) anche nel caso peggiore.",
+      "nextPage": 72
+    },
+    {
+      "sourcePage": 111,
+      "isCorrect": true,
+      "text": "Corretto! Merge Sort ha complessità temporale O(n log n) in tutti i casi (migliore, medio, peggiore). È anche un algoritmo stabile.",
+      "nextPage": 88
+    },
+    {
+      "sourcePage": 112,
+      "isCorrect": false,
+      "text": "Sbagliato. Merge Sort È un algoritmo stabile: elementi uguali mantengono il loro ordine relativo.",
+      "nextPage": 72
+    },
+    {
+      "sourcePage": 113,
+      "isCorrect": false,
+      "text": "Sbagliato. Merge Sort richiede O(n) memoria aggiuntiva per l'array temporaneo usato nel merge.",
+      "nextPage": 72
+    },
+    {
+      "sourcePage": 120,
+      "isCorrect": false,
+      "text": "Sbagliato. log₂(64) = ? → 2⁴ = 16, 2⁵ = 32, 2⁶ = 64. Quindi la risposta è 6.",
+      "nextPage": 88
+    },
+    {
+      "sourcePage": 121,
+      "isCorrect": false,
+      "text": "Sbagliato. 2⁸ = 256, non 64. Ricorda: log₂(64) chiede a quale potenza bisogna elevare 2 per ottenere 64.",
+      "nextPage": 88
+    },
+    {
+      "sourcePage": 122,
+      "isCorrect": true,
+      "text": "Corretto! 2⁶ = 2×2×2×2×2×2 = 64. Quindi log₂(64) = 6.",
+      "nextPage": 105
+    },
+    {
+      "sourcePage": 123,
+      "isCorrect": false,
+      "text": "Sbagliato. 32 sarebbe il risultato di log₂(2³²), non log₂(64). La risposta corretta è 6.",
+      "nextPage": 88
+    },
+    {
+      "sourcePage": 130,
+      "isCorrect": true,
+      "text": "Corretto! F = ma → a = F/m = 20/4 = 5 m/s².",
+      "nextPage": 120
+    },
+    {
+      "sourcePage": 131,
+      "isCorrect": false,
+      "text": "Sbagliato. Hai moltiplicato invece di dividere. a = F/m = 20/4 = 5 m/s².",
+      "nextPage": 105
+    },
+    {
+      "sourcePage": 132,
+      "isCorrect": false,
+      "text": "Sbagliato. a = 20/4 = 5, non 20×4 = 0.2 (hai invertito la divisione).",
+      "nextPage": 105
+    },
+    {
+      "sourcePage": 133,
+      "isCorrect": false,
+      "text": "Sbagliato. 16 = 4×4 (hai moltiplicato m per sé stesso). La formula è a = F/m.",
+      "nextPage": 105
+    },
+    {
+      "sourcePage": 140,
+      "isCorrect": true,
+      "text": "Corretto! Questo è un sillogismo classico. Premessa 1: tutti i programmatori bevono caffè. Premessa 2: Mario è programmatore. Conclusione certa: Mario beve caffè.",
+      "nextPage": 135
+    },
+    {
+      "sourcePage": 141,
+      "isCorrect": false,
+      "text": "Sbagliato. Non è 'potrebbe': è una certezza logica. Il sillogismo porta a una conclusione necessaria.",
+      "nextPage": 120
+    },
+    {
+      "sourcePage": 142,
+      "isCorrect": false,
+      "text": "Sbagliato. La conclusione è l'opposto: se tutti i programmatori bevono caffè e Mario è programmatore, Mario beve caffè.",
+      "nextPage": 120
+    },
+    {
+      "sourcePage": 143,
+      "isCorrect": false,
+      "text": "Sbagliato. Con un sillogismo valido si può sempre trarre una conclusione certa dalla combinazione delle premesse.",
+      "nextPage": 120
+    },
+    {
+      "sourcePage": 150,
+      "isCorrect": false,
+      "text": "Sbagliato. La coda usa FIFO (First In, First Out). Il primo elemento inserito è il primo ad uscire.",
+      "nextPage": 135
+    },
+    {
+      "sourcePage": 151,
+      "isCorrect": true,
+      "text": "Corretto! La pila (Stack) usa LIFO: l'ultimo elemento inserito (push) è il primo ad essere estratto (pop). Come una pila di piatti.",
+      "nextPage": 150
+    },
+    {
+      "sourcePage": 152,
+      "isCorrect": false,
+      "text": "Sbagliato. La lista collegata non impone un ordine di accesso LIFO o FIFO: gli elementi possono essere inseriti/rimossi ovunque.",
+      "nextPage": 135
+    },
+    {
+      "sourcePage": 153,
+      "isCorrect": false,
+      "text": "Sbagliato. L'albero binario è una struttura gerarchica, non lineare. Non usa il principio LIFO.",
+      "nextPage": 135
+    },
+    {
+      "sourcePage": 160,
+      "isCorrect": false,
+      "text": "Sbagliato. 360° è la somma degli angoli di un quadrilatero. Per un pentagono usa: (n−2)×180 = 3×180 = 540°.",
+      "nextPage": 150
+    },
+    {
+      "sourcePage": 161,
+      "isCorrect": true,
+      "text": "Corretto! Formula: (n−2)×180° con n=5 → (5−2)×180 = 3×180 = 540°.",
+      "nextPage": null
+    },
+    {
+      "sourcePage": 162,
+      "isCorrect": false,
+      "text": "Sbagliato. 720° è la somma degli angoli di un esagono (6 lati). Per il pentagono: (5−2)×180 = 540°.",
+      "nextPage": 150
+    },
+    {
+      "sourcePage": 163,
+      "isCorrect": false,
+      "text": "Sbagliato. 450° non corrisponde ad alcun poligono standard. Per il pentagono la formula dà 540°.",
+      "nextPage": 150
+    }
+  ]
+}

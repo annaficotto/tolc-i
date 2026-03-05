@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica Mentor - Allenamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📘 Logica Mentor</h1>
+            <div class="user-info">
+                <span id="usernameDisplay"></span>
+                <button id="logoutBtn">Logout</button>
+                <button id="profileBtn">Profilo</button>
+            </div>
+        </header>
+
+        <div class="mode-selector">
+            <button id="modeTraining" class="mode-btn active">Allenamento</button>
+            <button id="modeReview" class="mode-btn">Ripasso errori</button>
+            <button id="modeTest" class="mode-btn">Simulazione test</button>
+        </div>
+
+        <!-- Test configuration (hidden unless test mode) -->
+        <div id="testConfig" class="test-config hidden">
+            <label>Numero domande: <input type="number" id="testNum" value="20" min="1" max="100"></label>
+            <label>Tempo (min): <input type="number" id="testTime" value="90" min="1"></label>
+            <label>Penalità errore: <input type="number" id="testPenalty" value="0" min="0" step="0.25"></label>
+            <button id="startTestBtn">Avvia test</button>
+        </div>
+
+        <!-- Main content area -->
+        <div id="contentArea">
+            <!-- Question/Explanation will be injected here -->
+        </div>
+
+        <!-- Navigation buttons (for training/review) -->
+        <div id="navButtons" class="nav-buttons hidden">
+            <button id="continueBtn" class="hidden">Continua →</button>
+        </div>
+
+        <!-- Test timer and progress -->
+        <div id="testInfo" class="test-info hidden">
+            <span id="timerDisplay">00:00</span>
+            <span id="testProgress">0/0</span>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

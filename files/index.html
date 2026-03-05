@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOLC Trainer — Accedi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Grid texture viene aggiunta da CSS body::before -->
+
+  <div class="auth-wrap fade-in">
+    <div class="auth-card">
+
+      <!-- Logo -->
+      <div class="auth-logo">
+        <div class="logo-mark">[TOLC]</div>
+        <div class="logo-sub">Trainer per Ingegneria &amp; Informatica</div>
+      </div>
+
+      <!-- Card principale -->
+      <div class="card card-accent">
+
+        <!-- Tab bar -->
+        <div class="tab-bar mb-lg" id="auth-tabs">
+          <button class="tab-btn active" data-tab="login">Login</button>
+          <button class="tab-btn" data-tab="register">Registrati</button>
+        </div>
+
+        <!-- ── LOGIN ───────────────────────────────────────── -->
+        <div id="tab-login">
+          <div class="form-group">
+            <label for="login-username">Username</label>
+            <input type="text" id="login-username" placeholder="il tuo username" autocomplete="username" />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+          <button class="btn btn-primary btn-full mt-md" id="btn-login">→ Accedi</button>
+          <div class="alert" id="login-alert"></div>
+        </div>
+
+        <!-- ── REGISTRAZIONE ───────────────────────────────── -->
+        <div id="tab-register" class="hidden">
+          <div class="form-group">
+            <label for="reg-username">Username</label>
+            <input type="text" id="reg-username" placeholder="scegli un username" autocomplete="username" />
+          </div>
+          <div class="form-group">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" placeholder="almeno 6 caratteri" autocomplete="new-password" />
+          </div>
+          <div class="form-group">
+            <label for="reg-confirm">Conferma Password</label>
+            <input type="password" id="reg-confirm" placeholder="ripeti la password" autocomplete="new-password" />
+          </div>
+          <button class="btn btn-primary btn-full mt-md" id="btn-register">→ Crea account</button>
+          <div class="alert" id="register-alert"></div>
+        </div>
+
+      </div>
+
+      <!-- Footer info -->
+      <p class="text-center text-sm text-muted mt-md">
+        Dati salvati localmente · Nessun server
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Theme toggle (floating) -->
+  <button class="theme-toggle" id="theme-toggle" title="Cambia tema"
+          style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:50">
+    ☀
+  </button>
+
+  <script src="js/auth.js"></script>
+  <script>
+    'use strict';
+
+    Auth.applyTheme();
+    Auth.redirectIfLoggedIn();
+
+    // ── Tab switching ─────────────────────────────────────
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.dataset.tab;
+        document.getElementById('tab-login').classList.toggle('hidden', tab !== 'login');
+        document.getElementById('tab-register').classList.toggle('hidden', tab !== 'register');
+      });
+    });
+
+    // ── Login ─────────────────────────────────────────────
+    function showAlert(id, msg, type) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.className = `alert alert-${type} show`;
+      el.textContent = msg;
+    }
+
+    document.getElementById('btn-login').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-login');
+      const username = document.getElementById('login-username').value;
+      const password = document.getElementById('login-password').value;
+
+      if (!username || !password) {
+        showAlert('login-alert', 'Inserisci username e password.', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Accesso…';
+
+      const result = await Auth.login(username, password);
+
+      if (result.ok) {
+        window.location.href = 'app.html';
+      } else {
+        showAlert('login-alert', result.error, 'error');
+        btn.disabled = false;
+        btn.textContent = '→ Accedi';
+      }
+    });
+
+    // Invio con Enter
+    ['login-username', 'login-password'].forEach(id => {
+      document.getElementById(id).addEventListener('keydown', e => {
+        if (e.key === 'Enter') document.getElementById('btn-login').click();
+      });
+    });
+
+    // ── Registrazione ─────────────────────────────────────
+    document.getElementById('btn-register').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-register');
+      const username = document.getElementById('reg-username').value;
+      const password = document.getElementById('reg-password').value;
+      const confirm  = document.getElementById('reg-confirm').value;
+
+      if (!username || !password) {
+        showAlert('register-alert', 'Compila tutti i campi.', 'error');
+        return;
+      }
+
+      if (password !== confirm) {
+        showAlert('register-alert', 'Le password non coincidono.', 'error');
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Creazione…';
+
+      const result = await Auth.register(username, password);
+
+      if (result.ok) {
+        window.location.href = 'app.html';
+      } else {
+        showAlert('register-alert', result.error, 'error');
+        btn.disabled = false;
+        btn.textContent = '→ Crea account';
+      }
+    });
+
+    ['reg-username', 'reg-password', 'reg-confirm'].forEach(id => {
+      document.getElementById(id).addEventListener('keydown', e => {
+        if (e.key === 'Enter') document.getElementById('btn-register').click();
+      });
+    });
+
+    // ── Theme ─────────────────────────────────────────────
+    document.getElementById('theme-toggle').addEventListener('click', () => {
+      Auth.toggleTheme();
+      document.getElementById('theme-toggle').textContent =
+        document.body.classList.contains('light') ? '☾' : '☀';
+    });
+    // Icona iniziale
+    document.getElementById('theme-toggle').textContent =
+      document.body.classList.contains('light') ? '☾' : '☀';
+  </script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOLC Trainer — Allenamento</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ────────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="app.html" class="navbar-brand">
+        <span class="bracket">[</span>TOLC<span class="bracket">]</span>
+      </a>
+      <div class="navbar-actions">
+        <span class="text-sm text-mono text-muted" id="nav-username"></span>
+        <a href="profile.html" class="btn btn-ghost text-sm">👤 Profilo</a>
+        <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
+        <button class="btn btn-outline text-sm" id="btn-logout">Esci</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── ALERT globale ─────────────────────────────────── -->
+  <div class="container">
+    <div class="alert" id="app-alert" style="margin-top:1rem"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       SEZIONE 1: WELCOME / SELEZIONE MODALITÀ
+  ══════════════════════════════════════════════════ -->
+  <section id="section-welcome" class="container quiz-area">
+
+    <div class="main-hero">
+      <h1>Ciao, <span id="welcome-name" class="text-accent"></span></h1>
+      <p class="subtitle">Scegli come vuoi allenarti oggi.</p>
+    </div>
+
+    <!-- Stats rapide -->
+    <div id="welcome-stats" class="mb-lg"></div>
+
+    <!-- Modalità -->
+    <div class="mode-grid">
+
+      <div class="mode-card" id="btn-train-resume" tabindex="0" role="button">
+        <span class="mode-icon">📖</span>
+        <h3>Riprendi Allenamento</h3>
+        <p>Continua dal punto in cui ti eri fermato nel grafo delle domande.</p>
+      </div>
+
+      <div class="mode-card" id="btn-train-new" tabindex="0" role="button">
+        <span class="mode-icon">🔄</span>
+        <h3>Ricomincia dall'Inizio</h3>
+        <p>Riparte dalla prima domanda. Il progresso verrà resettato.</p>
+      </div>
+
+      <div class="mode-card" id="btn-review" tabindex="0" role="button">
+        <span class="mode-icon">🔁</span>
+        <h3>Ripasso Errori</h3>
+        <p>Rivedi solo le domande che hai risposto in modo errato.</p>
+      </div>
+
+      <div class="mode-card" id="btn-sim" tabindex="0" role="button">
+        <span class="mode-icon">⏱</span>
+        <h3>Simulazione Test</h3>
+        <p>Simula il TOLC con timer, domande casuali e punteggio finale.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SEZIONE 2: CONFIGURAZIONE SIMULAZIONE
+  ══════════════════════════════════════════════════ -->
+  <section id="section-sim-config" class="container quiz-area hidden">
+
+    <div class="flex-between mb-lg">
+      <h2>⚙ Configura Simulazione</h2>
+      <button class="btn btn-ghost" id="btn-sim-cancel">✕ Annulla</button>
+    </div>
+
+    <div class="card card-accent">
+      <div class="sim-config">
+
+        <div class="config-row">
+          <div class="form-group" style="margin-bottom:0">
+            <label for="sim-num-questions">N° Domande</label>
+            <input type="number" id="sim-num-questions" value="20" min="1" max="200" />
+          </div>
+          <div class="form-group" style="margin-bottom:0">
+            <label for="sim-minutes">Durata (minuti)</label>
+            <input type="number" id="sim-minutes" value="90" min="5" max="180" />
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom:0">
+          <label for="sim-penalty">Penalità risposta errata (es. 0 o 0.25)</label>
+          <input type="number" id="sim-penalty" value="0" min="0" max="1" step="0.05" />
+          <p class="text-sm mt-sm">Punteggio: <code class="mono">+1</code> corretta, <code class="mono">0</code> non risposta, <code class="mono">−penalità</code> errata</p>
+        </div>
+
+        <button class="btn btn-primary" id="btn-sim-start">→ Inizia Simulazione</button>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SEZIONE 3: QUIZ (tutte le modalità)
+  ══════════════════════════════════════════════════ -->
+  <section id="section-quiz" class="container quiz-area hidden">
+
+    <!-- Header quiz -->
+    <div class="quiz-header">
+      <div class="flex gap-sm" style="flex-wrap:wrap;align-items:center">
+        <span id="mode-badge" class="badge badge-accent"></span>
+        <span id="category-badge" class="badge badge-muted"></span>
+        <span id="page-id" class="text-sm text-mono text-muted"></span>
+      </div>
+      <div class="flex gap-sm" style="align-items:center">
+        <span id="review-counter" class="badge badge-warn hidden"></span>
+        <div id="timer-wrap" class="hidden flex gap-sm" style="align-items:center">
+          <span class="text-sm text-muted">⏱</span>
+          <span id="timer-display" class="timer-display">90:00</span>
+        </div>
+        <span id="question-counter" class="q-counter"></span>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar-wrap mb-md">
+      <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="flex-between mb-lg">
+      <span id="progress-text" class="text-sm text-muted"></span>
+    </div>
+
+    <!-- Card domanda -->
+    <div class="card card-accent fade-in" id="question-card">
+
+      <p class="question-text" id="question-text">Caricamento domanda…</p>
+
+      <ul class="choices-list" id="choices-list">
+        <!-- Scelte dinamiche -->
+      </ul>
+
+      <!-- Spiegazione (Allenamento / Ripasso) -->
+      <div class="explanation-box hidden" id="explanation-box">
+        <p class="text-sm text-mono text-muted mb-md">📝 Spiegazione</p>
+        <p id="explanation-text" style="color:var(--text)"></p>
+      </div>
+
+    </div>
+
+    <!-- Azioni -->
+    <div class="flex gap-sm mt-md" style="flex-wrap:wrap">
+      <button class="btn btn-primary hidden" id="btn-continue">→ Continua</button>
+      <button class="btn btn-outline hidden" id="btn-skip">→ Salta</button>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SEZIONE 4: RISULTATI SIMULAZIONE
+  ══════════════════════════════════════════════════ -->
+  <section id="section-result" class="container quiz-area hidden">
+
+    <h2 class="mb-lg">📊 Risultati Simulazione</h2>
+
+    <div class="card card-accent text-center mb-lg">
+      <div class="result-circle">
+        <div class="pct" id="result-pct">0%</div>
+        <div class="pct-label">Score</div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value" style="color:var(--success)" id="result-correct">0</div>
+          <div class="stat-label">Corrette</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color:var(--danger)" id="result-wrong">0</div>
+          <div class="stat-label">Errate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color:var(--text-muted)" id="result-skipped">0</div>
+          <div class="stat-label">Non risp.</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value text-accent" id="result-time">—</div>
+          <div class="stat-label">Tempo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex gap-sm mb-lg" style="flex-wrap:wrap">
+      <button class="btn btn-primary" id="btn-back-home">← Torna alla Home</button>
+    </div>
+
+    <h3 class="mb-md">Dettaglio risposte</h3>
+    <div id="result-list"></div>
+
+  </section>
+
+  <!-- ── Scripts ────────────────────────────────────────── -->
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // Inserisce il nome utente nella welcome
+    document.addEventListener('DOMContentLoaded', () => {
+      const user = Auth.getCurrentUser();
+      const nameEl = document.getElementById('welcome-name');
+      if (nameEl && user) nameEl.textContent = user.username;
+
+      // Sync theme icon
+      const toggle = document.getElementById('theme-toggle');
+      if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
+    });
+  </script>
+</body>
+</html>

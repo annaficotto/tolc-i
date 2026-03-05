@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profilo Utente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👤 Profilo</h1>
+            <button id="backToApp">← Torna all'allenamento</button>
+        </header>
+
+        <div id="profileInfo">
+            <p><strong>Username:</strong> <span id="profUsername"></span></p>
+            <p><strong>Data creazione:</strong> <span id="profCreated"></span></p>
+            <p><strong>Ultima pagina visitata:</strong> <span id="profLastPage"></span></p>
+            <p><strong>Totale domande risposte:</strong> <span id="profTotal"></span></p>
+            <p><strong>Corrette:</strong> <span id="profCorrect"></span></p>
+            <p><strong>Errate:</strong> <span id="profWrong"></span></p>
+            <p><strong>Percentuale media:</strong> <span id="profPercent"></span>%</p>
+            <p><strong>Errori attivi:</strong> <span id="profErrors"></span></p>
+        </div>
+
+        <div class="profile-actions">
+            <button id="resetProgress">Reset progresso</button>
+            <button id="resetErrors">Reset errori</button>
+            <button id="changePassword">Cambia password</button>
+            <button id="deleteAccount">Elimina account</button>
+        </div>
+
+        <!-- Change password modal (simple) -->
+        <div id="changePwdModal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Cambia password</h3>
+                <input type="password" id="oldPwd" placeholder="Vecchia password">
+                <input type="password" id="newPwd" placeholder="Nuova password">
+                <input type="password" id="confirmPwd" placeholder="Conferma nuova">
+                <button id="submitPwdChange">Conferma</button>
+                <button id="cancelPwdChange">Annulla</button>
+                <p id="pwdError" class="error"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

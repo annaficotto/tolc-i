@@ -1,0 +1,798 @@
+{
+  "questions": [
+    {
+      "id": "Q1",
+      "sourcePage": 9,
+      "question": "Una ditta ha consegnato a domicilio surgelati ed ora occorre pagare il fattorino (o i fattorini) che materialmente ha svolto l'incarico. La consegna è stata effettuata con un furgone. Quel giorno erano disponibili solo i dipendenti Aldo, Bruno, Ciro. Sapendo che Ciro non lavora se non lavora anche Aldo e che Bruno non sa guidare, allora:",
+      "choices": [
+        { "label": "A", "text": "Aldo sarà pagato", "nextPage": 76 },
+        { "label": "B", "text": "solo Bruno sarà pagato", "nextPage": 44 },
+        { "label": "C", "text": "né Aldo né Bruno saranno pagati", "nextPage": 12 },
+        { "label": "D", "text": "Aldo non sarà pagato e Bruno sì", "nextPage": 65 },
+        { "label": "E", "text": "Ciro sarà pagato e Aldo no", "nextPage": 47 }
+      ]
+    },
+    {
+      "id": "Q2",
+      "sourcePage": 10,
+      "question": "Quanti triangoli sapete individuare nella figura seguente?",
+      "choices": [
+        { "label": "A", "text": "6", "nextPage": 72 },
+        { "label": "B", "text": "12", "nextPage": 70 },
+        { "label": "C", "text": "10", "nextPage": 44 },
+        { "label": "D", "text": "8", "nextPage": 36 },
+        { "label": "E", "text": "16", "nextPage": 25 }
+      ]
+    },
+    {
+      "id": "Q3",
+      "sourcePage": 11,
+      "question": "Un chimico, studiando una soluzione che si era tinta di arancione, constatò che in essa era presente del sodio o del potassio (o entrambi); inoltre osservò che, se NON c'era sodio, c'era ferro, e che, se c'era potassio, c'era anche jodio. Quale di queste situazione si può verificare?",
+      "choices": [
+        { "label": "A", "text": "La soluzione contiene solo potassio e ferro", "nextPage": 35 },
+        { "label": "B", "text": "La soluzione contiene solo ferro e jodio", "nextPage": 36 },
+        { "label": "C", "text": "la soluzione contiene sodio e potassio, e non contiene jodio", "nextPage": 45 },
+        { "label": "D", "text": "La soluzione non contiene né sodio né jodio", "nextPage": 25 },
+        { "label": "E", "text": "La soluzione contiene solo sodio", "nextPage": 37 }
+      ]
+    },
+    {
+      "id": "Q4",
+      "sourcePage": 12,
+      "question": "Con quale coppia di numeri continuereste la seguente successione di interi? 1;2; 2 ;4; 5 ;8; 10 ;14; 17 ;22; 26 ;32; … ;…",
+      "choices": [
+        { "label": "A", "text": "40;80", "nextPage": 69 },
+        { "label": "B", "text": "46;64", "nextPage": 70 },
+        { "label": "C", "text": "40;67", "nextPage": 72 },
+        { "label": "D", "text": "37;44", "nextPage": 18 },
+        { "label": "E", "text": "44;16", "nextPage": 48 }
+      ]
+    },
+    {
+      "id": "Q5",
+      "sourcePage": 13,
+      "question": "Quale dei quadrati numerati da 1 a 5 sostituisce correttamente il riquadro contenente il punto interrogativo? (con figura descritta da numeri: 16 16 16 ...)",
+      "choices": [
+        { "label": "A", "text": "Il quadrato 5", "nextPage": 24 },
+        { "label": "B", "text": "Il quadrato 3", "nextPage": 23 },
+        { "label": "C", "text": "Il quadrato 1", "nextPage": 61 },
+        { "label": "D", "text": "Il quadrato 2", "nextPage": 26 },
+        { "label": "E", "text": "Il quadrato 4", "nextPage": 19 }
+      ]
+    },
+    {
+      "id": "Q6",
+      "sourcePage": 14,
+      "question": "Dei due fratelli Romolo e Remo, uno è sempre sincero e l’altro sempre bugiardo. Se Romolo dice che la madre dei due si chiama Silvia e Remo afferma che ella è bionda, se ne deduce con certezza che:",
+      "choices": [
+        { "label": "A", "text": "se la madre è bionda, non si chiama Silvia", "nextPage": 54 },
+        { "label": "B", "text": "se la madre si chiama Silvia, allora è bionda", "nextPage": 77 },
+        { "label": "C", "text": "la madre si chiama Silvia e non è bionda", "nextPage": 74 },
+        { "label": "D", "text": "se il nome della madre non è Silvia, allora la madre non è bionda", "nextPage": 46 },
+        { "label": "E", "text": "la madre non si chiama Silvia", "nextPage": 64 }
+      ]
+    },
+    {
+      "id": "Q7",
+      "sourcePage": 15,
+      "question": "Il cuoco Giovanni osserva che cucinando l’arrosto se non si usa il forno a gas la carne o è cruda all’interno o è bruciata all’esterno o entrambe le cose. Quindi se ne deduce che:",
+      "choices": [
+        { "label": "A", "text": "se l’arrosto ha l’interno ben cotto è stato cotto nel forno a gas", "nextPage": 17 },
+        { "label": "B", "text": "se l’arrosto ha l’interno ben cotto o non è bruciato all’esterno è stato cotto nel forno a gas", "nextPage": 45 },
+        { "label": "C", "text": "se l’arrosto ha l’interno ben cotto e non è bruciato all’esterno è stato cotto nel forno a gas", "nextPage": 52 },
+        { "label": "D", "text": "se l’arrosto è crudo all’interno non è stato cotto nel forno a gas", "nextPage": 47 },
+        { "label": "E", "text": "se l’arrosto è stato cotto nel forno elettrico la carne è cruda all’interno e bruciata all’esterno", "nextPage": 33 }
+      ]
+    },
+    {
+      "id": "Q8",
+      "sourcePage": 16,
+      "question": "Dire quante stelle sono comprese sia nel triangolo, sia nel cerchio ma non nel quadrato e neppure nel rettangolo.",
+      "choices": [
+        { "label": "A", "text": "2", "nextPage": 31 },
+        { "label": "B", "text": "3", "nextPage": 41 },
+        { "label": "C", "text": "4", "nextPage": 59 },
+        { "label": "D", "text": "5", "nextPage": 24 },
+        { "label": "E", "text": "6", "nextPage": 57 }
+      ]
+    },
+    {
+      "id": "Q9",
+      "sourcePage": 17,
+      "question": "Luigina afferma: • il martedì, se faccio il bagno poi vado al mercato. L’altroieri era martedì, e ho fatto il bagno • ieri non ho fatto il bagno e sono andata al mercato • oggi andrò al mercato e forse mi farò anche il bagno. Ne consegue necessariamente che:",
+      "choices": [
+        { "label": "A", "text": "tutte le volte che Luigina va al mercato, non si fa il bagno", "nextPage": 31 },
+        { "label": "B", "text": "il martedì Luigina fa sempre il bagno", "nextPage": 11 },
+        { "label": "C", "text": "se Luigina fa il bagno di mercoledì poi non va al mercato", "nextPage": 35 },
+        { "label": "D", "text": "l’altro ieri Luigina non è andata al mercato", "nextPage": 10 },
+        { "label": "E", "text": "a volte Luigina va al mercato senza essersi fatta il bagno", "nextPage": 8 }
+      ]
+    },
+    {
+      "id": "Q10",
+      "sourcePage": 22,
+      "question": "Dobbiamo colorare le 11 regioni delimitate dai 4 cerchi della figura in modo che due regioni che hanno un arco in comune non siano dello stesso colore. Quanti colori dobbiamo usare come minimo per soddisfare questa richiesta?",
+      "choices": [
+        { "label": "A", "text": "4", "nextPage": 51 },
+        { "label": "B", "text": "6", "nextPage": 24 },
+        { "label": "C", "text": "2", "nextPage": 58 },
+        { "label": "D", "text": "5", "nextPage": 44 },
+        { "label": "E", "text": "3", "nextPage": 10 }
+      ]
+    },
+    {
+      "id": "Q11",
+      "sourcePage": 24,
+      "question": "Quali dei numeri x; y proposti vanno inseriti nella tabella?\n1 3 6 10 x 21 28\n1 2 6 24 120 y 5040",
+      "choices": [
+        { "label": "A", "text": "x = 14 e y = 720", "nextPage": 29 },
+        { "label": "B", "text": "x = 14 e y = 240", "nextPage": 37 },
+        { "label": "C", "text": "x = 15 e y = 720", "nextPage": 17 },
+        { "label": "D", "text": "x = 12 e y = 240", "nextPage": 16 },
+        { "label": "E", "text": "x = 15 e y = 240", "nextPage": 31 }
+      ]
+    },
+    {
+      "id": "Q12",
+      "sourcePage": 25,
+      "question": "Una indagine mostra che in Italia ci sono piú persone coniugate che single e piú maschi che femmine. Da questi dati possiamo dedurre che una sola fra le seguenti affermazioni è sicuramente FALSA; quale?",
+      "choices": [
+        { "label": "A", "text": "In Italia le coppie sono più delle donne nubili", "nextPage": 25 },
+        { "label": "B", "text": "In Italia le coppie sono più dei maschi celibi", "nextPage": 15 },
+        { "label": "C", "text": "In Italia ci sono più mariti che donne nubili", "nextPage": 62 },
+        { "label": "D", "text": "In Italia i single sono più del doppio delle coppie", "nextPage": 38 },
+        { "label": "E", "text": "In Italia ci sono più maschi celibi che mariti", "nextPage": 16 }
+      ]
+    },
+    {
+      "id": "Q13",
+      "sourcePage": 27,
+      "question": "Quale fra le seguenti affermazioni è sicuramente falsa?",
+      "choices": [
+        { "label": "A", "text": "Chi respira è vivo; Piero non respira, dunque Piero è morto", "nextPage": 13 },
+        { "label": "B", "text": "Nessun parigino è italiano; tutti i parigini parlano francese; ma non è vero che nessun italiano parla francese", "nextPage": 31 },
+        { "label": "C", "text": "Un quadrato è sempre un rombo", "nextPage": 64 },
+        { "label": "D", "text": "Ciò che è scritto in A. è falso", "nextPage": 58 },
+        { "label": "E", "text": "Ogni professore ha un registro; Mario non ha registro, dunque Mario non è professore", "nextPage": 66 }
+      ]
+    },
+    {
+      "id": "Q14",
+      "sourcePage": 28,
+      "question": "Si legge sull’autobus: I passeggeri sono tenuti a pagare un ulteriore biglietto per ogni bagaglio che superi almeno una delle seguenti dimensioni: 50cm × 30cm × 25cm. In base a questa norma si deduce che:",
+      "choices": [
+        { "label": "A", "text": "non si deve pagare un ulteriore biglietto per un oggetto che supera 50cm di lunghezza, 30cm di altezza e 25cm di spessore", "nextPage": 42 },
+        { "label": "B", "text": "non si deve pagare un ulteriore biglietto per un bastone lungo 90cm e con diametro di 2cm se tenuto orizzontalmente", "nextPage": 15 },
+        { "label": "C", "text": "non si deve pagare un ulteriore biglietto per un bastone lungo 90cm e con diametro di 2cm", "nextPage": 77 },
+        { "label": "D", "text": "non si deve pagare un ulteriore biglietto per un oggetto che supera 50cm di lunghezza oppure 30cm di altezza oppure 25cm di spessore", "nextPage": 22 },
+        { "label": "E", "text": "non si deve pagare un ulteriore biglietto per un pallone del diametro di 20cm", "nextPage": 49 }
+      ]
+    },
+    {
+      "id": "Q15",
+      "sourcePage": 29,
+      "question": "Due giocatori, Aldo e Bruno, dispongono a turno le loro pedine su una scacchiera 3 × 3; le pedine dei due giocatori sono uguali, diciamo tutte nere. Vince il primo giocatore che riesce a completare un terzetto in una fila orizzontale, verticale o una delle due diagonali. Quante sono le mosse con cui può iniziare la partita il primo giocatore (Aldo) in modo da potersi garantire la vittoria indipendentemente da come giocherà Bruno?",
+      "choices": [
+        { "label": "A", "text": "8", "nextPage": 49 },
+        { "label": "B", "text": "1", "nextPage": 48 },
+        { "label": "C", "text": "0, nel senso che Bruno può sempre rispondere in modo opportuno e garantirsi la vittoria", "nextPage": 12 },
+        { "label": "D", "text": "5", "nextPage": 10 },
+        { "label": "E", "text": "9", "nextPage": 60 }
+      ]
+    },
+    {
+      "id": "Q16",
+      "sourcePage": 30,
+      "question": "Indicare quanti numeri diversi si possono ottenere da somme algebriche di questo tipo ±1 ± 2 ± 3 ± 4 ± 5 utilizzando tutte le cifre da 1 a 5 e al variare di tutte le possibili scelte dei segni + o - (ad esempio: -1 -2 +3 +4 +5, 1+2-3+4+5, ...).",
+      "choices": [
+        { "label": "A", "text": "20", "nextPage": 45 },
+        { "label": "B", "text": "24", "nextPage": 23 },
+        { "label": "C", "text": "31", "nextPage": 73 },
+        { "label": "D", "text": "16", "nextPage": 78 },
+        { "label": "E", "text": "32", "nextPage": 73 }
+      ]
+    },
+    {
+      "id": "Q17",
+      "sourcePage": 32,
+      "question": "Quale dei riquadri numerati da 1 a 5 sostituisce il riquadro marcato con il punto interrogativo? 1 2 3 4 5?",
+      "choices": [
+        { "label": "A", "text": "1", "nextPage": 28 },
+        { "label": "B", "text": "2", "nextPage": 80 },
+        { "label": "C", "text": "3", "nextPage": 18 },
+        { "label": "D", "text": "4", "nextPage": 41 },
+        { "label": "E", "text": "5", "nextPage": 23 }
+      ]
+    },
+    {
+      "id": "Q18",
+      "sourcePage": 35,
+      "question": "La frase 'Sul tavolo ci sono due bicchieri' implica che sul tavolo:",
+      "choices": [
+        { "label": "A", "text": "ci sono due bicchieri e una bottiglia", "nextPage": 61 },
+        { "label": "B", "text": "non ci sono bottiglie", "nextPage": 43 },
+        { "label": "C", "text": "ci sono due bicchieri e due tazzine da caffè", "nextPage": 73 },
+        { "label": "D", "text": "c’è un bicchiere", "nextPage": 10 },
+        { "label": "E", "text": "non ci sono tre bicchieri", "nextPage": 32 }
+      ]
+    },
+    {
+      "id": "Q19",
+      "sourcePage": 36,
+      "question": "La guerriera Bradamante si trova in una camera a forma di esagono regolare, con porte numerate in successione da 0 a 5. Dietro ogni porta si cela uno e uno solo dei seguenti: tre mortiferi draghi, l’amato paladino Ruggiero, l’ippogrifo e il beffardo mago Atlante. Se una porta paricela un drago, tutte le stanze pari celano draghi. Dietro alla porta 4 scalpita l’ippogrifo, mentre da sotto la porta ad essa opposta fa capolino una coda di drago. Il mago dice: la somma della porta di Ruggiero e delle due porte ad essa adiacenti è 6. Con certezza Bradamante può dire che:",
+      "choices": [
+        { "label": "A", "text": "Ruggiero è dietro una porta dispari", "nextPage": 29 },
+        { "label": "B", "text": "Ruggiero è dietro alla porta 2", "nextPage": 25 },
+        { "label": "C", "text": "Ruggiero è dietro alla porta 0", "nextPage": 33 },
+        { "label": "D", "text": "il mago non ha dato nuove indicazioni", "nextPage": 53 },
+        { "label": "E", "text": "Ruggiero è dietro alla porta 0 oppure dietro alla porta 3", "nextPage": 19 }
+      ]
+    },
+    {
+      "id": "Q20",
+      "sourcePage": 37,
+      "question": "Di una famiglia si sa che: • almeno un maschio non è celibe • tutti i laureati sono celibi • non è vero che almeno un maschio non è maggiorenne. Solo una delle seguenti proposizioni è deducibile dalle premesse. Quale?",
+      "choices": [
+        { "label": "A", "text": "Nessun maggiorenne non è coniugato", "nextPage": 58 },
+        { "label": "B", "text": "Tutti i celibi sono laureati", "nextPage": 63 },
+        { "label": "C", "text": "Almeno un maggiorenne è coniugato", "nextPage": 19 },
+        { "label": "D", "text": "Almeno un celibe non è maggiorenne", "nextPage": 30 },
+        { "label": "E", "text": "Almeno un maggiorenne non è coniugato", "nextPage": 48 }
+      ]
+    },
+    {
+      "id": "Q21",
+      "sourcePage": 38,
+      "question": "In occasione delle elezioni primarie per la scelta del candidato premier di Burgundia, ciascuno dei sette candidati è sicuro di riuscire a classificarsi fra i tre più votati. Negare questa frase vuol dire affermare che:",
+      "choices": [
+        { "label": "A", "text": "c’è almeno un candidato che teme di rientrare fra i tre meno votati", "nextPage": 65 },
+        { "label": "B", "text": "c’è almeno un candidato che non è sicuro di rientrare fra i primi tre più votati", "nextPage": 46 },
+        { "label": "C", "text": "alcuni dei sette candidati sono sicuri di riuscire a classificarsi fra i tre più votati", "nextPage": 33 },
+        { "label": "D", "text": "ogni candidato è sicuro di non riuscire a classificarsi fra i tre più votati", "nextPage": 18 },
+        { "label": "E", "text": "ciascuno dei sette candidati teme di rientrare fra i tre meno votati", "nextPage": 46 }
+      ]
+    },
+    {
+      "id": "Q22",
+      "sourcePage": 39,
+      "question": "Un’indagine svolta tra tutti i 1000 abitanti della cittadina di Sparagna al di sopra dei 55 anni, mostra che il 40% di loro possiede un frigorifero, che il 25% possiede un televisore, e che il 15% li possiede entrambi. Dunque, nella cittadina di Sparagna:",
+      "choices": [
+        { "label": "A", "text": "al di sotto dei 55 anni meno del 40% della popolazione possiede un frigorifero", "nextPage": 62 },
+        { "label": "B", "text": "meno del 45% della popolazione al di sopra dei 55 anni possiede televisore o frigorifero", "nextPage": 23 },
+        { "label": "C", "text": "il 50% della popolazione al di sopra dei 55 anni non possiede né televisore né frigorifero", "nextPage": 79 },
+        { "label": "D", "text": "al di sotto dei 55 anni più del 25% della popolazione possiede un televisore", "nextPage": 78 },
+        { "label": "E", "text": "più del 50% della popolazione al di sopra dei 55 anni ha televisore o frigorifero", "nextPage": 39 }
+      ]
+    },
+    {
+      "id": "Q23",
+      "sourcePage": 40,
+      "question": "Premesso che: • chi ascolta musica rock o blues non è stonato • Agenore non è stonato • chi ascolta blues non vince al Lotto. quale tra le seguenti conclusioni NON si può trarre dalle precedenti premesse?",
+      "choices": [
+        { "label": "A", "text": "È impossibile che Agenore ascolti blues", "nextPage": 32 },
+        { "label": "B", "text": "Uno stonato non ascolta rock", "nextPage": 68 },
+        { "label": "C", "text": "È possibile che Agenore non vinca al Lotto", "nextPage": 19 },
+        { "label": "D", "text": "Chi vince al Lotto non ascolta blues", "nextPage": 22 },
+        { "label": "E", "text": "Non è escluso che Agenore ascolti rock", "nextPage": 30 }
+      ]
+    },
+    {
+      "id": "Q24",
+      "sourcePage": 41,
+      "question": "Considero una tabella quadrata formata da 4 numeri diversi disposti in 2 righe ciascuna composta da 2 numeri: (a b; c d). Siano: r1 il più piccolo dei numeri della prima riga, r2 il più piccolo dei numeri della seconda riga, R il maggiore tra r1 e r2, K1 il più grande dei numeri della prima colonna, K2 il più grande dei numeri della seconda colonna, k il minore tra K1 e K2. Allora possiamo concludere che:",
+      "choices": [
+        { "label": "A", "text": "R < k", "nextPage": 32 },
+        { "label": "B", "text": "R = k", "nextPage": 40 },
+        { "label": "C", "text": "R > k", "nextPage": 50 },
+        { "label": "D", "text": "R ≥ k", "nextPage": 47 },
+        { "label": "E", "text": "R ≤ k", "nextPage": 9 }
+      ]
+    },
+    {
+      "id": "Q25",
+      "sourcePage": 42,
+      "question": "La signora QKX è stata strangolata nel proprio salotto. Il commissario ZYW non crede che l’imputato di omicidio (il quale si difende vibratamente dichiarando la propria innocenza) non si sia recato a casa della vittima nell’intervallo di tempo nel quale la stessa ha perso la vita. Si può dedurre che:",
+      "choices": [
+        { "label": "A", "text": "sicuramente l’imputato non è colpevole", "nextPage": 35 },
+        { "label": "B", "text": "il commissario ZYW è convinto che l’imputato non si sia recato a casa della vittima nell’intervallo di tempo nel quale la stessa ha perso la vita", "nextPage": 38 },
+        { "label": "C", "text": "per il commissario ZYW l’imputato non è certamente colpevole", "nextPage": 70 },
+        { "label": "D", "text": "sicuramente l’imputato è colpevole", "nextPage": 78 },
+        { "label": "E", "text": "il commissario ZYW non esclude che l’imputato abbia strangolato la signora QKX", "nextPage": 66 }
+      ]
+    },
+    {
+      "id": "Q26",
+      "sourcePage": 44,
+      "question": "Il grande teorico dei numeri Kontakerikonta ha scoperto i numeri Incredibili; egli non sa ancora se essi siano in numero finito, però ha fatto la seguente congettura: • se sono infiniti, almeno uno di essi deve avere 8 fattori primi distinti. Il suo allievo Rikontoijo studiando con cura questi numeri, dimostra che la congettura di Kontakerikonta è falsa. Dunque Rikontoijo ha provato che:",
+      "choices": [
+        { "label": "A", "text": "se i numeri Incredibili sono una quantità finita, nessuno di essi ha 8 fattori primi distinti", "nextPage": 66 },
+        { "label": "B", "text": "se i numeri Incredibili sono una quantità finita, tutti hanno 8 fattori primi distinti", "nextPage": 35 },
+        { "label": "C", "text": "i numeri Incredibili sono infiniti", "nextPage": 74 },
+        { "label": "D", "text": "i numeri Incredibili sono infiniti e nessuno di essi ha 8 fattori primi distinti", "nextPage": 31 },
+        { "label": "E", "text": "i numeri Incredibili sono infiniti e hanno tutti 8 fattori primi distinti", "nextPage": 47 }
+      ]
+    },
+    {
+      "id": "Q27",
+      "sourcePage": 45,
+      "question": "Nell’atrio di ingresso di un condominio è appeso un cartello con il seguente avviso: È permesso giocare a calcio in cortile, tranne che dalle ore 13.00 alle ore 16.00 e di domenica. Se ne può dedurre che in quel condominio:",
+      "choices": [
+        { "label": "A", "text": "non è vietato giocare a calcio in cortile alle ore 12.00, purchè non sia domenica", "nextPage": 24 },
+        { "label": "B", "text": "non è vietato giocare a calcio in cortile la domenica dalle ore 16.00 in poi", "nextPage": 17 },
+        { "label": "C", "text": "nei giorni diversi da domenica è vietato non giocare a calcio in cortile prima delle 13.00 e dopo le 16.00", "nextPage": 8 },
+        { "label": "D", "text": "non è vietato giocare a calcio in cortile alle ore 14.00, purchè non sia domenica", "nextPage": 29 },
+        { "label": "E", "text": "non è vietato giocare a calcio in cortile alle ore 14.00, purchè sia domenica", "nextPage": 42 }
+      ]
+    },
+    {
+      "id": "Q28",
+      "sourcePage": 46,
+      "question": "Per numerare le pagine di un libro sono state usate in totale 3301 cifre. Le pagine del libro sono:",
+      "choices": [
+        { "label": "A", "text": "tra 1500 e 2000", "nextPage": 39 },
+        { "label": "B", "text": "tra 2000 e 3000", "nextPage": 24 },
+        { "label": "C", "text": "meno di 1000", "nextPage": 77 },
+        { "label": "D", "text": "più di 3000", "nextPage": 31 },
+        { "label": "E", "text": "tra 1000 e 1500", "nextPage": 75 }
+      ]
+    },
+    {
+      "id": "Q29",
+      "sourcePage": 48,
+      "question": "Un Marziolano, osservando che: • metà di tutti i Tondolini sono remissivi • metà di tutti i Marziolani sono testardi • metà di tutti i Marziolani sono remissivi e tenendo presente che non si può essere insieme remissivi e testardi, deduce che una e una sola delle seguenti affermazioni NON può essere vera. Quale?",
+      "choices": [
+        { "label": "A", "text": "Metà di tutti i Tondolini sono testardi", "nextPage": 52 },
+        { "label": "B", "text": "Tutti i Tondolini sono Marziolani", "nextPage": 66 },
+        { "label": "C", "text": "Tutti i Marziolani sono Tondolini e nessun Tondolino è testardo", "nextPage": 47 },
+        { "label": "D", "text": "Non esistono Tondolini che siano anche Marziolani", "nextPage": 26 },
+        { "label": "E", "text": "Tondolini e Marziolani sono lo stesso insieme di persone", "nextPage": 61 }
+      ]
+    },
+    {
+      "id": "Q30",
+      "sourcePage": 51,
+      "question": "Volendo disporre i numeri 28 29 36 43 55 in modo che i dispari occupino una posizione dispari ed i pari occupino una posizione pari, in quanti modi diversi si può operare?",
+      "choices": [
+        { "label": "A", "text": "3", "nextPage": 29 },
+        { "label": "B", "text": "24", "nextPage": 49 },
+        { "label": "C", "text": "12", "nextPage": 80 },
+        { "label": "D", "text": "5", "nextPage": 50 },
+        { "label": "E", "text": "6", "nextPage": 28 }
+      ]
+    },
+    {
+      "id": "Q31",
+      "sourcePage": 52,
+      "question": "Ci sono cinque persone con diverse situazioni patrimoniali. Oronzo è più ricco di Rocco, le cui ricchezze sono più modeste di quelle di Silvio, e quest'ultimo a sua volta è più danaroso di Piero. Quirino è meno benestante di Piero, ma più agiato di Oronzo. Chi è il terzo in ordine di ricchezza?",
+      "choices": [
+        { "label": "A", "text": "Piero", "nextPage": 66 },
+        { "label": "B", "text": "Rocco", "nextPage": 29 },
+        { "label": "C", "text": "Oronzo", "nextPage": 54 },
+        { "label": "D", "text": "Silvio", "nextPage": 45 },
+        { "label": "E", "text": "Quirino", "nextPage": 21 }
+      ]
+    },
+    {
+      "id": "Q32",
+      "sourcePage": 53,
+      "question": "Esaminata la seguente catena di proposizioni: Solo gli ingegneri sono persone affidabili; Qualche persona affidabile si occupa di politica; se ne può dedurre che:",
+      "choices": [
+        { "label": "A", "text": "non si può dedurre nulla", "nextPage": 23 },
+        { "label": "B", "text": "nessun ingegnere si occupa di politica", "nextPage": 74 },
+        { "label": "C", "text": "chiunque si occupi di politica non è una persona affidabile", "nextPage": 7 },
+        { "label": "D", "text": "qualche ingegnere si occupa di politica", "nextPage": 61 },
+        { "label": "E", "text": "tutti gli ingegneri si occupano di politica", "nextPage": 16 }
+      ]
+    },
+    {
+      "id": "Q33",
+      "sourcePage": 54,
+      "question": "Una famosa congettura afferma che i numeri primi q tali che q+2 è un numero primo sono infiniti. Confutare questa affermazione equivale a provare che",
+      "choices": [
+        { "label": "A", "text": "per ogni intero positivo n e per ogni numero primo q con q > n il numero q+2 non è primo", "nextPage": 68 },
+        { "label": "B", "text": "esistono un intero positivo n e un numero primo q con q > n tali che il numero q+2 non è primo", "nextPage": 27 },
+        { "label": "C", "text": "per ogni intero positivo n esiste un numero primo q con q > n tale che il numero q+2 non è primo", "nextPage": 7 },
+        { "label": "D", "text": "esiste un intero positivo n tale che, qualunque sia il numero primo q con q > n, il numero q+2 non è primo", "nextPage": 71 },
+        { "label": "E", "text": "esiste un intero positivo n tale che, per ogni numero (primo e non primo) m con m > n, il numero m+2 non è primo", "nextPage": 48 }
+      ]
+    },
+    {
+      "id": "Q34",
+      "sourcePage": 55,
+      "question": "Nonno Peperino non ricorda più la combinazione del suo forziere elettronico. Egli ricorda solo che: • è di quattro cifre distinte fra 0 e 9 • non vi compare il 4 • la terza cifra è la metà della quarta • le cifre sono crescenti dalla prima all’ultima. Quante sono le possibili combinazioni del forziere di Nonno Peperino?",
+      "choices": [
+        { "label": "A", "text": "3", "nextPage": 28 },
+        { "label": "B", "text": "4", "nextPage": 27 },
+        { "label": "C", "text": "5", "nextPage": 18 },
+        { "label": "D", "text": "6", "nextPage": 60 },
+        { "label": "E", "text": "2", "nextPage": 48 }
+      ]
+    },
+    {
+      "id": "Q35",
+      "sourcePage": 56,
+      "question": "Quale delle figure numerate da 1 a 5 sostituisce correttamente il riquadro contenente il punto interrogativo? (con figura descritta da numeri: 15, 6 9, ...)",
+      "choices": [
+        { "label": "A", "text": "La figura 2", "nextPage": 67 },
+        { "label": "B", "text": "La figura 3", "nextPage": 8 },
+        { "label": "C", "text": "La figura 4", "nextPage": 7 },
+        { "label": "D", "text": "La figura 5", "nextPage": 43 },
+        { "label": "E", "text": "La figura 1", "nextPage": 44 }
+      ]
+    },
+    {
+      "id": "Q36",
+      "sourcePage": 57,
+      "question": "Franco il tabaccaio ha in cassa 195 euro e non ha monete. Un cliente gli chiede se ha da cambiare 10, 20, 50 o 100 euro, ma Franco risponde a malincuore di no a tutte le richieste. Quanti pezzi da 20 euro ha in cassa Franco?",
+      "choices": [
+        { "label": "A", "text": "1", "nextPage": 16 },
+        { "label": "B", "text": "4", "nextPage": 51 },
+        { "label": "C", "text": "3", "nextPage": 62 },
+        { "label": "D", "text": "2", "nextPage": 63 },
+        { "label": "E", "text": "0", "nextPage": 50 }
+      ]
+    },
+    {
+      "id": "Q37",
+      "sourcePage": 59,
+      "question": "Il ministro dell’economia di Matlandia afferma: Se il bilancio non sarà tagliato, allora nel prossimo anno 2006 i prezzi rimarranno stabili se e soltanto se aumenteremo tutte le tasse. Ammessa l’assoluta verità di questa affermazione e fondandosi solo su di essa, che cosa può essere accaduto a Matlandia nel 2006?",
+      "choices": [
+        { "label": "A", "text": "Il bilancio non fu tagliato; tutte le tasse furono aumentate e i prezzi rimasero stabili", "nextPage": 72 },
+        { "label": "B", "text": "Il bilancio non fu tagliato; tutte le tasse furono aumentate e i prezzi crebbero", "nextPage": 40 },
+        { "label": "C", "text": "Il bilancio non fu tagliato; le tasse non furono aumentate e i prezzi rimasero stabili", "nextPage": 57 },
+        { "label": "D", "text": "Il bilancio non fu tagliato; furono aumentate le tasse solo sugli stipendi degli impiegati dello Stato e i prezzi rimasero stabili", "nextPage": 9 },
+        { "label": "E", "text": "Il bilancio non fu tagliato, e i prezzi crebbero comunque", "nextPage": 64 }
+      ]
+    },
+    {
+      "id": "Q38",
+      "sourcePage": 60,
+      "question": "Giocando a Risiko Giulio Cesare ha vinto più di suo nipote Augusto, ma non di Napoleone. Alessandro Magno ha vinto meno di Carlo Magno, ma più di Napoleone. Chi ha vinto di meno?",
+      "choices": [
+        { "label": "A", "text": "Carlo Magno", "nextPage": 32 },
+        { "label": "B", "text": "Alessandro Magno", "nextPage": 49 },
+        { "label": "C", "text": "Napoleone", "nextPage": 45 },
+        { "label": "D", "text": "Augusto", "nextPage": 41 },
+        { "label": "E", "text": "Giulio Cesare", "nextPage": 11 }
+      ]
+    },
+    {
+      "id": "Q39",
+      "sourcePage": 61,
+      "question": "Al termine di una seduta di allenamento della Nazionale, Totti e Buffon fanno la seguente scommessa: Totti tirerà 12 rigori e Buffon cercherà di pararli. Per ogni rigore parato Totti darà 50 euro a Buffon mentre per ogni rigore segnato Buffon darà 40 euro a Totti. Dopo di ciò viene eseguita la serie di rigori al termine della quale Totti deve ricevere da Buffon 120 euro. Quanti rigori ha parato Buffon?",
+      "choices": [
+        { "label": "A", "text": "9", "nextPage": 49 },
+        { "label": "B", "text": "5", "nextPage": 34 },
+        { "label": "C", "text": "6", "nextPage": 58 },
+        { "label": "D", "text": "4", "nextPage": 24 },
+        { "label": "E", "text": "12", "nextPage": 77 }
+      ]
+    },
+    {
+      "id": "Q40",
+      "sourcePage": 62,
+      "question": "Il tenente Piccione, nel corso delle sue indagini su un assassinio, ha appurato questi due fatti: • se X ha accoltellato la vittima, allora X è mancino; • se Y ha accoltellato la vittima, allora Y è l’assassino. Quale di queste deduzioni è corretta?",
+      "choices": [
+        { "label": "A", "text": "Il commissario Piccione accerta che il signor Bianchi non è mancino e ne deduce che non è l’assassino", "nextPage": 21 },
+        { "label": "B", "text": "L’assassino ha accoltellato la vittima", "nextPage": 18 },
+        { "label": "C", "text": "Il commissario Piccione accerta che il signor Rossi è mancino e ne deduce che è l’assassino", "nextPage": 40 },
+        { "label": "D", "text": "Il commissario Piccione accerta che il signor Bianchi non è mancino e ne deduce che non ha accoltellato la vittima", "nextPage": 36 },
+        { "label": "E", "text": "Il commissario Piccione accerta che il signor Rossi è mancino e ne deduce che ha accoltellato la vittima", "nextPage": 16 }
+      ]
+    },
+    {
+      "id": "Q41",
+      "sourcePage": 63,
+      "question": "Nella Repubblica di Arraffa NON è vero che Ogni parlamentare è persona onesta e competente. Dunque, nella Repubblica di Arraffa:",
+      "choices": [
+        { "label": "A", "text": "qualche parlamentare non è onesto oppure non è competente", "nextPage": 66 },
+        { "label": "B", "text": "ogni parlamentare o è onesto, ma non competente, oppure è competente, ma non onesto", "nextPage": 69 },
+        { "label": "C", "text": "qualche parlamentare è onesto e competente", "nextPage": 59 },
+        { "label": "D", "text": "le persone oneste e competenti non diventano mai parlamentari", "nextPage": 12 },
+        { "label": "E", "text": "nessun parlamentare è onesto e competente", "nextPage": 12 }
+      ]
+    },
+    {
+      "id": "Q42",
+      "sourcePage": 64,
+      "question": "Un accogliente cartello all’ingresso del ristorante L’Oca Giuliva recita: Se si è in pochi, si mangia bene; Se si è in tanti, si spende poco. Il signor Aquilotto, con la sua mente acuta, ne deduce logicamente che:",
+      "choices": [
+        { "label": "A", "text": "se si è pochi, si spende tanto", "nextPage": 76 },
+        { "label": "B", "text": "per mangiar bene è necessario andarci in pochi", "nextPage": 51 },
+        { "label": "C", "text": "se si mangia male non si è in pochi", "nextPage": 13 },
+        { "label": "D", "text": "per spendere poco bisogna essere in tanti", "nextPage": 41 },
+        { "label": "E", "text": "se si è in tanti, si mangia male", "nextPage": 34 }
+      ]
+    },
+    {
+      "id": "Q43",
+      "sourcePage": 65,
+      "question": "Il Re non rispettò il consiglio del Gran Ciambellano di opporsi alla celebrazione del matrimonio della Principessa dal Collo di Cigno con il rospo che amava, qualora i giovani insistessero per celebrare il rito nella Basilica di Superga. Le principesse, almeno quelle delle favole, seguono la volontà paterna. Che cosa ne deducete?",
+      "choices": [
+        { "label": "A", "text": "La principessa ed il rospo potranno sposarsi, se lo desidereranno, nella Basilica di Superga", "nextPage": 42 },
+        { "label": "B", "text": "La principessa ed il rospo non si sposeranno", "nextPage": 50 },
+        { "label": "C", "text": "La principessa ed il rospo potranno sposarsi, ma non nella Basilica di Superga", "nextPage": 16 },
+        { "label": "D", "text": "I dati del problema non autorizzano a concludere la veridicità di alcuna delle interpretazioni proposte", "nextPage": 53 },
+        { "label": "E", "text": "La principessa ed il rospo si sposeranno necessariamente nella Basilica di Superga", "nextPage": 43 }
+      ]
+    },
+    {
+      "id": "Q44",
+      "sourcePage": 66,
+      "question": "Dei 120 parlamentari di Allegrandia si sa che un terzo è stato inquisito dalla magistratura e condannato definitivamente e i tre quarti sono al secondo (o comunque, non al primo) mandato parlamentare. Se ne può concludere che:",
+      "choices": [
+        { "label": "A", "text": "un quarto dei parlamentari è al primo mandato ed è stato condannato definitivamente", "nextPage": 73 },
+        { "label": "B", "text": "nessuno dei parlamentari al primo mandato è stato condannato definitivamente", "nextPage": 70 },
+        { "label": "C", "text": "scelti comunque tre parlamentari, uno almeno di essi è stato condannato definitivamente", "nextPage": 49 },
+        { "label": "D", "text": "un terzo dei parlamentari al primo mandato è stato condannato definitivamente", "nextPage": 29 },
+        { "label": "E", "text": "c’è almeno un parlamentare che è stato condannato definitivamente ed è ad un mandato successivo al primo", "nextPage": 62 }
+      ]
+    },
+    {
+      "id": "Q45",
+      "sourcePage": 67,
+      "question": "Indicare quale tra le coppie di numeri indicate va inserita al posto dei puntini nella seguente sequenza 3, 43 ; 5, 27; 9, 19; …, …; 33, 13",
+      "choices": [
+        { "label": "A", "text": "24, 74", "nextPage": 76 },
+        { "label": "B", "text": "19, 11", "nextPage": 45 },
+        { "label": "C", "text": "15, 15", "nextPage": 51 },
+        { "label": "D", "text": "17, 15", "nextPage": 57 },
+        { "label": "E", "text": "23, 13", "nextPage": 49 }
+      ]
+    },
+    {
+      "id": "Q46",
+      "sourcePage": 68,
+      "question": "Il grande teorico dei numeri Valakekontojioo, studiando i numeri interi 1;2;3;4;5;…, ha trovato che tra essi potrebbero esistere i numeri cirilli, che godono di queste due proprietà: • la somma di due numeri cirilli (anche uguali) è un cirillo • il prodotto di due numeri cirilli (anche uguali) non è un cirillo. Il suo allievo SonPyoohFoorb studiando con cura questi numeri, ha scoperto quanti sono i numeri cirilli, e precisamente ha dedotto che il numero dei cirilli è:",
+      "choices": [
+        { "label": "A", "text": "3", "nextPage": 18 },
+        { "label": "B", "text": "0", "nextPage": 64 },
+        { "label": "C", "text": "1", "nextPage": 69 },
+        { "label": "D", "text": "4", "nextPage": 7 },
+        { "label": "E", "text": "infinito", "nextPage": 41 }
+      ]
+    },
+    {
+      "id": "Q47",
+      "sourcePage": 69,
+      "question": "Gli archeobatteri sono organismi unicellulari che vivono in stagni e si riproducono per scissione (cioè ogni batterio si divide in due e forma due altri batteri uguali). Se si immette un archeobatterio in un certo stagno, esso ogni giorno si riproduce per scissione una sola volta, e dopo 30 giorni la superficie dello stagno è completamente ricoperta dai batteri. Quanti giorni ci vorranno affinché la superficie dello stesso stagno sia completamente ricoperta, se inizialmente vi si immettono due archeobatteri?",
+      "choices": [
+        { "label": "A", "text": "30 giorni", "nextPage": 21 },
+        { "label": "B", "text": "28 giorni", "nextPage": 74 },
+        { "label": "C", "text": "29 giorni", "nextPage": 56 },
+        { "label": "D", "text": "dipende dalla superficie dello stagno", "nextPage": 44 },
+        { "label": "E", "text": "15 giorni", "nextPage": 10 }
+      ]
+    },
+    {
+      "id": "Q48",
+      "sourcePage": 70,
+      "question": "In una discussione tra amici, Antonio dice: A tutti noi piace il caffè, tranne che a Paola, a cui non piace. Fabio osserva che Antonio ha torto. Ne consegue che:",
+      "choices": [
+        { "label": "A", "text": "a tutti gli amici piace il caffè", "nextPage": 80 },
+        { "label": "B", "text": "a Paola piace il caffè", "nextPage": 20 },
+        { "label": "C", "text": "a uno degli amici, che non è Paola, non piace il caffè", "nextPage": 21 },
+        { "label": "D", "text": "o a Paola piace il caffè, oppure c’è qualcuno tra gli amici, oltre Paola, a cui il caffè non piace", "nextPage": 56 },
+        { "label": "E", "text": "non è possibile che il caffè dispiaccia a uno solo tra gli amici", "nextPage": 48 }
+      ]
+    },
+    {
+      "id": "Q49",
+      "sourcePage": 71,
+      "question": "Indicare qual è la negazione dell’affermazione: Umberto ha almeno un figlio biondo.",
+      "choices": [
+        { "label": "A", "text": "Almeno un figlio di Umberto non è biondo", "nextPage": 20 },
+        { "label": "B", "text": "Umberto non ha figli oppure ha soltanto figli non biondi", "nextPage": 60 },
+        { "label": "C", "text": "Tutti i figli di Umberto sono bruni", "nextPage": 29 },
+        { "label": "D", "text": "Non tutti i figli di Umberto sono biondi", "nextPage": 33 },
+        { "label": "E", "text": "Umberto ha tutti i figli rossi di capelli", "nextPage": 70 }
+      ]
+    },
+    {
+      "id": "Q50",
+      "sourcePage": 72,
+      "question": "Completare la seguente sequenza con i due numeri opportuni: 7 14 29 60 123 x y",
+      "choices": [
+        { "label": "A", "text": "x = 63 ; y = 32", "nextPage": 44 },
+        { "label": "B", "text": "x = 250 ; y = 500", "nextPage": 11 },
+        { "label": "C", "text": "x = 250 ; y = 505", "nextPage": 14 },
+        { "label": "D", "text": "x = 224 ; y = 283", "nextPage": 17 },
+        { "label": "E", "text": "x = 240 ; y = 485", "nextPage": 19 }
+      ]
+    },
+    {
+      "id": "Q51",
+      "sourcePage": 73,
+      "question": "Due giocatori prendono a turno dei sassolini con l’unica regola che non se ne possono prendere né 4 né 8. Vince quel giocatore che riesce a prendere l’ultimo sassolino. Se inizialmente i sassolini sono 8, quanti ne deve prendere il primo giocatore per potersi garantire la vittoria, supponendo che nelle mosse successive ogni giocatore non commetta errori?",
+      "choices": [
+        { "label": "A", "text": "Qualunque numero prenda, vincerà sempre", "nextPage": 55 },
+        { "label": "B", "text": "Qualunque numero prenda, perderà sempre", "nextPage": 77 },
+        { "label": "C", "text": "1", "nextPage": 43 },
+        { "label": "D", "text": "2", "nextPage": 32 },
+        { "label": "E", "text": "3", "nextPage": 55 }
+      ]
+    },
+    {
+      "id": "Q45",
+      "sourcePage": 74,
+      "question": "Indicare quale tra le coppie di numeri indicate va inserita al posto dei puntini nella seguente sequenza 3, 43 ; 5, 27; 9, 19; …, …; 33, 13",
+      "choices": [
+        { "label": "A", "text": "24, 74", "nextPage": 76 },
+        { "label": "B", "text": "19, 11", "nextPage": 45 },
+        { "label": "C", "text": "15, 15", "nextPage": 51 },
+        { "label": "D", "text": "17, 15", "nextPage": 57 },
+        { "label": "E", "text": "23, 13", "nextPage": 49 }
+      ]
+    },
+    {
+      "id": "Q46",
+      "sourcePage": 75,
+      "question": "Il grande teorico dei numeri Valakekontojioo, studiando i numeri interi 1;2;3;4;5;…, ha trovato che tra essi potrebbero esistere i numeri cirilli, che godono di queste due proprietà: • la somma di due numeri cirilli (anche uguali) è un cirillo • il prodotto di due numeri cirilli (anche uguali) non è un cirillo. Il suo allievo SonPyoohFoorb studiando con cura questi numeri, ha scoperto quanti sono i numeri cirilli, e precisamente ha dedotto che il numero dei cirilli è:",
+      "choices": [
+        { "label": "A", "text": "3", "nextPage": 18 },
+        { "label": "B", "text": "0", "nextPage": 64 },
+        { "label": "C", "text": "1", "nextPage": 69 },
+        { "label": "D", "text": "4", "nextPage": 7 },
+        { "label": "E", "text": "infinito", "nextPage": 41 }
+      ]
+    },
+    {
+      "id": "Q47",
+      "sourcePage": 76,
+      "question": "Gli archeobatteri sono organismi unicellulari che vivono in stagni e si riproducono per scissione (cioè ogni batterio si divide in due e forma due altri batteri uguali). Se si immette un archeobatterio in un certo stagno, esso ogni giorno si riproduce per scissione una sola volta, e dopo 30 giorni la superficie dello stagno è completamente ricoperta dai batteri. Quanti giorni ci vorranno affinché la superficie dello stesso stagno sia completamente ricoperta, se inizialmente vi si immettono due archeobatteri?",
+      "choices": [
+        { "label": "A", "text": "30 giorni", "nextPage": 21 },
+        { "label": "B", "text": "28 giorni", "nextPage": 74 },
+        { "label": "C", "text": "29 giorni", "nextPage": 56 },
+        { "label": "D", "text": "dipende dalla superficie dello stagno", "nextPage": 44 },
+        { "label": "E", "text": "15 giorni", "nextPage": 10 }
+      ]
+    },
+    {
+      "id": "Q48",
+      "sourcePage": 77,
+      "question": "In una discussione tra amici, Antonio dice: A tutti noi piace il caffè, tranne che a Paola, a cui non piace. Fabio osserva che Antonio ha torto. Ne consegue che:",
+      "choices": [
+        { "label": "A", "text": "a tutti gli amici piace il caffè", "nextPage": 80 },
+        { "label": "B", "text": "a Paola piace il caffè", "nextPage": 20 },
+        { "label": "C", "text": "a uno degli amici, che non è Paola, non piace il caffè", "nextPage": 21 },
+        { "label": "D", "text": "o a Paola piace il caffè, oppure c’è qualcuno tra gli amici, oltre Paola, a cui il caffè non piace", "nextPage": 56 },
+        { "label": "E", "text": "non è possibile che il caffè dispiaccia a uno solo tra gli amici", "nextPage": 48 }
+      ]
+    },
+    {
+      "id": "Q49",
+      "sourcePage": 78,
+      "question": "Indicare qual è la negazione dell’affermazione: Umberto ha almeno un figlio biondo.",
+      "choices": [
+        { "label": "A", "text": "Almeno un figlio di Umberto non è biondo", "nextPage": 20 },
+        { "label": "B", "text": "Umberto non ha figli oppure ha soltanto figli non biondi", "nextPage": 60 },
+        { "label": "C", "text": "Tutti i figli di Umberto sono bruni", "nextPage": 29 },
+        { "label": "D", "text": "Non tutti i figli di Umberto sono biondi", "nextPage": 33 },
+        { "label": "E", "text": "Umberto ha tutti i figli rossi di capelli", "nextPage": 70 }
+      ]
+    },
+    {
+      "id": "Q50",
+      "sourcePage": 79,
+      "question": "Completare la seguente sequenza con i due numeri opportuni: 7 14 29 60 123 x y",
+      "choices": [
+        { "label": "A", "text": "x = 63 ; y = 32", "nextPage": 44 },
+        { "label": "B", "text": "x = 250 ; y = 500", "nextPage": 11 },
+        { "label": "C", "text": "x = 250 ; y = 505", "nextPage": 14 },
+        { "label": "D", "text": "x = 224 ; y = 283", "nextPage": 17 },
+        { "label": "E", "text": "x = 240 ; y = 485", "nextPage": 19 }
+      ]
+    },
+    {
+      "id": "Q51",
+      "sourcePage": 80,
+      "question": "Due giocatori prendono a turno dei sassolini con l’unica regola che non se ne possono prendere né 4 né 8. Vince quel giocatore che riesce a prendere l’ultimo sassolino. Se inizialmente i sassolini sono 8, quanti ne deve prendere il primo giocatore per potersi garantire la vittoria, supponendo che nelle mosse successive ogni giocatore non commetta errori?",
+      "choices": [
+        { "label": "A", "text": "Qualunque numero prenda, vincerà sempre", "nextPage": 55 },
+        { "label": "B", "text": "Qualunque numero prenda, perderà sempre", "nextPage": 77 },
+        { "label": "C", "text": "1", "nextPage": 43 },
+        { "label": "D", "text": "2", "nextPage": 32 },
+        { "label": "E", "text": "3", "nextPage": 55 }
+      ]
+    }
+  ],
+  "explanations": [
+    {
+      "sourcePage": 18,
+      "isCorrect": false,
+      "text": "Non è il quadrato esatto; non si individua la legge che genera i numeri sui lati e nei vertici, internamente o esternamente alla figura.",
+      "nextPage": 55
+    },
+    {
+      "sourcePage": 19,
+      "isCorrect": true,
+      "text": "Individuiamo le leggi che generano i due insiemi di numeri, sapendo che possono anche essere diverse. Riscriviamo i numeri della prima riga della tabella: 1;3;6;10;x;21;28. La differenza tra un numero e quello che lo precede cresce come la successione dei numeri naturali: x-10=5 => x=15; 21-x=6 => x=15. Riscriviamo i numeri della seconda riga della tabella: 1;2;6;24;120;y;5040. Il rapporto tra un numero e quello che lo precede cresce come la successione dei numeri naturali: y/120=6 => y=720; 5040/y=7 => y=720.",
+      "nextPage": 74
+    },
+    {
+      "sourcePage": 20,
+      "isCorrect": false,
+      "text": "Almeno uno, ma non abbiamo la certezza che siano tutti e sette, teme di non classificarsi tra i tre più votati!",
+      "nextPage": 36
+    },
+    {
+      "sourcePage": 21,
+      "isCorrect": true,
+      "text": "Il numero dei quadratini grigi, all’interno di ogni quadrato grande, è un quadrato perfetto decrescente (16;9;4;?). L’unico quadrato perfetto, minore di 4, è 1. Ci aspettiamo quindi un solo quadrato grigio. I numeri scritti in ogni quadratino sono quadrati perfetti, crescenti (9;16;36;?). L’unico quadrato perfetto maggiore di 36, tra le possibili scelte, è 144. Possiamo anche constatare che il prodotto del numero di quadratini per il numero scritto su ogni quadratino è sempre 144 (ovvero la somma di tutti i numeri presenti in ogni quadrato grande è sempre 144).",
+      "nextPage": 44
+    },
+    {
+      "sourcePage": 23,
+      "isCorrect": false,
+      "text": "Riscriviamo la prima ipotesi del quesito: se X ha accoltellato la vittima, allora X è mancino. Se Bianchi non è mancino, non è certamente l’accoltellatore; potrebbe però essere ugualmente l’assassino. La vittima potrebbe essere stata avvelenata, strangolata… da Bianchi. Ricordiamo che: p => q è equivalente a (non q) => (non p). Non mancino => non accoltellatore, ma non accoltellatore /=> non assassino.",
+      "nextPage": 65
+    },
+    {
+      "sourcePage": 26,
+      "isCorrect": false,
+      "text": "6 colori sono troppi.",
+      "nextPage": 20
+    },
+    {
+      "sourcePage": 31,
+      "isCorrect": false,
+      "text": "La risposta corretta non è questa. Prova a scrivere alcune possibili disposizioni dei 5 numeri che soddisfino le premesse; vedrai che sono sicuramente più di tre, anche se non le scrivi tutte.",
+      "nextPage": 50
+    },
+    {
+      "sourcePage": 33,
+      "isCorrect": true,
+      "text": "Due sole sono le stelle che soddisfano le quattro condizioni.",
+      "nextPage": 8
+    },
+    {
+      "sourcePage": 34,
+      "isCorrect": true,
+      "text": "Rappresentiamo mediante i diagrammi di Venn la prima ipotesi del quesito: Ascoltano rock o blues Non stonati Agenore? La prima ipotesi del quesito 'chi ascolta musica rock o blues non è stonato' equivale a dire che chi è stonato non ascolta né musica rock né musica blues. Agenore non è stonato quindi può ascoltare musica rock o blues. Dunque la risposta proposta è sicuramente incompatibile con le premesse.",
+      "nextPage": 46
+    },
+    {
+      "sourcePage": 43,
+      "isCorrect": true,
+      "text": "Se i simboli + + - - indicano quante aste si devono accendere o spegnere per visualizzare sul display il numero indicato al di là del segno di =, con due sole aste in più il 5 diventa 8!",
+      "nextPage": 81
+    },
+    {
+      "sourcePage": 47,
+      "isCorrect": false,
+      "text": "L’ipotesi se NON si usa il forno a gas allora la carne o è cruda all’interno o è bruciata all’esterno o entrambe le cose equivale a arrosto ben cotto all’interno e non bruciato in superficie => forno a gas. Infatti: p => q è equivalente a (non q) => (non p) e se q = a ∨ b allora (non q) = (non a) ∧ (non b). Quindi se q è: (arrosto crudo all’interno) o (bruciato in superficie) o (entrambe le cose) allora (non q) diventa: (arrosto ben cotto all’interno) e (non bruciato in superficie). Per essere sicuri che l’arrosto sia stato cotto in un forno a gas la carne deve avere l’interno ben cotto e l’esterno non bruciato!",
+      "nextPage": 13
+    },
+    {
+      "sourcePage": 49,
+      "isCorrect": true,
+      "text": "L’affermazione è sicuramente falsa: dire che tutti i Marziolani sono Tondolini, equivale a dire che l’insieme dei Marziolani è un sottoinsieme di quello dei Tondolini e dunque i Marziolani testardi sono un sottoinsieme dei Tondolini NON remissivi; pertanto esistono Tondolini non remissivi che sono testardi.",
+      "nextPage": 23
+    },
+    {
+      "sourcePage": 50,
+      "isCorrect": false,
+      "text": "La risposta è sbagliata. I secondi numeri di ogni coppia sembrano essere disposti in modo crescente…",
+      "nextPage": 10
+    },
+    {
+      "sourcePage": 58,
+      "isCorrect": false,
+      "text": "L’affermazione da valutare: nessun maggiorenne non è coniugato. è equivalente a: tutti i maggiorenni sono coniugati. Dalle ipotesi del quesito sappiamo che • almeno un maschio è coniugato; • i laureati, se esistono, non sono coniugati; • tutti i maschi sono maggiorenni. Quindi almeno un maschio della famiglia è coniugato, ma non abbiamo la certezza che tutti i maschi siano coniugati.",
+      "nextPage": 35
+    },
+    {
+      "sourcePage": 81,
+      "isCorrect": true,
+      "text": "Se i simboli + + - - indicano quante aste si devono accendere o spegnere per visualizzare sul display il numero indicato al di là del segno di =, con due sole aste in più il 5 diventa 8!",
+      "nextPage": 81
+    },
+    {
+      "sourcePage": 82,
+      "isCorrect": false,
+      "text": "La negazione dell’affermazione 'a tutti noi piace il caffè, tranne che a Paola, a cui non piace' è 'o a Paola piace il caffè oppure c’è qualcuno tra gli amici, oltre Paola, a cui non piace il caffè'. La risposta proposta considera solo il caso in cui anche a Paola piace il caffè e non l’eventualità che esista qualche altro amico a cui non piace, visto che Fabio afferma che Antonio ha torto.",
+      "nextPage": 75
+    }
+  ]
+}
