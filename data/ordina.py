@@ -1,41 +1,43 @@
 import json
 
+nome_file = input("nome file: ")
+
 # Carica il file JSON
-with open('data\matematica2.json', 'r', encoding='utf-8') as f:
+with open(f'data\{nome_file}.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 # Ordine desiderato degli ID (senza il prefisso "Q")
 ordine_ids = [
     "88",
-"73",
-"71",
-"75",
-"67",
-"86",
-"69",
-"85",
-"83",
-"80",
-"90",
-"78",
-"89",
-"84",
-"66",
-"79",
-"64",
-"76",
-"70",
-"87",
-"65",
-"63",
-"81",
-"74",
-"61",
-"68",
-"62",
-"82",
-"77",
-"72"
+    "73",
+    "71",
+    "75",
+    "67",
+    "86",
+    "69",
+    "85",
+    "83",
+    "80",
+    "90",
+    "78",
+    "89",
+    "84",
+    "66",
+    "79",
+    "64",
+    "76",
+    "70",
+    "87",
+    "65",
+    "63",
+    "81",
+    "74",
+    "61",
+    "68",
+    "62",
+    "82",
+    "77",
+    "72"
 ]
 
 # Crea un dizionario per accesso rapido alle domande
@@ -54,7 +56,7 @@ for id_num in ordine_ids:
 data['questions'] = nuove_domande
 
 # Salva il file riordinato
-with open('matematica1_riordinato.json', 'w', encoding='utf-8') as f:
+with open(f'data\{nome_file}.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print("Riordinamento completato. File salvato come 'matematica1_riordinato.json'.")
+print(f"Riordinamento completato. File salvato come '{nome_file}.json'.")
