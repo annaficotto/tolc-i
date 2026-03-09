@@ -3,7 +3,7 @@
     "_format": {
         "id": "Identificatore univoco della domanda (Q01, Q02, ...)",
         "question": "Testo della domanda",
-        "image": "Percorso immagine opzionale, es. 'images/q01.png', oppure null",
+        "image": "Percorso immagine opzionale, es. '../images/q01.png', oppure null",
         "category": "Categoria: logica | matematica | fisica | informatica | geometria | ...",
         "choices": "Array di 5 scelte (A-E). Imposta soluzione:true solo sulla risposta corretta.",
         "_note": "LE IMMAGINI 18, 49, 27, 33, 37, 44d, 45, 50, 49d, 53, 56d, 59d sono DOMANDE"
@@ -89,8 +89,8 @@
         },
         {
             "id": "Q18",
-            "question": "Sia a un numero reale maggiore di 1. L'espressione numerica log_a ( (a^2 √a) / (√(a^(5/2))) ) è uguale a:",
-            "image": "images/m-q18.png",
+            "question": "Sia a un numero reale maggiore di 1. L'espressione numerica in immagine è uguale a:",
+            "image": "../images/m-q18.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -116,7 +116,8 @@
                     "label": "D",
                     "text": "0",
                     "soluzione": true,
-                    "feedback": "Vale: (a^2 √a) / (√(a^(5/2))) = a^(2 + 1/2) / a^(5/4) = a^(5/2 - 5/4) = a^(5/4). Quindi log_a (a^(5/4)) = 5/4, non 0. Ma il feedback dice che è giusta? Aspetta, ricalcoliamo: a^2 √a = a^(2 + 1/2) = a^(5/2). √(a^(5/2)) = a^(5/4). Quindi il rapporto è a^(5/2 - 5/4) = a^(5/4). Quindi log_a (a^(5/4)) = 5/4. Nessuna opzione è 5/4. Le opzioni sono -1, a, e, 0, +1. Quindi 5/4 non c'è. Forse ho sbagliato a leggere l'espressione. Nel testo originale è: log_a ( (a^2 √a) / (√(a^(5/2))) )? Oppure c'è un errore. Nel documento, l'espressione è scritta come: 'log_a ( (a^2 √a) / (√(a^(5/2))) )' ma forse è diverso. In ogni caso, il feedback per D dice che è giusta, quindi ci fidiamo."
+                    "feedback": "La risposta è giusta.",
+                    "image": "../images/m-q18-d.png"
                 },
                 {
                     "label": "E",
@@ -402,7 +403,7 @@
         {
             "id": "Q56",
             "question": "Rispetto ad un sistema di riferimento cartesiano ortogonale Oxy, è data la circonferenza di equazione √3 x^2 + √3 y^2 - 2x - 2y = 0. Allora il suo raggio è:",
-            "image": "images/m-q56d.png",
+            "image": "../images/m-q56d.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -1143,7 +1144,7 @@
         {
             "id": "Q27",
             "question": "Dato un qualunque numero reale positivo x, allora log(x^3) - log(x^2) è uguale a",
-            "image": "images/m-q27.png",
+            "image": "../images/m-q27.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -1182,7 +1183,7 @@
         {
             "id": "Q33",
             "question": "Il polinomio 12a^2 - 18b^2 è divisibile per",
-            "image": "images/m-q33.png",
+            "image": "../images/m-q33.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -1221,7 +1222,7 @@
         {
             "id": "Q45",
             "question": "Le soluzioni dell'equazione trigonometrica sin x = 1/sin x sono",
-            "image": "images/m-q45.png",
+            "image": "../images/m-q45.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -1377,7 +1378,7 @@
         {
             "id": "Q53",
             "question": "L'espressione log_10( ∛(x^2+1) ) · log_10 1000 vale:",
-            "image": "images/m-q53.png",
+            "image": "../images/m-q53.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -1455,7 +1456,7 @@
         {
             "id": "Q50",
             "question": "Per 0 ≤ x ≤ π/2, l'equazione √3 sin^2 x + √3 cos^2 x - 2 sin x = 0 ha soluzione",
-            "image": "images/m-q50.png",
+            "image": "../images/m-q50.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -1728,7 +1729,7 @@
         {
             "id": "Q49",
             "question": "L'insieme delle soluzioni della disequazione (x+3)/(x+1) ≥ 2 è costituito da tutti i numeri reali x tali che",
-            "image": "images/m-q49d.png",
+            "image": "../images/m-q49d.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -1884,7 +1885,7 @@
         {
             "id": "Q48",
             "question": "Da un punto P esterno ad una circonferenza di centro O e raggio di 1 cm, si tracciano le tangenti a tale circonferenza che la incontrano nei punti A e B. L'area del poligono PAOB è di √3 cm^2 se la distanza di P da O è",
-            "image": "images/m-q48.png",
+            "image": "../images/m-q48.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -2001,7 +2002,7 @@
         {
             "id": "Q59",
             "question": "Dato un numero reale positivo x e posto f(x) = log_10 x, si ha f(10 · x^(-2)) =",
-            "image": "images/m-q59d.png",
+            "image": "../images/m-q59d.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -2079,7 +2080,7 @@
         {
             "id": "Q44",
             "question": "Nel piano cartesiano quanti sono i punti P(x,y) per cui sono verificate tutte e tre le seguenti condizioni? (x+y)^2 = 1, x^2 + y^2 = 1, x+y ≤ 0",
-            "image": "images/m-q44d.png",
+            "image": "../images/m-q44d.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -2196,7 +2197,7 @@
         {
             "id": "Q37",
             "question": "La seguente espressione: ( (3^20 + 3^20 + 3^20) / (3^3)^2 )^(1/3) vale",
-            "image": "images/m-q37.png",
+            "image": "../images/m-q37.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
@@ -2274,7 +2275,7 @@
         {
             "id": "Q16",
             "question": "Dato il triangolo equilatero ABC il cui lato misura 2 cm, siano D,E,F i punti medi rispettivamente dei lati AB, BC, AC. L'area del rombo DECF è",
-            "image": "images/m-q16.png",
+            "image": "../images/m-q16.png",
             "imageExplanation": null,
             "category": "matematica",
             "choices": [
