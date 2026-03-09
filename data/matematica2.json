@@ -1,1153 +1,1153 @@
 {
-  "_note": "Template domande — formato flat. Per ogni domanda: compila 'question', 'category', il testo di ogni scelta, imposta 'soluzione: true' sulla risposta corretta e scrivi il 'feedback' per ogni scelta.",
-  "_format": {
-    "id": "Identificatore univoco della domanda (Q61, Q62, ...)",
-    "question": "Testo della domanda",
-    "image": "Percorso immagine opzionale, es. 'images/q61.png', oppure null",
-    "category": "Categoria: logica | matematica | fisica | informatica | geometria | ...",
-    "choices": "Array di 5 scelte (A-E). Imposta soluzione:true solo sulla risposta corretta.",
-    "choice-image": "Le risposte possono includere immagini (campo image nella choice)"
-  },
-  "questions": [
-    {
-      "id": "Q88",
-      "question": "La disequazione cos^2 x - cos x - 2 ≥ 0 è verificata per:",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "nessun valore reale di x",
-          "soluzione": false,
-          "feedback": "La funzione cos^2 x - cos x - 2 si annulla se, ad esempio, si sceglie x = π. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "x = π + 2kπ per ogni k intero",
-          "soluzione": true,
-          "feedback": "Posto t = cos x, la disequazione diventa t^2 - t - 2 ≥ 0. Usando la formula risolutiva delle equazioni di secondo grado, le soluzioni dell'equazione t^2 - t - 2 = 0 sono t1 = -1 e t2 = 2. Quindi la disequazione è soddisfatta per t ≤ -1 oppure t ≥ 2, ovvero, cos x ≤ -1 oppure cos x ≥ 2. La prima è soddisfatta quando cos x = -1, ovvero per x = π + 2kπ per ogni k intero, mentre la seconda non ammette soluzioni. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "C",
-          "text": "x = 2kπ per ogni k intero",
-          "soluzione": false,
-          "feedback": "La funzione cos^2 x - cos x - 2 per x = 0 vale -2 e quindi x = 2kπ non è soluzione per k=0. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "qualunque valore reale di x",
-          "soluzione": false,
-          "feedback": "La funzione cos^2 x - cos x - 2 per x = 0 vale -2 e quindi x=0 non è soluzione. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "x = 3kπ per ogni k intero",
-          "soluzione": false,
-          "feedback": "La funzione cos^2 x - cos x - 2 per x = 0 vale -2 e quindi x = 3kπ non è soluzione per k=0. Pertanto la risposta è sbagliata."
-        }
-      ]
+    "_note": "Template domande — formato flat. Per ogni domanda: compila 'question', 'category', il testo di ogni scelta, imposta 'soluzione: true' sulla risposta corretta e scrivi il 'feedback' per ogni scelta.",
+    "_format": {
+        "id": "Identificatore univoco della domanda (Q61, Q62, ...)",
+        "question": "Testo della domanda",
+        "image": "Percorso immagine opzionale, es. 'images/q61.png', oppure null",
+        "category": "Categoria: logica | matematica | fisica | informatica | geometria | ...",
+        "choices": "Array di 5 scelte (A-E). Imposta soluzione:true solo sulla risposta corretta.",
+        "choice-image": "Le risposte possono includere immagini (campo image nella choice)"
     },
-    {
-      "id": "Q73",
-      "question": "Un foglio di carta di forma quadrata viene piegato in due parti uguali in modo da formare due rettangoli sovrapposti. Sapendo che il perimetro del rettangolo è di 12 cm, qual è l'area del quadrato originario?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
+    "questions": [
         {
-          "label": "A",
-          "text": "9 cm²",
-          "soluzione": false,
-          "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è sbagliata."
+            "id": "Q88",
+            "question": "La disequazione cos^2 x - cos x - 2 ≥ 0 è verificata per:",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "nessun valore reale di x",
+                    "soluzione": false,
+                    "feedback": "La funzione cos^2 x - cos x - 2 si annulla se, ad esempio, si sceglie x = π. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "x = π + 2kπ per ogni k intero",
+                    "soluzione": true,
+                    "feedback": "Posto t = cos x, la disequazione diventa t^2 - t - 2 ≥ 0. Usando la formula risolutiva delle equazioni di secondo grado, le soluzioni dell'equazione t^2 - t - 2 = 0 sono t1 = -1 e t2 = 2. Quindi la disequazione è soddisfatta per t ≤ -1 oppure t ≥ 2, ovvero, cos x ≤ -1 oppure cos x ≥ 2. La prima è soddisfatta quando cos x = -1, ovvero per x = π + 2kπ per ogni k intero, mentre la seconda non ammette soluzioni. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "C",
+                    "text": "x = 2kπ per ogni k intero",
+                    "soluzione": false,
+                    "feedback": "La funzione cos^2 x - cos x - 2 per x = 0 vale -2 e quindi x = 2kπ non è soluzione per k=0. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "qualunque valore reale di x",
+                    "soluzione": false,
+                    "feedback": "La funzione cos^2 x - cos x - 2 per x = 0 vale -2 e quindi x=0 non è soluzione. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "x = 3kπ per ogni k intero",
+                    "soluzione": false,
+                    "feedback": "La funzione cos^2 x - cos x - 2 per x = 0 vale -2 e quindi x = 3kπ non è soluzione per k=0. Pertanto la risposta è sbagliata."
+                }
+            ]
         },
         {
-          "label": "B",
-          "text": "36 cm²",
-          "soluzione": false,
-          "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è sbagliata."
+            "id": "Q73",
+            "question": "Un foglio di carta di forma quadrata viene piegato in due parti uguali in modo da formare due rettangoli sovrapposti. Sapendo che il perimetro del rettangolo è di 12 cm, qual è l'area del quadrato originario?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "9 cm²",
+                    "soluzione": false,
+                    "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "36 cm²",
+                    "soluzione": false,
+                    "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "24 cm²",
+                    "soluzione": false,
+                    "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "72 cm²",
+                    "soluzione": false,
+                    "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "16 cm²",
+                    "soluzione": true,
+                    "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è giusta."
+                }
+            ]
         },
         {
-          "label": "C",
-          "text": "24 cm²",
-          "soluzione": false,
-          "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è sbagliata."
+            "id": "Q71",
+            "question": "Fissato nel piano un sistema di assi cartesiani ortogonali Oxy, consideriamo i punti A=(1,0) e B=(0,2). Per quale scelta del punto C il triangolo ABC non è rettangolo?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "C=(0,-1/2)",
+                    "soluzione": false,
+                    "feedback": "Se C=(0,-1/2) vale: AB=√5, AC=√(1^2 + (1/2)^2)=√(5/4), BC=√(0^2 + (2+1/2)^2)=5/2. Verificato che si ha BC^2 = AB^2 + AC^2, in quanto 25/4 = 5 + 5/4, il triangolo ABC è rettangolo con ipotenusa BC. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "C=(-1,0)",
+                    "soluzione": true,
+                    "feedback": "Se C=(-1,0) vale: AB=√5, AC=2, BC=√(1^2+2^2)=√5. Il triangolo è isoscele sulla base AC e non è rettangolo in quanto in un triangolo isoscele rettangolo solo la base può essere l'ipotenusa (il lato più lungo) e, nel caso in esame, AB=BC. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "C",
+                    "text": "C=(1,2)",
+                    "soluzione": false,
+                    "feedback": "Se C=(1,2) vale: AB=√5, AC=2, BC=1. Verificato che si ha AB^2 = AC^2 + BC^2, in quanto 5 = 4 + 1, il triangolo ABC è rettangolo con ipotenusa AB. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "C=(-4,0)",
+                    "soluzione": false,
+                    "feedback": "Se C=(-4,0) vale: AB=√5, AC=5, BC=2√5. Verificato che si ha AC^2 = AB^2 + BC^2, in quanto 25 = 5 + 20, il triangolo ABC è rettangolo con ipotenusa AC. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "C=(0,0)",
+                    "soluzione": false,
+                    "feedback": "Se C=(0,0) vale: AB=√5, AC=1, BC=2. Verificato che si ha AB^2 = AC^2 + BC^2, in quanto 5 = 1 + 4, il triangolo ABC è rettangolo con ipotenusa AB. Pertanto la risposta è sbagliata."
+                }
+            ]
         },
         {
-          "label": "D",
-          "text": "72 cm²",
-          "soluzione": false,
-          "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è sbagliata."
+            "id": "Q75",
+            "question": "L'equazione |x-1| = 1 - |x| ha",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "esattamente due soluzioni",
+                    "soluzione": false,
+                    "feedback": "Per ogni numero reale x vale |x-1| ≥ 0. Ne segue che le soluzioni devono soddisfare la condizione 1 - |x| ≥ 0, ovvero -1 ≤ x ≤ 1. Se si osserva che per tali valori di x si ha |x-1| = 1 - x, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "esattamente tre soluzioni",
+                    "soluzione": false,
+                    "feedback": "Per ogni numero reale x vale |x-1| ≥ 0. Ne segue che le soluzioni devono soddisfare la condizione 1 - |x| ≥ 0, ovvero -1 ≤ x ≤ 1. Se si osserva che per tali valori di x si ha |x-1| = 1 - x, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "esattamente quattro soluzioni",
+                    "soluzione": false,
+                    "feedback": "Per ogni numero reale x vale |x-1| ≥ 0. Ne segue che le soluzioni devono soddisfare la condizione 1 - |x| ≥ 0, ovvero -1 ≤ x ≤ 1. Se si osserva che per tali valori di x si ha |x-1| = 1 - x, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "infinite soluzioni",
+                    "soluzione": true,
+                    "feedback": "Per ogni numero reale x vale |x-1| ≥ 0. Ne segue che le soluzioni devono soddisfare la condizione 1 - |x| ≥ 0, ovvero -1 ≤ x ≤ 1. Per tali valori di x si ha |x-1| = 1 - x. Quindi il problema è ridotto allo studio dell'equazione 1 - x = 1 - |x|, con la condizione -1 ≤ x ≤ 1. In definitiva si deve risolvere x = |x|, con la condizione -1 ≤ x ≤ 1, ottenendo come soluzione 0 ≤ x ≤ 1. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "E",
+                    "text": "nessuna soluzione",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, per x=0 l'equazione è soddisfatta. Pertanto la risposta è sbagliata."
+                }
+            ]
         },
         {
-          "label": "E",
-          "text": "16 cm²",
-          "soluzione": true,
-          "feedback": "Detto ℓ il lato del quadrato originario, i rettangoli sovrapposti hanno lati ℓ e ℓ/2. Il loro perimetro vale P = 2(ℓ + ℓ/2) = 3ℓ. Quindi ℓ = (1/3)·12 cm = 4 cm e l'area del quadrato vale 16 cm². Pertanto la risposta è giusta."
+            "id": "Q67",
+            "question": "Per quali x reali è verificata la disequazione √(x^2 - 1) > 2x?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "x ≥ -1",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, per x=0 la funzione √(x^2-1) non è definita. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "x ≤ -1",
+                    "soluzione": true,
+                    "feedback": "Ha senso studiare la disequazione solo per x^2-1 ≥ 0, cioè per x ≤ -1 o per x ≥ 1. Per x ≥ 1 si possono elevare al quadrato entrambi i membri della disequazione ottenendo x^2-1 ≥ 4x^2 ⟺ 3x^2+1 ≤ 0, che non è mai verificata. Per x ≤ -1 la disequazione è sempre verificata. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "C",
+                    "text": "-1 < x < 1",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, per x=0 la funzione √(x^2-1) non è definita. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "per nessun x reale",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, per x=-1 la disequazione è soddisfatta. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "x ≥ 1",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, per x=1 la disequazione non è soddisfatta. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q86",
+            "question": "Aldo, Bea, Carlo, Dario, Ebe, Franco vanno in treno e trovano uno scompartimento a sei posti libero. Considerando che Aldo e Bea devono stare vicino al finestrino, quanti modi diversi hanno i sei amici di disporsi nello scompartimento?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "48",
+                    "soluzione": true,
+                    "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione e quindi si tratta di calcolare il numero di permutazioni di 4 persone su 4 posti, cioè 4! = 1·2·3·4 = 24. Ne segue che i modi diversi che hanno i sei amici per disporsi nello scompartimento sono 2·24 = 48. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "B",
+                    "text": "4",
+                    "soluzione": false,
+                    "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione. Se si fa uso della formula per calcolare il numero di permutazioni di 4 persone su 4 posti, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "240",
+                    "soluzione": false,
+                    "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione. Se si fa uso della formula per calcolare il numero di permutazioni di 4 persone su 4 posti, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "8",
+                    "soluzione": false,
+                    "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione. Se si fa uso della formula per calcolare il numero di permutazioni di 4 persone su 4 posti, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "10",
+                    "soluzione": false,
+                    "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione. Se si fa uso della formula per calcolare il numero di permutazioni di 4 persone su 4 posti, si deduce che la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q69",
+            "question": "In un paese in cui ogni cittadino è tenuto a pagare in tasse il 25% del proprio reddito, un anno l'aliquota viene abbassata al 20%. Viene però contestualmente introdotta una tassa 'una tantum' di 1000 € che ogni contribuente è tenuto a pagare. Si può dire che in quello stesso anno, in rapporto a questa operazione:",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "i cittadini con un reddito superiore a 25 000 € hanno dovuto pagare un importo maggiorato di un quinto rispetto a quello che avrebbero dovuto pagare secondo le norme dell'anno precedente",
+                    "soluzione": false,
+                    "feedback": "Se x è il reddito in euro, un cittadino dovrà pagare, secondo il nuovo sistema, un importo di (20/100)x + 1000, mentre, con il vecchio sistema, avrebbe pagato (25/100)x. Osservando che x > 25 000, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "il peso fiscale è rimasto invariato per tutti",
+                    "soluzione": false,
+                    "feedback": "Se, ad esempio, il reddito di un cittadino è di 25 000 €, egli dovrà pagare, secondo il nuovo sistema, un importo di (20/100·25000 + 1000) = 6000 €, mentre, con il vecchio sistema, avrebbe pagato (25/100·25000) = 6250 €. Quindi il nuovo sistema risulta più conveniente. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "solo i cittadini con un reddito superiore a 10 000 € sono stati avvantaggiati",
+                    "soluzione": false,
+                    "feedback": "Se, ad esempio, il reddito di un cittadino è di 15 000 € > 10 000 €, egli dovrà pagare, secondo il nuovo sistema, un importo di (20/100·15000 + 1000) = 4000 €, mentre, con il vecchio sistema, avrebbe pagato (25/100·15000) = 3750 €. Quindi il nuovo sistema risulta meno conveniente. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "i cittadini con un reddito superiore a 25 000 € sono stati avvantaggiati",
+                    "soluzione": true,
+                    "feedback": "Se x è il reddito in euro, un cittadino dovrà pagare, secondo il nuovo sistema, un importo di (20/100)x + 1000, mentre, con il vecchio sistema, avrebbe pagato (25/100)x. Se x > 25 000, la differenza è (20/100 x + 1000) - 25/100 x = 1000 - x/20 < 1000 - 25000/20 = -250. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "E",
+                    "text": "solo i cittadini con un reddito inferiore a 20 000 € sono stati avvantaggiati",
+                    "soluzione": false,
+                    "feedback": "Se, ad esempio, il reddito di un cittadino è di 15 000 € < 20 000 €, egli dovrà pagare, secondo il nuovo sistema, un importo di (20/100·15000 + 1000) = 4000 €, mentre, con il vecchio sistema, avrebbe pagato (25/100·15000) = 3750 €. Quindi il nuovo sistema risulta meno conveniente. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q85",
+            "question": "Rispetto ad un riferimento cartesiano ortogonale Oxy del piano, l'equazione (x-1)^2 - y^2 = 0 individua:",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "due rette incidenti",
+                    "soluzione": true,
+                    "feedback": "È immediato osservare che vale: (x-1)^2 - y^2 = (x-1-y)(x-1+y). Quindi i punti del luogo soddisfano una delle due seguenti condizioni: x-1-y=0 oppure x-1+y=0. Le due equazioni precedenti rappresentano due rette distinte che si intersecano nel punto (1,0). Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "B",
+                    "text": "una parabola",
+                    "soluzione": false,
+                    "feedback": "È immediato osservare che vale: (x-1)^2 - y^2 = (x-1-y)(x-1+y). Quindi i punti del luogo soddisfano una delle due seguenti condizioni: x-1-y=0 oppure x-1+y=0. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "due soli punti",
+                    "soluzione": false,
+                    "feedback": "È immediato osservare che vale: (x-1)^2 - y^2 = (x-1-y)(x-1+y). Quindi i punti del luogo soddisfano una delle due seguenti condizioni: x-1-y=0 oppure x-1+y=0. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "una circonferenza",
+                    "soluzione": false,
+                    "feedback": "Sviluppando il quadrato al primo membro dell'equazione (x-1)^2 - y^2 = 0, si osserva che i coefficienti di x^2 e y^2 risultano avere segno opposto. Se si fa uso della definizione di circonferenza, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "due rette parallele",
+                    "soluzione": false,
+                    "feedback": "È immediato osservare che vale: (x-1)^2 - y^2 = (x-1-y)(x-1+y). Quindi i punti del luogo soddisfano una delle due seguenti condizioni: x-1-y=0 oppure x-1+y=0. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q83",
+            "question": "Una quantità di liquido che riempie una sfera di raggio K viene travasata in cilindri aventi diametro di base K ed altezza K. Qual è il numero minimo di cilindri che occorrono per compiere questa operazione?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "5",
+                    "soluzione": false,
+                    "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "6",
+                    "soluzione": true,
+                    "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Vale: Vs/Vc = (4/3)πK^3 / ((π/4)K^3) = 16/3 = 5 + 1/3, quindi il numero minimo di cilindri necessari è 6. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "C",
+                    "text": "3",
+                    "soluzione": false,
+                    "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "9",
+                    "soluzione": false,
+                    "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "4",
+                    "soluzione": false,
+                    "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q80",
+            "question": "In un gruppo di 100 persone 51 parlano inglese, 36 francese, delle quali 12 sia inglese che francese. Quante di loro non parlano né inglese né francese?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "49",
+                    "soluzione": false,
+                    "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "15",
+                    "soluzione": false,
+                    "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "29",
+                    "soluzione": false,
+                    "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "13",
+                    "soluzione": false,
+                    "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "25",
+                    "soluzione": true,
+                    "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Quindi il numero di persone in D è pari a nD = 100 - (12+39+24) = 25. Pertanto la risposta è giusta."
+                }
+            ]
+        },
+        {
+            "id": "Q90",
+            "question": "L'equazione x(x - a) = 1 ha due soluzioni distinte",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "se e solo se a ≥ 0",
+                    "soluzione": false,
+                    "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "se e solo se -1 < a < 1",
+                    "soluzione": false,
+                    "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "per nessun valore reale di a",
+                    "soluzione": false,
+                    "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "per tutti gli a reali",
+                    "soluzione": true,
+                    "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Quindi l'equazione ha sempre due soluzioni reali distinte. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "E",
+                    "text": "se e solo se -2 < a < 2",
+                    "soluzione": false,
+                    "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q78",
+            "question": "L'equazione sin x = -x",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "ammette infinite soluzioni",
+                    "soluzione": false,
+                    "feedback": "L'equazione proposta può essere studiata nella forma equivalente sin x + x = 0, e, essendo f(x)=sin x + x una funzione dispari, basta considerare i valori x ≥ 0. Se si fa uso delle proprietà della funzione sin x, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "se h>0 è una soluzione, allora anche x = h+π lo è",
+                    "soluzione": false,
+                    "feedback": "Se h>0 è una soluzione, vale sin h = -h. D'altra parte sin(h+π) = - sin h = h, e quindi h+π è una soluzione dell'equazione se e solo se h = -(h+π), cioè h = -π/2, ma tale valore è negativo. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "non ammette soluzioni",
+                    "soluzione": false,
+                    "feedback": "È immediato osservare che x=0 è una soluzione. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "ammette soltanto una soluzione",
+                    "soluzione": true,
+                    "feedback": "L'equazione proposta può essere studiata nella forma equivalente sin x + x = 0, e, essendo f(x)=sin x + x una funzione dispari, basta considerare i valori x ≥ 0. È immediato osservare che x=0 è una soluzione. Inoltre, vale: 0 < x ≤ π ⇒ sin x + x > 0; x > π ⇒ sin x + x > -1 + π > 0, quindi non esistono altre soluzioni. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "E",
+                    "text": "ammette esattamente due soluzioni",
+                    "soluzione": false,
+                    "feedback": "L'equazione proposta può essere studiata nella forma equivalente sin x + x = 0, e, essendo f(x)=sin x + x una funzione dispari, basta considerare i valori x ≥ 0. Se si fa uso delle proprietà della funzione sin x, si deduce che la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q89",
+            "question": "Nel salvadanaio di Geremia ci sono monete da 1 € e da 2 €, per un totale di 60 €. Quale delle seguenti affermazioni è vera?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Se il salvadanaio contiene almeno 30 monete, allora la maggior parte di queste sono da 2 €",
+                    "soluzione": false,
+                    "feedback": "Se, ad esempio, ci sono 20 monete da 1 € e 20 monete da 2 € il salvadanaio contiene 60 € e 40 monete, ma la maggior parte non è da 2 €. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "Il numero di monete da 1 € non può essere uguale al numero di monete da 2 €",
+                    "soluzione": false,
+                    "feedback": "Se, ad esempio, ci sono 20 monete da 1 € e 20 monete da 2 € il salvadanaio contiene 60 €. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "Se il salvadanaio contiene meno di 40 monete, allora la maggior parte di queste sono da 2 €",
+                    "soluzione": true,
+                    "feedback": "Introduciamo le notazioni: n = numero totale di monete, n1 = numero di monete da 1 €, n2 = numero di monete da 2 €. Deve valere n1 + n2 = n, n1 + 2 n2 = 60. Dalle relazioni precedenti si ottiene n1 = 2n - 60, n2 = 60 - n. Se n < 40 si ha n1 < 20 e n2 > 20. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "D",
+                    "text": "Il numero di monete da 1 € è sicuramente minore del numero di monete da 2 €",
+                    "soluzione": false,
+                    "feedback": "Se, ad esempio, ci sono 56 monete da 1 € e 2 monete da 2 € il salvadanaio contiene 60 €, ma il numero di monete da 1 € è maggiore. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "Il numero di monete da 1 € è sicuramente maggiore del numero di monete da 2 €",
+                    "soluzione": false,
+                    "feedback": "Se, ad esempio, ci sono 2 monete da 1 € e 29 monete da 2 € il salvadanaio contiene 60 €, ma il numero di monete da 1 € è minore. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q84",
+            "question": "Il resto della divisione del polinomio 2x^3 - 3x + 2 per x-2 è:",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "8",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso del teorema del resto, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "-1",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso del teorema del resto, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "12",
+                    "soluzione": true,
+                    "feedback": "Il teorema del resto stabilisce che il resto della divisione proposta si ottiene valutando il polinomio per x=2: resto = (2x^3 - 3x + 2)|x=2 = 16 - 6 + 2 = 12. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "D",
+                    "text": "-8",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso del teorema del resto, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "-12",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso del teorema del resto, si deduce che la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q66",
+            "question": "In un piano cartesiano consideriamo le rette r_k di equazione y = kx + 2k + 1 dove k è un parametro reale. Quale delle seguenti affermazioni è vera?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Le rette r_k sono a due a due incidenti, ma non esiste nessun punto comune a tutte",
+                    "soluzione": false,
+                    "feedback": "Se k e k' sono distinti le rette r_k e r_k' non sono parallele (hanno coefficiente angolare diverso) e il punto di intersezione si ottiene risolvendo il sistema y=kx+2k+1 e y=k'x+2k'+1. Il sistema ammette sempre la stessa soluzione per tutti i valori di k e k' distinti? In realtà si trova che il punto (-2,1) soddisfa tutte le equazioni. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "Per k=0 non si ottiene l'equazione di una retta",
+                    "soluzione": false,
+                    "feedback": "Per k=0 l'equazione diventa y=1, che è l'equazione di una retta orizzontale. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "Tutte le rette r_k passano per il punto (1,-2)",
+                    "soluzione": false,
+                    "feedback": "Se si sostituisce la coppia (1,-2) nell'equazione si ha: -2 = k + 2k + 1, una relazione che non è verificata per ogni k reale. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "Tutte le rette r_k passano per il punto (-2,1)",
+                    "soluzione": true,
+                    "feedback": "Se si sostituisce la coppia (-2,1) nell'equazione si ha: 1 = -2k + 2k + 1, una relazione che è verificata per ogni k reale. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "E",
+                    "text": "Le rette r_k sono parallele fra loro",
+                    "soluzione": false,
+                    "feedback": "Se k e k' sono distinti le rette r_k e r_k' non sono parallele perché hanno coefficiente angolare diverso. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q79",
+            "question": "L'insieme {(x,y) ∈ R^2 : x≠0, y/x > 2} è costituito da",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "una delle parti di piano delimitate da una iperbole",
+                    "soluzione": false,
+                    "feedback": "I punti (x,y) dell'insieme soddisfano la disequazione (y-2x)/x > 0. Risolvendo tale disequazione, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "una corona circolare",
+                    "soluzione": false,
+                    "feedback": "I punti (x,y) dell'insieme soddisfano la disequazione (y-2x)/x > 0. Risolvendo tale disequazione, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "due angoli opposti al vertice",
+                    "soluzione": true,
+                    "feedback": "I punti (x,y) dell'insieme considerato si ottengono risolvendo la disequazione (y-2x)/x > 0. Le sue soluzioni soddisfano uno dei seguenti sistemi di disequazioni: y-2x < 0 e x < 0, oppure y-2x > 0 e x > 0. Il primo sistema individua i punti del terzo quadrante che si trovano sotto la retta y=2x, mentre il secondo sistema individua i punti del primo quadrante che si trovano sopra la retta y=2x. Quindi l'insieme è costituito da due angoli opposti al vertice. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "D",
+                    "text": "un semipiano",
+                    "soluzione": false,
+                    "feedback": "I punti (x,y) dell'insieme soddisfano la disequazione (y-2x)/x > 0. Risolvendo tale disequazione, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "due semipiani",
+                    "soluzione": false,
+                    "feedback": "I punti (x,y) dell'insieme soddisfano la disequazione (y-2x)/x > 0. Risolvendo tale disequazione, si deduce che la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q64",
+            "question": "Sia p un numero positivo dispari e q il numero dispari successivo. Si ha:",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "q^2 - p^2 è divisibile per 16 e può non essere divisibile per 32",
+                    "soluzione": false,
+                    "feedback": "Se, ad esempio, p=1 e q=3 vale q^2-p^2=9-1=8, che non è divisibile per 16. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "q^2 - p^2 può essere dispari",
+                    "soluzione": false,
+                    "feedback": "Se p e q sono dispari anche p^2 e q^2 sono dispari e quindi q^2-p^2 è sempre pari in quanto differenza di numeri dispari. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "q^2 - p^2 è divisibile per 2 e può non essere divisibile per 4",
+                    "soluzione": false,
+                    "feedback": "Se p è un numero positivo dispari vuol dire che per qualche intero positivo k vale p=2k-1. Il numero dispari successivo di p è q=2k+1. Vale: q^2-p^2 = (q+p)(q-p) = 4k·2 = 8k. Quindi q^2-p^2 è sempre divisibile per 4. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "q^2 - p^2 è divisibile per 4 e può non essere divisibile per 8",
+                    "soluzione": false,
+                    "feedback": "Se p è un numero positivo dispari vuol dire che per qualche intero positivo k vale p=2k-1. Il numero dispari successivo di p è q=2k+1. Vale: q^2-p^2 = (q+p)(q-p) = 4k·2 = 8k. Quindi q^2-p^2 è sempre divisibile per 8. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "q^2 - p^2 è divisibile per 8 e può non essere divisibile per 16",
+                    "soluzione": true,
+                    "feedback": "Se p è un numero positivo dispari vuol dire che per qualche intero positivo k vale p=2k-1. Il numero dispari successivo di p è q=2k+1. Vale: q^2-p^2 = (q+p)(q-p) = 4k·2 = 8k. Quindi q^2-p^2 è sempre divisibile per 8. Se, ad esempio, p=1 e q=3 vale q^2-p^2=9-1=8, che non è divisibile per 16. Pertanto la risposta è giusta."
+                }
+            ]
+        },
+        {
+            "id": "Q76",
+            "question": "L'espressione log(x^4 + 2x^2 + sin^2 x + cos^2 x) coincide con",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "4 log(1+x)",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso dell'uguaglianza sin^2 x + cos^2 x = 1 e delle proprietà dei logaritmi, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "[log(1+x^2)]^2",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso dell'uguaglianza sin^2 x + cos^2 x = 1 e delle proprietà dei logaritmi, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "2 log(1+x^2)",
+                    "soluzione": true,
+                    "feedback": "Usando l'uguaglianza sin^2 x + cos^2 x = 1 e le proprietà dei logaritmi, si ha: log(x^4 + 2x^2 + sin^2 x + cos^2 x) = log(x^4 + 2x^2 + 1) = log((x^2+1)^2) = 2 log(x^2+1). Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "D",
+                    "text": "log(x^4+2x^2) + log(sin^2 x+cos^2 x)",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso dell'uguaglianza sin^2 x + cos^2 x = 1 e delle proprietà dei logaritmi, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "2 log(1+x+sin x+cos x)",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso dell'uguaglianza sin^2 x + cos^2 x = 1 e delle proprietà dei logaritmi, si deduce che la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q70",
+            "question": "Un rettangolo è formato da due quadrati il cui lato misura 2 cm e da sette quadrati il cui lato misura 1 cm. Il perimetro del rettangolo misura",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "22 cm",
+                    "soluzione": false,
+                    "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Modi diversi per farlo sono illustrati in figura. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Se si fa uso di tali informazioni, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "18 cm",
+                    "soluzione": false,
+                    "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Modi diversi per farlo sono illustrati in figura. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Se si fa uso di tali informazioni, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "24 cm",
+                    "soluzione": false,
+                    "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Modi diversi per farlo sono illustrati in figura. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Se si fa uso di tali informazioni, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "20 cm",
+                    "soluzione": false,
+                    "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Modi diversi per farlo sono illustrati in figura. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Se si fa uso di tali informazioni, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "16 cm",
+                    "soluzione": true,
+                    "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Poiché la scomposizione in fattori primi di 15 è 15 = 3·5, necessariamente, se si riesce a formare un rettangolo, i suoi lati misurano 3 cm e 5 cm. Modi diversi per costruire un rettangolo con le dimensioni trovate sono illustrati in figura. Quindi il perimetro del rettangolo vale P = 2(3+5) cm = 16 cm. Pertanto la risposta è giusta."
+                }
+            ]
+        },
+        {
+            "id": "Q87",
+            "question": "Dato n intero positivo, sia x_n la soluzione dell'equazione (x+1)/1 + (x+2)/2 + ... + (x+n)/n = n. Quale delle seguenti affermazioni è vera?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "x_n ≠ 0 per ogni n",
+                    "soluzione": false,
+                    "feedback": "Per ogni n intero positivo, l'equazione proposta è un'equazione di primo grado nella variabile x. Risolvendola, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "se n1 < n2 allora x_n1 < x_n2",
+                    "soluzione": false,
+                    "feedback": "Per ogni n intero positivo, l'equazione proposta è un'equazione di primo grado nella variabile x. Risolvendola, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "se n1 < n2 allora x_n1 > x_n2",
+                    "soluzione": false,
+                    "feedback": "Per ogni n intero positivo, l'equazione proposta è un'equazione di primo grado nella variabile x. Risolvendola, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "x_n = x_n + 1 per ogni n",
+                    "soluzione": false,
+                    "feedback": "La condizione x_n = x_n + 1 è falsa per ogni valore di x_n. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "x_n = 0 per ogni n",
+                    "soluzione": true,
+                    "feedback": "Per ogni n intero positivo, l'equazione proposta è un'equazione di primo grado nella variabile x e, mettendo in evidenza la x al primo membro, essa è equivalente all'equazione x(1 + 1/2 + ... + 1/n) + (1 + 2/2 + ... + n/n) = n, ovvero, posto a_n = 1 + 1/2 + ... + 1/n > 0, a_n x = 0. Quindi la soluzione (unica) dell'equazione è x_n = 0 per ogni n. Pertanto la risposta è giusta."
+                }
+            ]
+        },
+        {
+            "id": "Q65",
+            "question": "Nel piano cartesiano, il luogo dei punti di coordinate (x,y) che verificano l'equazione (y - 2x^2)(y^2 - 4) = 0 è:",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "l'insieme costituito dai punti di coordinate (1,-2), (1,2)",
+                    "soluzione": false,
+                    "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "l'insieme costituito dai punti di coordinate (1,2), (-1,2)",
+                    "soluzione": false,
+                    "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "l'unione di una parabola e di due rette",
+                    "soluzione": true,
+                    "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. La prima è l'equazione di una parabola, le altre due sono rette. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "D",
+                    "text": "l'intersezione di un'iperbole e di due rette",
+                    "soluzione": false,
+                    "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "l'intersezione di una parabola e di due rette",
+                    "soluzione": false,
+                    "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q63",
+            "question": "I numeri interi strettamente positivi a, b, c, d sono tutti differenti tra loro e sono tutti minori di 6. Sapendo che la loro somma vale 12 determinare il loro prodotto.",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "60",
+                    "soluzione": false,
+                    "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "24",
+                    "soluzione": false,
+                    "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "50",
+                    "soluzione": false,
+                    "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "40",
+                    "soluzione": true,
+                    "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Quindi il prodotto dei quattro numeri è pari a 1·2·4·5 = 40. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "E",
+                    "text": "30",
+                    "soluzione": false,
+                    "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q81",
+            "question": "Quanti sono i numeri reali x che sono soluzioni dell'equazione tan(2x - 5π) = -10^4?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "uno",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso della proprietà di periodicità della funzione tan(2x-5π), si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "cinque",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso della proprietà di periodicità della funzione tan(2x-5π), si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "infiniti",
+                    "soluzione": true,
+                    "feedback": "La funzione tan(2x-5π), nell'intervallo -π/4 < x < π/4, assume tutti i valori reali, quindi in tale intervallo esiste una soluzione dell'equazione. Detta x̄ tale soluzione, essendo la funzione periodica di periodo T = π/2, sono soluzioni dell'equazione gli infiniti valori nella forma x̄ + k·π/2, con k intero qualunque. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "D",
+                    "text": "nessuno",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso della proprietà di periodicità della funzione tan(2x-5π), si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "due",
+                    "soluzione": false,
+                    "feedback": "Se si fa uso della proprietà di periodicità della funzione tan(2x-5π), si deduce che la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q74",
+            "question": "Un triangolo rettangolo, ruotando attorno ai propri cateti, genera due coni. Il rapporto fra i volumi dei due coni è pari al rapporto fra",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "il cateto maggiore e l'ipotenusa",
+                    "soluzione": false,
+                    "feedback": "Siano a e b i cateti del triangolo rettangolo. Il cono generato dalla rotazione del triangolo intorno ad a ha altezza a e raggio di base b. Il cono generato dalla rotazione del triangolo intorno a b ha altezza b e raggio di base a. Se si calcolano i volumi dei coni, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "i cateti",
+                    "soluzione": true,
+                    "feedback": "Siano a e b i cateti del triangolo rettangolo. I volumi dei coni sono: rotazione intorno ad a: V_a = (1/3)π b^2 a; rotazione intorno a b: V_b = (1/3)π a^2 b. Quindi il rapporto tra i volumi dei due coni è V_a/V_b = b/a. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "C",
+                    "text": "i quadrati dei cateti",
+                    "soluzione": false,
+                    "feedback": "Siano a e b i cateti del triangolo rettangolo. Il cono generato dalla rotazione del triangolo intorno ad a ha altezza a e raggio di base b. Il cono generato dalla rotazione del triangolo intorno a b ha altezza b e raggio di base a. Se si calcolano i volumi dei coni, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "il cateto minore e l'ipotenusa",
+                    "soluzione": false,
+                    "feedback": "Siano a e b i cateti del triangolo rettangolo. Il cono generato dalla rotazione del triangolo intorno ad a ha altezza a e raggio di base b. Il cono generato dalla rotazione del triangolo intorno a b ha altezza b e raggio di base a. Se si calcolano i volumi dei coni, si deduce che la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "i cubi dei cateti",
+                    "soluzione": false,
+                    "feedback": "Siano a e b i cateti del triangolo rettangolo. Il cono generato dalla rotazione del triangolo intorno ad a ha altezza a e raggio di base b. Il cono generato dalla rotazione del triangolo intorno a b ha altezza b e raggio di base a. Se si calcolano i volumi dei coni, si deduce che la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q61",
+            "question": "Per quale dei seguenti valori di x si ha sin(x/3) = sin x / 3?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "x = π/3",
+                    "soluzione": false,
+                    "feedback": "Osserviamo che, per 𝛼 ∈ ℝ, vale: sin 3𝛼 = sin 𝛼 cos 2𝛼 + cos 𝛼 sin 2𝛼 = sin 𝛼(1 - 2 sin^2 𝛼) + 2 sin 𝛼 cos^2 𝛼 = sin 𝛼[(1 - 2 sin^2 𝛼) + 2(1 - sin^2 𝛼)] = 3 sin 𝛼 - 4 sin^3 𝛼. Usando la diseguaglianza precedente con 𝛼 = π/9 e osservando che 0 < π/9 < π/2, si ha: sin(π/3) = 3 sin(π/9) - 4 sin^3(π/9). Quindi sin(π/3)/3 = sin(π/9) - (4/3) sin^3(π/9) < sin(π/9). Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "x = 3π",
+                    "soluzione": true,
+                    "feedback": "Se si valutano i due membri dell'uguaglianza proposta per x = 3π, si ha: sin(3π/3) = sin π = 0, sin(3π)/3 = 0/3 = 0. Quindi x = 3π verifica l'uguaglianza. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "C",
+                    "text": "x = 2π",
+                    "soluzione": false,
+                    "feedback": "Se si valutano i due membri dell'uguaglianza proposta per x = 2π, si ha: sin(2π/3) = √3/2, sin(2π)/3 = 0/3 = 0. Quindi x = 2π non verifica l'uguaglianza. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "x = π/6",
+                    "soluzione": false,
+                    "feedback": "Se si valutano i due membri dell'uguaglianza proposta per x = π/6, si ha: sin(π/18) ≈ 0,174, sin(π/6)/3 = (1/2)/3 = 1/6 ≈ 0,167. Quindi x = π/6 non verifica l'uguaglianza. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "x = π/2",
+                    "soluzione": false,
+                    "feedback": "Se si valutano i due membri dell'uguaglianza proposta per x = π/2, si ha: sin(π/6) = 1/2, sin(π/2)/3 = 1/3. Quindi x = π/2 non verifica l'uguaglianza. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q68",
+            "question": "Si considerino tutti i numeri reali a della forma a = (3n+3+(-1)^n)/(n+1) dove n è un qualunque intero positivo. Quanti dei numeri a sono maggiori di 2,99?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "infiniti, ma non tutti",
+                    "soluzione": true,
+                    "feedback": "Vale: a = (3n+3+(-1)^n)/(n+1) = (3(n+1)+(-1)^n)/(n+1) = 3 + (-1)^n/(n+1). Se n è pari, a = 3 + 1/(n+1) > 3 > 2,99 e quindi esistono infiniti numeri a maggiori di 2,99. Ad esempio, se n=1, a=3-1/2=2,5 < 2,99 e quindi non tutti i numeri a sono maggiori di 2,99. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "B",
+                    "text": "nessuno",
+                    "soluzione": false,
+                    "feedback": "Vale: a = 3 + (-1)^n/(n+1). Se n è pari, a > 3, quindi ce ne sono. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "uno",
+                    "soluzione": false,
+                    "feedback": "Vale: a = 3 + (-1)^n/(n+1). Se n è pari, a > 3, quindi ce ne sono infiniti. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "due",
+                    "soluzione": false,
+                    "feedback": "Vale: a = 3 + (-1)^n/(n+1). Se n è pari, a > 3, quindi ce ne sono infiniti. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "tutti",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, se n=1, a=3-1/2=2,5 < 2,99 e quindi non tutti i numeri a sono maggiori di 2,99. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q62",
+            "question": "Siano dati nel piano due triangoli equilateri che si possono ruotare e traslare liberamente uno rispetto all'altro. Data una qualsiasi posizione dei due triangoli, la loro porzione di superficie sovrapposta non potrà mai essere",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "un trapezio",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, se si dispongono i triangoli come in figura, la porzione di superficie sovrapposta è un trapezio. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "un esagono",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, se si dispongono i triangoli come in figura, la porzione di superficie sovrapposta è un esagono. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "un rettangolo",
+                    "soluzione": true,
+                    "feedback": "In generale, la porzione di superficie sovrapposta è un poligono i cui lati sono parti dei lati dei triangoli equilateri. Per ottenere un rettangolo bisogna necessariamente disporre i triangoli in modo che un lato di uno e un lato dell'altro siano paralleli. Con la disposizione descritta, due lati qualunque (di entrambi i triangoli) o sono paralleli o formano un angolo di 60° e quindi non è possibile ottenere un rettangolo. In maniera alternativa, si può anche procedere per esclusione, osservando che è possibile disporre i triangoli in modo da ottenere un trapezio, un esagono, un triangolo equilatero o un triangolo rettangolo (le altre risposte). Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "D",
+                    "text": "un triangolo equilatero",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, se i triangoli vengono disposti in modo che uno sia contenuto nell'altro, la porzione di superficie sovrapposta è un triangolo equilatero. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "un triangolo rettangolo",
+                    "soluzione": false,
+                    "feedback": "Ad esempio, se si dispongono i triangoli come in figura, la porzione di superficie sovrapposta è un triangolo rettangolo. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q82",
+            "question": "Sia x un numero razionale che soddisfa questa proprietà: x ≤ y per ogni y razionale tale che y > √2. Quale delle seguenti affermazioni è vera?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "x è il più grande numero razionale minore di √2",
+                    "soluzione": false,
+                    "feedback": "Poiché √2 è un numero irrazionale, non esiste il più grande numero razionale minore di √2. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "x è il più piccolo numero razionale maggiore di √2",
+                    "soluzione": false,
+                    "feedback": "Poiché √2 è un numero irrazionale, non esiste il più piccolo numero razionale maggiore di √2. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "x = y",
+                    "soluzione": false,
+                    "feedback": "Il valore di y non è fissato, mentre quello di x lo è. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "x < √2",
+                    "soluzione": true,
+                    "feedback": "Non può valere x = √2 perché x è razionale, mentre √2 non lo è. D'altra parte, se fosse x > √2, si potrebbe scegliere y razionale tale che x > y > √2 ottenendo una contraddizione. Quindi deve valere x < √2. Pertanto la risposta è giusta."
+                },
+                {
+                    "label": "E",
+                    "text": "x = √2",
+                    "soluzione": false,
+                    "feedback": "Non può valere x = √2 perché x è razionale, mentre √2 non lo è. Pertanto la risposta è sbagliata."
+                }
+            ]
+        },
+        {
+            "id": "Q77",
+            "question": "Date le due circonferenze rispettivamente di centro (0,0) e raggio 1 e di centro (2,2) e raggio 1, si indichi con d(P1,P2) la distanza tra un generico punto P1 che sta sulla prima circonferenza ed un generico punto P2 che sta sulla seconda circonferenza. Si consideri poi il minimo m di d(P1,P2) al variare di P1 e di P2. Si ha che",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "m = √2",
+                    "soluzione": false,
+                    "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "m = √2 - 1",
+                    "soluzione": false,
+                    "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "m = √2 - 1",
+                    "soluzione": false,
+                    "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "tale minimo non esiste",
+                    "soluzione": false,
+                    "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "m = 2(√2 - 1)",
+                    "soluzione": true,
+                    "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. La loro distanza si può calcolare sottraendo alla distanza tra i centri la somma dei raggi delle circonferenze: m = 2√2 - 2·1 = 2(√2-1). Pertanto la risposta è giusta."
+                }
+            ]
+        },
+        {
+            "id": "Q72",
+            "question": "Un'azienda vinicola produce il rinomato pirlot, un miscuglio di bianco pinot e di rosso merlot in parti uguali. Da una bottiglia il produttore ne preleva 1/3 e lo rimpiazza con una parte identica di solo pinot, poi preleva 1/4 del nuovo miscuglio e lo rimpiazza ancora con una parte identica di solo pinot. Quale frazione del miscuglio finale è composta di pinot?",
+            "image": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "5/7",
+                    "soluzione": false,
+                    "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "B",
+                    "text": "7/12",
+                    "soluzione": false,
+                    "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "C",
+                    "text": "5/12",
+                    "soluzione": false,
+                    "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "D",
+                    "text": "2/3",
+                    "soluzione": false,
+                    "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Pertanto la risposta è sbagliata."
+                },
+                {
+                    "label": "E",
+                    "text": "3/4",
+                    "soluzione": true,
+                    "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Riassumiamo in una tabella gli effetti delle manipolazioni sul vino. Frazione di pinot: Situazione iniziale 1/2; Primo rimpiazzo: 1/2 × 2/3 + 1/3 = 2/3; Secondo rimpiazzo: 2/3 × 3/4 + 1/4 = 3/4. Pertanto la risposta è giusta."
+                }
+            ]
         }
-      ]
-    },
-    {
-      "id": "Q71",
-      "question": "Fissato nel piano un sistema di assi cartesiani ortogonali Oxy, consideriamo i punti A=(1,0) e B=(0,2). Per quale scelta del punto C il triangolo ABC non è rettangolo?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "C=(0,-1/2)",
-          "soluzione": false,
-          "feedback": "Se C=(0,-1/2) vale: AB=√5, AC=√(1^2 + (1/2)^2)=√(5/4), BC=√(0^2 + (2+1/2)^2)=5/2. Verificato che si ha BC^2 = AB^2 + AC^2, in quanto 25/4 = 5 + 5/4, il triangolo ABC è rettangolo con ipotenusa BC. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "C=(-1,0)",
-          "soluzione": true,
-          "feedback": "Se C=(-1,0) vale: AB=√5, AC=2, BC=√(1^2+2^2)=√5. Il triangolo è isoscele sulla base AC e non è rettangolo in quanto in un triangolo isoscele rettangolo solo la base può essere l'ipotenusa (il lato più lungo) e, nel caso in esame, AB=BC. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "C",
-          "text": "C=(1,2)",
-          "soluzione": false,
-          "feedback": "Se C=(1,2) vale: AB=√5, AC=2, BC=1. Verificato che si ha AB^2 = AC^2 + BC^2, in quanto 5 = 4 + 1, il triangolo ABC è rettangolo con ipotenusa AB. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "C=(-4,0)",
-          "soluzione": false,
-          "feedback": "Se C=(-4,0) vale: AB=√5, AC=5, BC=2√5. Verificato che si ha AC^2 = AB^2 + BC^2, in quanto 25 = 5 + 20, il triangolo ABC è rettangolo con ipotenusa AC. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "C=(0,0)",
-          "soluzione": false,
-          "feedback": "Se C=(0,0) vale: AB=√5, AC=1, BC=2. Verificato che si ha AB^2 = AC^2 + BC^2, in quanto 5 = 1 + 4, il triangolo ABC è rettangolo con ipotenusa AB. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q75",
-      "question": "L'equazione |x-1| = 1 - |x| ha",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "esattamente due soluzioni",
-          "soluzione": false,
-          "feedback": "Per ogni numero reale x vale |x-1| ≥ 0. Ne segue che le soluzioni devono soddisfare la condizione 1 - |x| ≥ 0, ovvero -1 ≤ x ≤ 1. Se si osserva che per tali valori di x si ha |x-1| = 1 - x, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "esattamente tre soluzioni",
-          "soluzione": false,
-          "feedback": "Per ogni numero reale x vale |x-1| ≥ 0. Ne segue che le soluzioni devono soddisfare la condizione 1 - |x| ≥ 0, ovvero -1 ≤ x ≤ 1. Se si osserva che per tali valori di x si ha |x-1| = 1 - x, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "esattamente quattro soluzioni",
-          "soluzione": false,
-          "feedback": "Per ogni numero reale x vale |x-1| ≥ 0. Ne segue che le soluzioni devono soddisfare la condizione 1 - |x| ≥ 0, ovvero -1 ≤ x ≤ 1. Se si osserva che per tali valori di x si ha |x-1| = 1 - x, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "infinite soluzioni",
-          "soluzione": true,
-          "feedback": "Per ogni numero reale x vale |x-1| ≥ 0. Ne segue che le soluzioni devono soddisfare la condizione 1 - |x| ≥ 0, ovvero -1 ≤ x ≤ 1. Per tali valori di x si ha |x-1| = 1 - x. Quindi il problema è ridotto allo studio dell'equazione 1 - x = 1 - |x|, con la condizione -1 ≤ x ≤ 1. In definitiva si deve risolvere x = |x|, con la condizione -1 ≤ x ≤ 1, ottenendo come soluzione 0 ≤ x ≤ 1. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "E",
-          "text": "nessuna soluzione",
-          "soluzione": false,
-          "feedback": "Ad esempio, per x=0 l'equazione è soddisfatta. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q67",
-      "question": "Per quali x reali è verificata la disequazione √(x^2 - 1) > 2x?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "x ≥ -1",
-          "soluzione": false,
-          "feedback": "Ad esempio, per x=0 la funzione √(x^2-1) non è definita. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "x ≤ -1",
-          "soluzione": true,
-          "feedback": "Ha senso studiare la disequazione solo per x^2-1 ≥ 0, cioè per x ≤ -1 o per x ≥ 1. Per x ≥ 1 si possono elevare al quadrato entrambi i membri della disequazione ottenendo x^2-1 ≥ 4x^2 ⟺ 3x^2+1 ≤ 0, che non è mai verificata. Per x ≤ -1 la disequazione è sempre verificata. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "C",
-          "text": "-1 < x < 1",
-          "soluzione": false,
-          "feedback": "Ad esempio, per x=0 la funzione √(x^2-1) non è definita. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "per nessun x reale",
-          "soluzione": false,
-          "feedback": "Ad esempio, per x=-1 la disequazione è soddisfatta. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "x ≥ 1",
-          "soluzione": false,
-          "feedback": "Ad esempio, per x=1 la disequazione non è soddisfatta. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q86",
-      "question": "Aldo, Bea, Carlo, Dario, Ebe, Franco vanno in treno e trovano uno scompartimento a sei posti libero. Considerando che Aldo e Bea devono stare vicino al finestrino, quanti modi diversi hanno i sei amici di disporsi nello scompartimento?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "48",
-          "soluzione": true,
-          "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione e quindi si tratta di calcolare il numero di permutazioni di 4 persone su 4 posti, cioè 4! = 1·2·3·4 = 24. Ne segue che i modi diversi che hanno i sei amici per disporsi nello scompartimento sono 2·24 = 48. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "B",
-          "text": "4",
-          "soluzione": false,
-          "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione. Se si fa uso della formula per calcolare il numero di permutazioni di 4 persone su 4 posti, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "240",
-          "soluzione": false,
-          "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione. Se si fa uso della formula per calcolare il numero di permutazioni di 4 persone su 4 posti, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "8",
-          "soluzione": false,
-          "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione. Se si fa uso della formula per calcolare il numero di permutazioni di 4 persone su 4 posti, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "10",
-          "soluzione": false,
-          "feedback": "Aldo e Bea hanno due posti a disposizione e quindi hanno due modi per disporsi. Gli altri quattro amici hanno quattro posti a disposizione. Se si fa uso della formula per calcolare il numero di permutazioni di 4 persone su 4 posti, si deduce che la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q69",
-      "question": "In un paese in cui ogni cittadino è tenuto a pagare in tasse il 25% del proprio reddito, un anno l'aliquota viene abbassata al 20%. Viene però contestualmente introdotta una tassa 'una tantum' di 1000 € che ogni contribuente è tenuto a pagare. Si può dire che in quello stesso anno, in rapporto a questa operazione:",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "i cittadini con un reddito superiore a 25 000 € hanno dovuto pagare un importo maggiorato di un quinto rispetto a quello che avrebbero dovuto pagare secondo le norme dell'anno precedente",
-          "soluzione": false,
-          "feedback": "Se x è il reddito in euro, un cittadino dovrà pagare, secondo il nuovo sistema, un importo di (20/100)x + 1000, mentre, con il vecchio sistema, avrebbe pagato (25/100)x. Osservando che x > 25 000, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "il peso fiscale è rimasto invariato per tutti",
-          "soluzione": false,
-          "feedback": "Se, ad esempio, il reddito di un cittadino è di 25 000 €, egli dovrà pagare, secondo il nuovo sistema, un importo di (20/100·25000 + 1000) = 6000 €, mentre, con il vecchio sistema, avrebbe pagato (25/100·25000) = 6250 €. Quindi il nuovo sistema risulta più conveniente. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "solo i cittadini con un reddito superiore a 10 000 € sono stati avvantaggiati",
-          "soluzione": false,
-          "feedback": "Se, ad esempio, il reddito di un cittadino è di 15 000 € > 10 000 €, egli dovrà pagare, secondo il nuovo sistema, un importo di (20/100·15000 + 1000) = 4000 €, mentre, con il vecchio sistema, avrebbe pagato (25/100·15000) = 3750 €. Quindi il nuovo sistema risulta meno conveniente. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "i cittadini con un reddito superiore a 25 000 € sono stati avvantaggiati",
-          "soluzione": true,
-          "feedback": "Se x è il reddito in euro, un cittadino dovrà pagare, secondo il nuovo sistema, un importo di (20/100)x + 1000, mentre, con il vecchio sistema, avrebbe pagato (25/100)x. Se x > 25 000, la differenza è (20/100 x + 1000) - 25/100 x = 1000 - x/20 < 1000 - 25000/20 = -250. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "E",
-          "text": "solo i cittadini con un reddito inferiore a 20 000 € sono stati avvantaggiati",
-          "soluzione": false,
-          "feedback": "Se, ad esempio, il reddito di un cittadino è di 15 000 € < 20 000 €, egli dovrà pagare, secondo il nuovo sistema, un importo di (20/100·15000 + 1000) = 4000 €, mentre, con il vecchio sistema, avrebbe pagato (25/100·15000) = 3750 €. Quindi il nuovo sistema risulta meno conveniente. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q85",
-      "question": "Rispetto ad un riferimento cartesiano ortogonale Oxy del piano, l'equazione (x-1)^2 - y^2 = 0 individua:",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "due rette incidenti",
-          "soluzione": true,
-          "feedback": "È immediato osservare che vale: (x-1)^2 - y^2 = (x-1-y)(x-1+y). Quindi i punti del luogo soddisfano una delle due seguenti condizioni: x-1-y=0 oppure x-1+y=0. Le due equazioni precedenti rappresentano due rette distinte che si intersecano nel punto (1,0). Pertanto la risposta è giusta."
-        },
-        {
-          "label": "B",
-          "text": "una parabola",
-          "soluzione": false,
-          "feedback": "È immediato osservare che vale: (x-1)^2 - y^2 = (x-1-y)(x-1+y). Quindi i punti del luogo soddisfano una delle due seguenti condizioni: x-1-y=0 oppure x-1+y=0. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "due soli punti",
-          "soluzione": false,
-          "feedback": "È immediato osservare che vale: (x-1)^2 - y^2 = (x-1-y)(x-1+y). Quindi i punti del luogo soddisfano una delle due seguenti condizioni: x-1-y=0 oppure x-1+y=0. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "una circonferenza",
-          "soluzione": false,
-          "feedback": "Sviluppando il quadrato al primo membro dell'equazione (x-1)^2 - y^2 = 0, si osserva che i coefficienti di x^2 e y^2 risultano avere segno opposto. Se si fa uso della definizione di circonferenza, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "due rette parallele",
-          "soluzione": false,
-          "feedback": "È immediato osservare che vale: (x-1)^2 - y^2 = (x-1-y)(x-1+y). Quindi i punti del luogo soddisfano una delle due seguenti condizioni: x-1-y=0 oppure x-1+y=0. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q83",
-      "question": "Una quantità di liquido che riempie una sfera di raggio K viene travasata in cilindri aventi diametro di base K ed altezza K. Qual è il numero minimo di cilindri che occorrono per compiere questa operazione?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "5",
-          "soluzione": false,
-          "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "6",
-          "soluzione": true,
-          "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Vale: Vs/Vc = (4/3)πK^3 / ((π/4)K^3) = 16/3 = 5 + 1/3, quindi il numero minimo di cilindri necessari è 6. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "C",
-          "text": "3",
-          "soluzione": false,
-          "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "9",
-          "soluzione": false,
-          "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "4",
-          "soluzione": false,
-          "feedback": "Il volume di una sfera di raggio K è Vs = (4/3)πK^3, mentre il volume di un cilindro avente diametro di base K ed altezza K è Vc = π(K/2)^2 K = (π/4)K^3. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q80",
-      "question": "In un gruppo di 100 persone 51 parlano inglese, 36 francese, delle quali 12 sia inglese che francese. Quante di loro non parlano né inglese né francese?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "49",
-          "soluzione": false,
-          "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "15",
-          "soluzione": false,
-          "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "29",
-          "soluzione": false,
-          "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "13",
-          "soluzione": false,
-          "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "25",
-          "soluzione": true,
-          "feedback": "L'insieme delle 100 persone può essere visto come l'unione dei seguenti quattro sottoinsiemi a due a due disgiunti: A = {persone che parlano sia inglese che francese}, B = {persone che parlano inglese, ma non parlano francese}, C = {persone che parlano francese, ma non parlano inglese}, D = {persone che non parlano né inglese né francese}. Il numero di persone in A è pari a nA = 12, il numero di persone in B è pari a nB = 51-12 = 39, il numero di persone in C è pari a nC = 36-12 = 24. Quindi il numero di persone in D è pari a nD = 100 - (12+39+24) = 25. Pertanto la risposta è giusta."
-        }
-      ]
-    },
-    {
-      "id": "Q90",
-      "question": "L'equazione x(x - a) = 1 ha due soluzioni distinte",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "se e solo se a ≥ 0",
-          "soluzione": false,
-          "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "se e solo se -1 < a < 1",
-          "soluzione": false,
-          "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "per nessun valore reale di a",
-          "soluzione": false,
-          "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "per tutti gli a reali",
-          "soluzione": true,
-          "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Quindi l'equazione ha sempre due soluzioni reali distinte. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "E",
-          "text": "se e solo se -2 < a < 2",
-          "soluzione": false,
-          "feedback": "L'equazione proposta è un'equazione di secondo grado che può essere posta nella forma x^2 - ax - 1 = 0. Il discriminante vale Δ = a^2 + 4 ed è positivo per ogni valore reale di a. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q78",
-      "question": "L'equazione sin x = -x",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "ammette infinite soluzioni",
-          "soluzione": false,
-          "feedback": "L'equazione proposta può essere studiata nella forma equivalente sin x + x = 0, e, essendo f(x)=sin x + x una funzione dispari, basta considerare i valori x ≥ 0. Se si fa uso delle proprietà della funzione sin x, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "se h>0 è una soluzione, allora anche x = h+π lo è",
-          "soluzione": false,
-          "feedback": "Se h>0 è una soluzione, vale sin h = -h. D'altra parte sin(h+π) = - sin h = h, e quindi h+π è una soluzione dell'equazione se e solo se h = -(h+π), cioè h = -π/2, ma tale valore è negativo. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "non ammette soluzioni",
-          "soluzione": false,
-          "feedback": "È immediato osservare che x=0 è una soluzione. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "ammette soltanto una soluzione",
-          "soluzione": true,
-          "feedback": "L'equazione proposta può essere studiata nella forma equivalente sin x + x = 0, e, essendo f(x)=sin x + x una funzione dispari, basta considerare i valori x ≥ 0. È immediato osservare che x=0 è una soluzione. Inoltre, vale: 0 < x ≤ π ⇒ sin x + x > 0; x > π ⇒ sin x + x > -1 + π > 0, quindi non esistono altre soluzioni. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "E",
-          "text": "ammette esattamente due soluzioni",
-          "soluzione": false,
-          "feedback": "L'equazione proposta può essere studiata nella forma equivalente sin x + x = 0, e, essendo f(x)=sin x + x una funzione dispari, basta considerare i valori x ≥ 0. Se si fa uso delle proprietà della funzione sin x, si deduce che la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q89",
-      "question": "Nel salvadanaio di Geremia ci sono monete da 1 € e da 2 €, per un totale di 60 €. Quale delle seguenti affermazioni è vera?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "Se il salvadanaio contiene almeno 30 monete, allora la maggior parte di queste sono da 2 €",
-          "soluzione": false,
-          "feedback": "Se, ad esempio, ci sono 20 monete da 1 € e 20 monete da 2 € il salvadanaio contiene 60 € e 40 monete, ma la maggior parte non è da 2 €. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "Il numero di monete da 1 € non può essere uguale al numero di monete da 2 €",
-          "soluzione": false,
-          "feedback": "Se, ad esempio, ci sono 20 monete da 1 € e 20 monete da 2 € il salvadanaio contiene 60 €. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "Se il salvadanaio contiene meno di 40 monete, allora la maggior parte di queste sono da 2 €",
-          "soluzione": true,
-          "feedback": "Introduciamo le notazioni: n = numero totale di monete, n1 = numero di monete da 1 €, n2 = numero di monete da 2 €. Deve valere n1 + n2 = n, n1 + 2 n2 = 60. Dalle relazioni precedenti si ottiene n1 = 2n - 60, n2 = 60 - n. Se n < 40 si ha n1 < 20 e n2 > 20. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "D",
-          "text": "Il numero di monete da 1 € è sicuramente minore del numero di monete da 2 €",
-          "soluzione": false,
-          "feedback": "Se, ad esempio, ci sono 56 monete da 1 € e 2 monete da 2 € il salvadanaio contiene 60 €, ma il numero di monete da 1 € è maggiore. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "Il numero di monete da 1 € è sicuramente maggiore del numero di monete da 2 €",
-          "soluzione": false,
-          "feedback": "Se, ad esempio, ci sono 2 monete da 1 € e 29 monete da 2 € il salvadanaio contiene 60 €, ma il numero di monete da 1 € è minore. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q84",
-      "question": "Il resto della divisione del polinomio 2x^3 - 3x + 2 per x-2 è:",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "8",
-          "soluzione": false,
-          "feedback": "Se si fa uso del teorema del resto, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "-1",
-          "soluzione": false,
-          "feedback": "Se si fa uso del teorema del resto, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "12",
-          "soluzione": true,
-          "feedback": "Il teorema del resto stabilisce che il resto della divisione proposta si ottiene valutando il polinomio per x=2: resto = (2x^3 - 3x + 2)|x=2 = 16 - 6 + 2 = 12. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "D",
-          "text": "-8",
-          "soluzione": false,
-          "feedback": "Se si fa uso del teorema del resto, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "-12",
-          "soluzione": false,
-          "feedback": "Se si fa uso del teorema del resto, si deduce che la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q66",
-      "question": "In un piano cartesiano consideriamo le rette r_k di equazione y = kx + 2k + 1 dove k è un parametro reale. Quale delle seguenti affermazioni è vera?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "Le rette r_k sono a due a due incidenti, ma non esiste nessun punto comune a tutte",
-          "soluzione": false,
-          "feedback": "Se k e k' sono distinti le rette r_k e r_k' non sono parallele (hanno coefficiente angolare diverso) e il punto di intersezione si ottiene risolvendo il sistema y=kx+2k+1 e y=k'x+2k'+1. Il sistema ammette sempre la stessa soluzione per tutti i valori di k e k' distinti? In realtà si trova che il punto (-2,1) soddisfa tutte le equazioni. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "Per k=0 non si ottiene l'equazione di una retta",
-          "soluzione": false,
-          "feedback": "Per k=0 l'equazione diventa y=1, che è l'equazione di una retta orizzontale. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "Tutte le rette r_k passano per il punto (1,-2)",
-          "soluzione": false,
-          "feedback": "Se si sostituisce la coppia (1,-2) nell'equazione si ha: -2 = k + 2k + 1, una relazione che non è verificata per ogni k reale. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "Tutte le rette r_k passano per il punto (-2,1)",
-          "soluzione": true,
-          "feedback": "Se si sostituisce la coppia (-2,1) nell'equazione si ha: 1 = -2k + 2k + 1, una relazione che è verificata per ogni k reale. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "E",
-          "text": "Le rette r_k sono parallele fra loro",
-          "soluzione": false,
-          "feedback": "Se k e k' sono distinti le rette r_k e r_k' non sono parallele perché hanno coefficiente angolare diverso. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q79",
-      "question": "L'insieme {(x,y) ∈ R^2 : x≠0, y/x > 2} è costituito da",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "una delle parti di piano delimitate da una iperbole",
-          "soluzione": false,
-          "feedback": "I punti (x,y) dell'insieme soddisfano la disequazione (y-2x)/x > 0. Risolvendo tale disequazione, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "una corona circolare",
-          "soluzione": false,
-          "feedback": "I punti (x,y) dell'insieme soddisfano la disequazione (y-2x)/x > 0. Risolvendo tale disequazione, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "due angoli opposti al vertice",
-          "soluzione": true,
-          "feedback": "I punti (x,y) dell'insieme considerato si ottengono risolvendo la disequazione (y-2x)/x > 0. Le sue soluzioni soddisfano uno dei seguenti sistemi di disequazioni: y-2x < 0 e x < 0, oppure y-2x > 0 e x > 0. Il primo sistema individua i punti del terzo quadrante che si trovano sotto la retta y=2x, mentre il secondo sistema individua i punti del primo quadrante che si trovano sopra la retta y=2x. Quindi l'insieme è costituito da due angoli opposti al vertice. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "D",
-          "text": "un semipiano",
-          "soluzione": false,
-          "feedback": "I punti (x,y) dell'insieme soddisfano la disequazione (y-2x)/x > 0. Risolvendo tale disequazione, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "due semipiani",
-          "soluzione": false,
-          "feedback": "I punti (x,y) dell'insieme soddisfano la disequazione (y-2x)/x > 0. Risolvendo tale disequazione, si deduce che la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q64",
-      "question": "Sia p un numero positivo dispari e q il numero dispari successivo. Si ha:",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "q^2 - p^2 è divisibile per 16 e può non essere divisibile per 32",
-          "soluzione": false,
-          "feedback": "Se, ad esempio, p=1 e q=3 vale q^2-p^2=9-1=8, che non è divisibile per 16. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "q^2 - p^2 può essere dispari",
-          "soluzione": false,
-          "feedback": "Se p e q sono dispari anche p^2 e q^2 sono dispari e quindi q^2-p^2 è sempre pari in quanto differenza di numeri dispari. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "q^2 - p^2 è divisibile per 2 e può non essere divisibile per 4",
-          "soluzione": false,
-          "feedback": "Se p è un numero positivo dispari vuol dire che per qualche intero positivo k vale p=2k-1. Il numero dispari successivo di p è q=2k+1. Vale: q^2-p^2 = (q+p)(q-p) = 4k·2 = 8k. Quindi q^2-p^2 è sempre divisibile per 4. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "q^2 - p^2 è divisibile per 4 e può non essere divisibile per 8",
-          "soluzione": false,
-          "feedback": "Se p è un numero positivo dispari vuol dire che per qualche intero positivo k vale p=2k-1. Il numero dispari successivo di p è q=2k+1. Vale: q^2-p^2 = (q+p)(q-p) = 4k·2 = 8k. Quindi q^2-p^2 è sempre divisibile per 8. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "q^2 - p^2 è divisibile per 8 e può non essere divisibile per 16",
-          "soluzione": true,
-          "feedback": "Se p è un numero positivo dispari vuol dire che per qualche intero positivo k vale p=2k-1. Il numero dispari successivo di p è q=2k+1. Vale: q^2-p^2 = (q+p)(q-p) = 4k·2 = 8k. Quindi q^2-p^2 è sempre divisibile per 8. Se, ad esempio, p=1 e q=3 vale q^2-p^2=9-1=8, che non è divisibile per 16. Pertanto la risposta è giusta."
-        }
-      ]
-    },
-    {
-      "id": "Q76",
-      "question": "L'espressione log(x^4 + 2x^2 + sin^2 x + cos^2 x) coincide con",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "4 log(1+x)",
-          "soluzione": false,
-          "feedback": "Se si fa uso dell'uguaglianza sin^2 x + cos^2 x = 1 e delle proprietà dei logaritmi, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "[log(1+x^2)]^2",
-          "soluzione": false,
-          "feedback": "Se si fa uso dell'uguaglianza sin^2 x + cos^2 x = 1 e delle proprietà dei logaritmi, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "2 log(1+x^2)",
-          "soluzione": true,
-          "feedback": "Usando l'uguaglianza sin^2 x + cos^2 x = 1 e le proprietà dei logaritmi, si ha: log(x^4 + 2x^2 + sin^2 x + cos^2 x) = log(x^4 + 2x^2 + 1) = log((x^2+1)^2) = 2 log(x^2+1). Pertanto la risposta è giusta."
-        },
-        {
-          "label": "D",
-          "text": "log(x^4+2x^2) + log(sin^2 x+cos^2 x)",
-          "soluzione": false,
-          "feedback": "Se si fa uso dell'uguaglianza sin^2 x + cos^2 x = 1 e delle proprietà dei logaritmi, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "2 log(1+x+sin x+cos x)",
-          "soluzione": false,
-          "feedback": "Se si fa uso dell'uguaglianza sin^2 x + cos^2 x = 1 e delle proprietà dei logaritmi, si deduce che la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q70",
-      "question": "Un rettangolo è formato da due quadrati il cui lato misura 2 cm e da sette quadrati il cui lato misura 1 cm. Il perimetro del rettangolo misura",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "22 cm",
-          "soluzione": false,
-          "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Modi diversi per farlo sono illustrati in figura. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Se si fa uso di tali informazioni, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "18 cm",
-          "soluzione": false,
-          "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Modi diversi per farlo sono illustrati in figura. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Se si fa uso di tali informazioni, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "24 cm",
-          "soluzione": false,
-          "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Modi diversi per farlo sono illustrati in figura. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Se si fa uso di tali informazioni, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "20 cm",
-          "soluzione": false,
-          "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Modi diversi per farlo sono illustrati in figura. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Se si fa uso di tali informazioni, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "16 cm",
-          "soluzione": true,
-          "feedback": "Osserviamo preliminarmente che non c'è un unico modo per disporre i 9 quadrati in modo da formare un rettangolo. Tuttavia si può affermare che le misure dei lati del rettangolo espresse in cm sono numeri interi maggiori di 1 (il rettangolo deve contenere quadrati il cui lato misura 2 cm) e che l'area A del rettangolo vale A = (2·2^2 + 7·1^2) cm^2 = 15 cm^2. Poiché la scomposizione in fattori primi di 15 è 15 = 3·5, necessariamente, se si riesce a formare un rettangolo, i suoi lati misurano 3 cm e 5 cm. Modi diversi per costruire un rettangolo con le dimensioni trovate sono illustrati in figura. Quindi il perimetro del rettangolo vale P = 2(3+5) cm = 16 cm. Pertanto la risposta è giusta."
-        }
-      ]
-    },
-    {
-      "id": "Q87",
-      "question": "Dato n intero positivo, sia x_n la soluzione dell'equazione (x+1)/1 + (x+2)/2 + ... + (x+n)/n = n. Quale delle seguenti affermazioni è vera?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "x_n ≠ 0 per ogni n",
-          "soluzione": false,
-          "feedback": "Per ogni n intero positivo, l'equazione proposta è un'equazione di primo grado nella variabile x. Risolvendola, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "se n1 < n2 allora x_n1 < x_n2",
-          "soluzione": false,
-          "feedback": "Per ogni n intero positivo, l'equazione proposta è un'equazione di primo grado nella variabile x. Risolvendola, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "se n1 < n2 allora x_n1 > x_n2",
-          "soluzione": false,
-          "feedback": "Per ogni n intero positivo, l'equazione proposta è un'equazione di primo grado nella variabile x. Risolvendola, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "x_n = x_n + 1 per ogni n",
-          "soluzione": false,
-          "feedback": "La condizione x_n = x_n + 1 è falsa per ogni valore di x_n. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "x_n = 0 per ogni n",
-          "soluzione": true,
-          "feedback": "Per ogni n intero positivo, l'equazione proposta è un'equazione di primo grado nella variabile x e, mettendo in evidenza la x al primo membro, essa è equivalente all'equazione x(1 + 1/2 + ... + 1/n) + (1 + 2/2 + ... + n/n) = n, ovvero, posto a_n = 1 + 1/2 + ... + 1/n > 0, a_n x = 0. Quindi la soluzione (unica) dell'equazione è x_n = 0 per ogni n. Pertanto la risposta è giusta."
-        }
-      ]
-    },
-    {
-      "id": "Q65",
-      "question": "Nel piano cartesiano, il luogo dei punti di coordinate (x,y) che verificano l'equazione (y - 2x^2)(y^2 - 4) = 0 è:",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "l'insieme costituito dai punti di coordinate (1,-2), (1,2)",
-          "soluzione": false,
-          "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "l'insieme costituito dai punti di coordinate (1,2), (-1,2)",
-          "soluzione": false,
-          "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "l'unione di una parabola e di due rette",
-          "soluzione": true,
-          "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. La prima è l'equazione di una parabola, le altre due sono rette. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "D",
-          "text": "l'intersezione di un'iperbole e di due rette",
-          "soluzione": false,
-          "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "l'intersezione di una parabola e di due rette",
-          "soluzione": false,
-          "feedback": "Il luogo richiesto è formato da tutti e soli i punti che soddisfano almeno una delle seguenti equazioni: y-2x^2=0 oppure y-2=0 oppure y+2=0. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q63",
-      "question": "I numeri interi strettamente positivi a, b, c, d sono tutti differenti tra loro e sono tutti minori di 6. Sapendo che la loro somma vale 12 determinare il loro prodotto.",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "60",
-          "soluzione": false,
-          "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "24",
-          "soluzione": false,
-          "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "50",
-          "soluzione": false,
-          "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "40",
-          "soluzione": true,
-          "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Quindi il prodotto dei quattro numeri è pari a 1·2·4·5 = 40. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "E",
-          "text": "30",
-          "soluzione": false,
-          "feedback": "I numeri a,b,c,d sono tutti differenti tra loro e possono assumere solo i valori 1,2,3,4,5. Osservato che 1+2+3+4+5=15, si deduce che sono assunti solo i valori 1,2,4,5 (in un ordine qualunque). Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q81",
-      "question": "Quanti sono i numeri reali x che sono soluzioni dell'equazione tan(2x - 5π) = -10^4?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "uno",
-          "soluzione": false,
-          "feedback": "Se si fa uso della proprietà di periodicità della funzione tan(2x-5π), si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "cinque",
-          "soluzione": false,
-          "feedback": "Se si fa uso della proprietà di periodicità della funzione tan(2x-5π), si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "infiniti",
-          "soluzione": true,
-          "feedback": "La funzione tan(2x-5π), nell'intervallo -π/4 < x < π/4, assume tutti i valori reali, quindi in tale intervallo esiste una soluzione dell'equazione. Detta x̄ tale soluzione, essendo la funzione periodica di periodo T = π/2, sono soluzioni dell'equazione gli infiniti valori nella forma x̄ + k·π/2, con k intero qualunque. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "D",
-          "text": "nessuno",
-          "soluzione": false,
-          "feedback": "Se si fa uso della proprietà di periodicità della funzione tan(2x-5π), si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "due",
-          "soluzione": false,
-          "feedback": "Se si fa uso della proprietà di periodicità della funzione tan(2x-5π), si deduce che la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q74",
-      "question": "Un triangolo rettangolo, ruotando attorno ai propri cateti, genera due coni. Il rapporto fra i volumi dei due coni è pari al rapporto fra",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "il cateto maggiore e l'ipotenusa",
-          "soluzione": false,
-          "feedback": "Siano a e b i cateti del triangolo rettangolo. Il cono generato dalla rotazione del triangolo intorno ad a ha altezza a e raggio di base b. Il cono generato dalla rotazione del triangolo intorno a b ha altezza b e raggio di base a. Se si calcolano i volumi dei coni, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "i cateti",
-          "soluzione": true,
-          "feedback": "Siano a e b i cateti del triangolo rettangolo. I volumi dei coni sono: rotazione intorno ad a: V_a = (1/3)π b^2 a; rotazione intorno a b: V_b = (1/3)π a^2 b. Quindi il rapporto tra i volumi dei due coni è V_a/V_b = b/a. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "C",
-          "text": "i quadrati dei cateti",
-          "soluzione": false,
-          "feedback": "Siano a e b i cateti del triangolo rettangolo. Il cono generato dalla rotazione del triangolo intorno ad a ha altezza a e raggio di base b. Il cono generato dalla rotazione del triangolo intorno a b ha altezza b e raggio di base a. Se si calcolano i volumi dei coni, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "il cateto minore e l'ipotenusa",
-          "soluzione": false,
-          "feedback": "Siano a e b i cateti del triangolo rettangolo. Il cono generato dalla rotazione del triangolo intorno ad a ha altezza a e raggio di base b. Il cono generato dalla rotazione del triangolo intorno a b ha altezza b e raggio di base a. Se si calcolano i volumi dei coni, si deduce che la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "i cubi dei cateti",
-          "soluzione": false,
-          "feedback": "Siano a e b i cateti del triangolo rettangolo. Il cono generato dalla rotazione del triangolo intorno ad a ha altezza a e raggio di base b. Il cono generato dalla rotazione del triangolo intorno a b ha altezza b e raggio di base a. Se si calcolano i volumi dei coni, si deduce che la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q61",
-      "question": "Per quale dei seguenti valori di x si ha sin(x/3) = sin x / 3?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "x = π/3",
-          "soluzione": false,
-          "feedback": "Osserviamo che, per 𝛼 ∈ ℝ, vale: sin 3𝛼 = sin 𝛼 cos 2𝛼 + cos 𝛼 sin 2𝛼 = sin 𝛼(1 - 2 sin^2 𝛼) + 2 sin 𝛼 cos^2 𝛼 = sin 𝛼[(1 - 2 sin^2 𝛼) + 2(1 - sin^2 𝛼)] = 3 sin 𝛼 - 4 sin^3 𝛼. Usando la diseguaglianza precedente con 𝛼 = π/9 e osservando che 0 < π/9 < π/2, si ha: sin(π/3) = 3 sin(π/9) - 4 sin^3(π/9). Quindi sin(π/3)/3 = sin(π/9) - (4/3) sin^3(π/9) < sin(π/9). Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "x = 3π",
-          "soluzione": true,
-          "feedback": "Se si valutano i due membri dell'uguaglianza proposta per x = 3π, si ha: sin(3π/3) = sin π = 0, sin(3π)/3 = 0/3 = 0. Quindi x = 3π verifica l'uguaglianza. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "C",
-          "text": "x = 2π",
-          "soluzione": false,
-          "feedback": "Se si valutano i due membri dell'uguaglianza proposta per x = 2π, si ha: sin(2π/3) = √3/2, sin(2π)/3 = 0/3 = 0. Quindi x = 2π non verifica l'uguaglianza. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "x = π/6",
-          "soluzione": false,
-          "feedback": "Se si valutano i due membri dell'uguaglianza proposta per x = π/6, si ha: sin(π/18) ≈ 0,174, sin(π/6)/3 = (1/2)/3 = 1/6 ≈ 0,167. Quindi x = π/6 non verifica l'uguaglianza. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "x = π/2",
-          "soluzione": false,
-          "feedback": "Se si valutano i due membri dell'uguaglianza proposta per x = π/2, si ha: sin(π/6) = 1/2, sin(π/2)/3 = 1/3. Quindi x = π/2 non verifica l'uguaglianza. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q68",
-      "question": "Si considerino tutti i numeri reali a della forma a = (3n+3+(-1)^n)/(n+1) dove n è un qualunque intero positivo. Quanti dei numeri a sono maggiori di 2,99?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "infiniti, ma non tutti",
-          "soluzione": true,
-          "feedback": "Vale: a = (3n+3+(-1)^n)/(n+1) = (3(n+1)+(-1)^n)/(n+1) = 3 + (-1)^n/(n+1). Se n è pari, a = 3 + 1/(n+1) > 3 > 2,99 e quindi esistono infiniti numeri a maggiori di 2,99. Ad esempio, se n=1, a=3-1/2=2,5 < 2,99 e quindi non tutti i numeri a sono maggiori di 2,99. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "B",
-          "text": "nessuno",
-          "soluzione": false,
-          "feedback": "Vale: a = 3 + (-1)^n/(n+1). Se n è pari, a > 3, quindi ce ne sono. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "uno",
-          "soluzione": false,
-          "feedback": "Vale: a = 3 + (-1)^n/(n+1). Se n è pari, a > 3, quindi ce ne sono infiniti. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "due",
-          "soluzione": false,
-          "feedback": "Vale: a = 3 + (-1)^n/(n+1). Se n è pari, a > 3, quindi ce ne sono infiniti. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "tutti",
-          "soluzione": false,
-          "feedback": "Ad esempio, se n=1, a=3-1/2=2,5 < 2,99 e quindi non tutti i numeri a sono maggiori di 2,99. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q62",
-      "question": "Siano dati nel piano due triangoli equilateri che si possono ruotare e traslare liberamente uno rispetto all'altro. Data una qualsiasi posizione dei due triangoli, la loro porzione di superficie sovrapposta non potrà mai essere",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "un trapezio",
-          "soluzione": false,
-          "feedback": "Ad esempio, se si dispongono i triangoli come in figura, la porzione di superficie sovrapposta è un trapezio. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "un esagono",
-          "soluzione": false,
-          "feedback": "Ad esempio, se si dispongono i triangoli come in figura, la porzione di superficie sovrapposta è un esagono. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "un rettangolo",
-          "soluzione": true,
-          "feedback": "In generale, la porzione di superficie sovrapposta è un poligono i cui lati sono parti dei lati dei triangoli equilateri. Per ottenere un rettangolo bisogna necessariamente disporre i triangoli in modo che un lato di uno e un lato dell'altro siano paralleli. Con la disposizione descritta, due lati qualunque (di entrambi i triangoli) o sono paralleli o formano un angolo di 60° e quindi non è possibile ottenere un rettangolo. In maniera alternativa, si può anche procedere per esclusione, osservando che è possibile disporre i triangoli in modo da ottenere un trapezio, un esagono, un triangolo equilatero o un triangolo rettangolo (le altre risposte). Pertanto la risposta è giusta."
-        },
-        {
-          "label": "D",
-          "text": "un triangolo equilatero",
-          "soluzione": false,
-          "feedback": "Ad esempio, se i triangoli vengono disposti in modo che uno sia contenuto nell'altro, la porzione di superficie sovrapposta è un triangolo equilatero. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "un triangolo rettangolo",
-          "soluzione": false,
-          "feedback": "Ad esempio, se si dispongono i triangoli come in figura, la porzione di superficie sovrapposta è un triangolo rettangolo. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q82",
-      "question": "Sia x un numero razionale che soddisfa questa proprietà: x ≤ y per ogni y razionale tale che y > √2. Quale delle seguenti affermazioni è vera?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "x è il più grande numero razionale minore di √2",
-          "soluzione": false,
-          "feedback": "Poiché √2 è un numero irrazionale, non esiste il più grande numero razionale minore di √2. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "x è il più piccolo numero razionale maggiore di √2",
-          "soluzione": false,
-          "feedback": "Poiché √2 è un numero irrazionale, non esiste il più piccolo numero razionale maggiore di √2. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "x = y",
-          "soluzione": false,
-          "feedback": "Il valore di y non è fissato, mentre quello di x lo è. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "x < √2",
-          "soluzione": true,
-          "feedback": "Non può valere x = √2 perché x è razionale, mentre √2 non lo è. D'altra parte, se fosse x > √2, si potrebbe scegliere y razionale tale che x > y > √2 ottenendo una contraddizione. Quindi deve valere x < √2. Pertanto la risposta è giusta."
-        },
-        {
-          "label": "E",
-          "text": "x = √2",
-          "soluzione": false,
-          "feedback": "Non può valere x = √2 perché x è razionale, mentre √2 non lo è. Pertanto la risposta è sbagliata."
-        }
-      ]
-    },
-    {
-      "id": "Q77",
-      "question": "Date le due circonferenze rispettivamente di centro (0,0) e raggio 1 e di centro (2,2) e raggio 1, si indichi con d(P1,P2) la distanza tra un generico punto P1 che sta sulla prima circonferenza ed un generico punto P2 che sta sulla seconda circonferenza. Si consideri poi il minimo m di d(P1,P2) al variare di P1 e di P2. Si ha che",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "m = √2",
-          "soluzione": false,
-          "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "m = √2 - 1",
-          "soluzione": false,
-          "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "m = √2 - 1",
-          "soluzione": false,
-          "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "tale minimo non esiste",
-          "soluzione": false,
-          "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "m = 2(√2 - 1)",
-          "soluzione": true,
-          "feedback": "La distanza tra i centri delle circonferenze vale √((2-0)^2 + (2-0)^2) = 2√2 > 2, quindi esse non hanno punti in comune. I punti sulle circonferenze che rendono minima d(P1,P2) si trovano sulla retta che passa per i centri come mostrato in figura. La loro distanza si può calcolare sottraendo alla distanza tra i centri la somma dei raggi delle circonferenze: m = 2√2 - 2·1 = 2(√2-1). Pertanto la risposta è giusta."
-        }
-      ]
-    },
-    {
-      "id": "Q72",
-      "question": "Un'azienda vinicola produce il rinomato pirlot, un miscuglio di bianco pinot e di rosso merlot in parti uguali. Da una bottiglia il produttore ne preleva 1/3 e lo rimpiazza con una parte identica di solo pinot, poi preleva 1/4 del nuovo miscuglio e lo rimpiazza ancora con una parte identica di solo pinot. Quale frazione del miscuglio finale è composta di pinot?",
-      "image": null,
-      "category": "matematica",
-      "choices": [
-        {
-          "label": "A",
-          "text": "5/7",
-          "soluzione": false,
-          "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "B",
-          "text": "7/12",
-          "soluzione": false,
-          "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "C",
-          "text": "5/12",
-          "soluzione": false,
-          "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "D",
-          "text": "2/3",
-          "soluzione": false,
-          "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Pertanto la risposta è sbagliata."
-        },
-        {
-          "label": "E",
-          "text": "3/4",
-          "soluzione": true,
-          "feedback": "Dopo ogni rimpiazzo, la frazione di pinot che resta nel miscuglio si calcola nel modo seguente. Si moltiplica la frazione di pinot prima dell'operazione per la frazione di vino che resta in bottiglia dopo il prelievo. Al valore ottenuto si somma la frazione aggiunta. Riassumiamo in una tabella gli effetti delle manipolazioni sul vino. Frazione di pinot: Situazione iniziale 1/2; Primo rimpiazzo: 1/2 × 2/3 + 1/3 = 2/3; Secondo rimpiazzo: 2/3 × 3/4 + 1/4 = 3/4. Pertanto la risposta è giusta."
-        }
-      ]
-    }
-  ]
+    ]
 }

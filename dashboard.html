@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TOLC Trainer — Dashboard</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOLC Trainer — Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <a href="dashboard.html" class="navbar-brand">
-        <span class="bracket">[</span>TOLC<span class="bracket">]</span>
-      </a>
-      <div class="navbar-actions">
-        <span class="text-sm text-mono text-muted" id="nav-username"></span>
-        <a href="profile.html" class="btn btn-ghost text-sm">👤 Profilo</a>
-        <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
-        <button class="btn btn-outline text-sm" id="btn-logout">Esci</button>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="dashboard.html" class="navbar-brand">
+                <span class="bracket">[</span>TOLC<span class="bracket">]</span>
+            </a>
+            <div class="navbar-actions">
+                <span class="text-sm text-mono text-muted" id="nav-username"></span>
+                <a href="profile.html" class="btn btn-ghost text-sm">👤 Profilo</a>
+                <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
+                <button class="btn btn-outline text-sm" id="btn-logout">Esci</button>
+            </div>
+        </div>
+    </nav>
 
-  <div class="container">
-    <div class="alert" id="dashboard-alert" style="margin-top:1rem"></div>
-  </div>
-
-  <main class="container fade-in" style="padding-top:2rem;padding-bottom:4rem">
-    <div class="main-hero">
-      <h1>Ciao, <span id="welcome-name" class="text-accent"></span></h1>
-      <p class="subtitle">Scegli una materia per iniziare l'allenamento.</p>
+    <div class="container">
+        <div class="alert" id="dashboard-alert" style="margin-top:1rem"></div>
     </div>
 
-    <!-- Statistiche globali rapide -->
-    <div id="global-stats" class="mb-lg"></div>
+    <main class="container fade-in" style="padding-top:2rem;padding-bottom:4rem">
+        <div class="main-hero">
+            <h1>Ciao, <span id="welcome-name" class="text-accent"></span></h1>
+            <p class="subtitle">Scegli una materia per iniziare l'allenamento.</p>
+        </div>
 
-    <!-- Card materie -->
-    <div class="mode-grid" id="subject-cards">
-      <!-- generate da js -->
-    </div>
+        <!-- Statistiche globali rapide -->
+        <div id="global-stats" class="mb-lg"></div>
 
-    <!-- Ultime sessioni -->
-    <div class="card mt-lg">
-      <h3 class="mb-md">📅 Ultime sessioni</h3>
-      <div id="recent-history">
-        <div class="spinner"></div>
-      </div>
-    </div>
-  </main>
+        <!-- Card materie -->
+        <div class="mode-grid" id="subject-cards">
+            <!-- generate da js -->
+        </div>
 
-  <script src="js/auth.js"></script>
-  <script src="js/dashboard.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggle = document.getElementById('theme-toggle');
-      if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
-    });
-  </script>
+        <!-- Ultime sessioni -->
+        <div class="card mt-lg">
+            <h3 class="mb-md">📅 Ultime sessioni</h3>
+            <div id="recent-history">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('theme-toggle');
+            if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
+        });
+    </script>
 </body>
+
 </html>

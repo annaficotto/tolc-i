@@ -1,118 +1,160 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TOLC Trainer — Matematica 1</title>
-  <link rel="stylesheet" href="../style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TOLC Trainer — Matematica 1</title>
+    <link rel="stylesheet" href="../style.css" />
 </head>
+
 <body>
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <a href="../dashboard.html" class="navbar-brand">
-        <span class="bracket">[</span>TOLC<span class="bracket">]</span>
-      </a>
-      <div class="navbar-actions">
-        <span class="text-sm text-mono text-muted" id="nav-username"></span>
-        <a href="../profile.html" class="btn btn-ghost text-sm">👤 Profilo</a>
-        <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
-        <button class="btn btn-outline text-sm" id="btn-logout">Esci</button>
-      </div>
-    </div>
-  </nav>
-
-  <div class="container">
-    <div class="alert" id="app-alert" style="margin-top:1rem"></div>
-  </div>
-
-  <section id="section-welcome" class="container quiz-area">
-    <div class="main-hero">
-      <h1>Matematica 1 · <span id="welcome-name" class="text-accent"></span></h1>
-      <p class="subtitle">Scegli come vuoi allenarti.</p>
-    </div>
-    <div id="welcome-stats" class="mb-lg"></div>
-    <div class="mode-grid">
-      <div class="mode-card" id="btn-train-resume" tabindex="0" role="button">
-        <span class="mode-icon">📖</span><h3>Riprendi Allenamento</h3><p>Continua dal punto in cui ti eri fermato.</p>
-      </div>
-      <div class="mode-card" id="btn-train-new" tabindex="0" role="button">
-        <span class="mode-icon">🔄</span><h3>Ricomincia dall'Inizio</h3><p>Riparte dalla prima domanda.</p>
-      </div>
-      <div class="mode-card" id="btn-review" tabindex="0" role="button">
-        <span class="mode-icon">🔁</span><h3>Ripasso Errori</h3><p>Rivedi solo le domande sbagliate.</p>
-      </div>
-      <div class="mode-card" id="btn-sim" tabindex="0" role="button">
-        <span class="mode-icon">⏱</span><h3>Simulazione Test</h3><p>Timer, domande casuali e punteggio.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="section-sim-config" class="container quiz-area hidden">
-    <div class="flex-between mb-lg">
-      <h2>⚙ Configura Simulazione</h2>
-      <button class="btn btn-ghost" id="btn-sim-cancel">✕ Annulla</button>
-    </div>
-    <div class="card card-accent">
-      <div class="sim-config">
-        <div class="config-row">
-          <div class="form-group"><label for="sim-num-questions">N° Domande</label><input type="number" id="sim-num-questions" value="20" min="1" max="200" /></div>
-          <div class="form-group"><label for="sim-minutes">Durata (minuti)</label><input type="number" id="sim-minutes" value="90" min="5" max="180" /></div>
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="../dashboard.html" class="navbar-brand">
+                <span class="bracket">[</span>TOLC<span class="bracket">]</span>
+            </a>
+            <div class="navbar-actions">
+                <span class="text-sm text-mono text-muted" id="nav-username"></span>
+                <a href="../profile.html" class="btn btn-ghost text-sm">👤 Profilo</a>
+                <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
+                <button class="btn btn-outline text-sm" id="btn-logout">Esci</button>
+            </div>
         </div>
-        <div class="form-group"><label for="sim-penalty">Penalità risposta errata</label><input type="number" id="sim-penalty" value="0" min="0" max="1" step="0.05" /></div>
-        <button class="btn btn-primary" id="btn-sim-start">→ Inizia Simulazione</button>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <section id="section-quiz" class="container quiz-area hidden">
-    <div class="quiz-header">
-      <div class="flex gap-sm"><span id="mode-badge" class="badge badge-accent"></span><span id="category-badge" class="badge badge-muted"></span><span id="page-id" class="text-sm text-mono text-muted"></span></div>
-      <div class="flex gap-sm"><span id="review-counter" class="badge badge-warn hidden"></span><div id="timer-wrap" class="hidden flex gap-sm"><span class="text-sm text-muted">⏱</span><span id="timer-display" class="timer-display">90:00</span></div><span id="question-counter" class="q-counter"></span></div>
+    <div class="container">
+        <div class="alert" id="app-alert" style="margin-top:1rem"></div>
     </div>
-    <div class="progress-bar-wrap mb-md"><div class="progress-bar-fill" id="progress-fill" style="width:0%"></div></div>
-    <div class="flex-between mb-lg"><span id="progress-text" class="text-sm text-muted"></span></div>
-    <div class="card card-accent fade-in" id="question-card">
-      <p class="question-text" id="question-text">Caricamento domanda…</p>
-      <div id="question-image-wrap" class="question-image-wrap hidden">
-        <img id="question-image" class="question-image" alt="Immagine domanda" style="max-width:100%;margin:1rem 0;border-radius:var(--radius);">
-      </div>
-      <ul class="choices-list" id="choices-list"></ul>
-      <div class="explanation-box hidden" id="explanation-box">
-        <p class="text-sm text-mono text-muted mb-md">📝 Spiegazione</p>
-        <p id="explanation-text" style="color:var(--text)"></p>
-        <div id="explanation-image-wrap" class="explanation-image-wrap hidden">
-          <img id="explanation-image" class="explanation-image" alt="Immagine spiegazione" style="max-width:100%;margin-top:1rem;border-radius:var(--radius);">
+
+    <section id="section-welcome" class="container quiz-area">
+        <div class="main-hero">
+            <h1>Matematica 1 · <span id="welcome-name" class="text-accent"></span></h1>
+            <p class="subtitle">Scegli come vuoi allenarti.</p>
         </div>
-      </div>
-    </div>
-    <div class="flex gap-sm mt-md"><button class="btn btn-primary hidden" id="btn-continue">→ Continua</button><button class="btn btn-outline hidden" id="btn-skip">→ Salta</button></div>
-  </section>
+        <div id="welcome-stats" class="mb-lg"></div>
+        <div class="mode-grid">
+            <div class="mode-card" id="btn-train-resume" tabindex="0" role="button">
+                <span class="mode-icon">📖</span>
+                <h3>Riprendi Allenamento</h3>
+                <p>Continua dal punto in cui ti eri fermato.</p>
+            </div>
+            <div class="mode-card" id="btn-train-new" tabindex="0" role="button">
+                <span class="mode-icon">🔄</span>
+                <h3>Ricomincia dall'Inizio</h3>
+                <p>Riparte dalla prima domanda.</p>
+            </div>
+            <div class="mode-card" id="btn-review" tabindex="0" role="button">
+                <span class="mode-icon">🔁</span>
+                <h3>Ripasso Errori</h3>
+                <p>Rivedi solo le domande sbagliate.</p>
+            </div>
+            <div class="mode-card" id="btn-sim" tabindex="0" role="button">
+                <span class="mode-icon">⏱</span>
+                <h3>Simulazione Test</h3>
+                <p>Timer, domande casuali e punteggio.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="section-result" class="container quiz-area hidden">
-    <h2 class="mb-lg">📊 Risultati Simulazione</h2>
-    <div class="card card-accent text-center mb-lg">
-      <div class="result-circle"><div class="pct" id="result-pct">0%</div><div class="pct-label">Score</div></div>
-      <div class="stat-grid">
-        <div class="stat-item"><div class="stat-value" style="color:var(--success)" id="result-correct">0</div><div class="stat-label">Corrette</div></div>
-        <div class="stat-item"><div class="stat-value" style="color:var(--danger)" id="result-wrong">0</div><div class="stat-label">Errate</div></div>
-        <div class="stat-item"><div class="stat-value" style="color:var(--text-muted)" id="result-skipped">0</div><div class="stat-label">Non risp.</div></div>
-        <div class="stat-item"><div class="stat-value text-accent" id="result-time">—</div><div class="stat-label">Tempo</div></div>
-      </div>
-    </div>
-    <div class="flex gap-sm mb-lg"><button class="btn btn-primary" id="btn-back-home">← Torna alla Dashboard</button></div>
-    <h3 class="mb-md">Dettaglio risposte</h3><div id="result-list"></div>
-  </section>
+    <section id="section-sim-config" class="container quiz-area hidden">
+        <div class="flex-between mb-lg">
+            <h2>⚙ Configura Simulazione</h2>
+            <button class="btn btn-ghost" id="btn-sim-cancel">✕ Annulla</button>
+        </div>
+        <div class="card card-accent">
+            <div class="sim-config">
+                <div class="config-row">
+                    <div class="form-group"><label for="sim-num-questions">N° Domande</label><input type="number"
+                            id="sim-num-questions" value="20" min="1" max="200" /></div>
+                    <div class="form-group"><label for="sim-minutes">Durata (minuti)</label><input type="number"
+                            id="sim-minutes" value="90" min="5" max="180" /></div>
+                </div>
+                <div class="form-group"><label for="sim-penalty">Penalità risposta errata</label><input type="number"
+                        id="sim-penalty" value="0" min="0" max="1" step="0.05" /></div>
+                <button class="btn btn-primary" id="btn-sim-start">→ Inizia Simulazione</button>
+            </div>
+        </div>
+    </section>
 
-  <script src="../js/auth.js"></script>
-  <script src="../js/app-matematica1.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const user = Auth.getCurrentUser();
-      const nameEl = document.getElementById('welcome-name');
-      if (nameEl && user) nameEl.textContent = user.username;
-      const toggle = document.getElementById('theme-toggle');
-      if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
-    });
-  </script>
+    <section id="section-quiz" class="container quiz-area hidden">
+        <div class="quiz-header">
+            <div class="flex gap-sm"><span id="mode-badge" class="badge badge-accent"></span><span id="category-badge"
+                    class="badge badge-muted"></span><span id="page-id" class="text-sm text-mono text-muted"></span>
+            </div>
+            <div class="flex gap-sm"><span id="review-counter" class="badge badge-warn hidden"></span>
+                <div id="timer-wrap" class="hidden flex gap-sm"><span class="text-sm text-muted">⏱</span><span
+                        id="timer-display" class="timer-display">90:00</span></div><span id="question-counter"
+                    class="q-counter"></span>
+            </div>
+        </div>
+        <div class="progress-bar-wrap mb-md">
+            <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+        <div class="flex-between mb-lg"><span id="progress-text" class="text-sm text-muted"></span></div>
+        <div class="card card-accent fade-in" id="question-card">
+            <p class="question-text" id="question-text">Caricamento domanda…</p>
+            <div id="question-image-wrap" class="question-image-wrap hidden">
+                <img id="question-image" class="question-image" alt="Immagine domanda"
+                    style="max-width:100%;margin:1rem 0;border-radius:var(--radius);">
+            </div>
+            <ul class="choices-list" id="choices-list"></ul>
+            <div class="explanation-box hidden" id="explanation-box">
+                <p class="text-sm text-mono text-muted mb-md">📝 Spiegazione</p>
+                <p id="explanation-text" style="color:var(--text)"></p>
+                <div id="explanation-image-wrap" class="explanation-image-wrap hidden">
+                    <img id="explanation-image" class="explanation-image" alt="Immagine spiegazione"
+                        style="max-width:100%;margin-top:1rem;border-radius:var(--radius);">
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-sm mt-md"><button class="btn btn-primary hidden" id="btn-continue">→
+                Continua</button><button class="btn btn-outline hidden" id="btn-skip">→ Salta</button></div>
+    </section>
+
+    <section id="section-result" class="container quiz-area hidden">
+        <h2 class="mb-lg">📊 Risultati Simulazione</h2>
+        <div class="card card-accent text-center mb-lg">
+            <div class="result-circle">
+                <div class="pct" id="result-pct">0%</div>
+                <div class="pct-label">Score</div>
+            </div>
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <div class="stat-value" style="color:var(--success)" id="result-correct">0</div>
+                    <div class="stat-label">Corrette</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" style="color:var(--danger)" id="result-wrong">0</div>
+                    <div class="stat-label">Errate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" style="color:var(--text-muted)" id="result-skipped">0</div>
+                    <div class="stat-label">Non risp.</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value text-accent" id="result-time">—</div>
+                    <div class="stat-label">Tempo</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-sm mb-lg"><button class="btn btn-primary" id="btn-back-home">← Torna alla
+                Dashboard</button></div>
+        <h3 class="mb-md">Dettaglio risposte</h3>
+        <div id="result-list"></div>
+    </section>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/app-matematica1.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = Auth.getCurrentUser();
+            const nameEl = document.getElementById('welcome-name');
+            if (nameEl && user) nameEl.textContent = user.username;
+            const toggle = document.getElementById('theme-toggle');
+            if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
+        });
+    </script>
 </body>
+
 </html>
