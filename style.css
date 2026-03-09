@@ -938,46 +938,127 @@ input::placeholder {
 
 
 /* style.css - Aggiungi queste regole */
+
+.question-image-wrap {
+  margin: 1rem 0;
+  text-align: center;
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+}
+
 .question-image {
-    max-width: 100%;
-    max-height: 300px;
-    object-fit: contain;
-    border-radius: var(--radius);
-    background: var(--surface2);
-    padding: 0.5rem;
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.explanation-image-wrap {
+  margin-top: 1rem;
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 0.5rem;
 }
 
 .explanation-image {
-    max-width: 100%;
-    max-height: 200px;
-    object-fit: contain;
-    border-radius: var(--radius);
-    background: var(--surface);
-    padding: 0.5rem;
-    margin-top: 0.5rem;
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 2px);
 }
 
 .choice-image {
-    max-width: 40px;
-    max-height: 40px;
-    object-fit: contain;
-    border-radius: 4px;
-    margin-right: 0.5rem;
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-right: 0.5rem;
 }
 
 .choice-image-small {
-    max-width: 30px;
-    max-height: 30px;
-    object-fit: contain;
-    border-radius: 4px;
+  max-width: 30px;
+  max-height: 30px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .choice-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.9rem 1.1rem;
+  background: var(--surface2);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.choice-btn .choice-label {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--accent);
+  min-width: 1.2rem;
+  flex-shrink: 0;
 }
 
 .align-center {
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+/* style.css - Aggiungi queste regole */
+
+.choice-image-container {
+  margin-top: 1rem;
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+.choice-image-large {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.question-image-wrap {
+  margin: 1rem 0;
+  text-align: center;
+  background: var(--surface2);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+}
+
+.question-image {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 2px);
+}
+
+.explanation-image-wrap {
+  margin-top: 1rem;
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+}
+
+.explanation-image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 2px);
 }
