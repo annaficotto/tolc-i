@@ -24,8 +24,8 @@
     --font-mono: 'JetBrains Mono', monospace;
     --font-body: 'DM Sans', sans-serif;
     --transition: 0.2s ease;
-    /*--glass: rgba(22, 27, 34, 0.7);*/
-    --glass: radial-gradient(circle at 20% 20%, #0f2c2a, transparent 40%), radial-gradient(circle at 80% 60%, #0c1c2e, transparent 40%), #0d1117;
+    --glass: rgba(22, 27, 34, 0.7);
+    /*--glass: radial-gradient(circle at 20% 20%, #0f2c2a, transparent 40%), radial-gradient(circle at 80% 60%, #0c1c2e, transparent 40%), #0d1117;*/
 
 }
 
@@ -40,8 +40,9 @@ body.light {
     --text-muted: #475569;
     --text-dim: #94a3b8;
     --shadow: 0 6px 24px rgba(2, 6, 23, 0.12);
-    /*--glass: rgba(255, 255, 255, 0.65);*/
-    --glass: linear-gradient(#e5edf5 1px, transparent 1px), linear-gradient(90deg, #e5edf5 1px, transparent 1px);
+    --glass: rgba(255, 255, 255, 0.65);
+    /*--glass: radial-gradient(circle at 50% 10%, #e8f6f4, transparent 40%), radial-gradient(circle at 30% 60%, #eef4ff, transparent 40%), #f7fafb;
+    --glass: linear-gradient(#e5edf5 1px, transparent 1px), linear-gradient(90deg, #e5edf5 1px, transparent 1px);*/
 }
 
 /* Reset & Base */
