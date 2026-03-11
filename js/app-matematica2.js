@@ -132,6 +132,11 @@ function updateStats(isCorrect) {
 
     const stats = user.data.stats;
     const sub = stats[SUBJECT] || { total: 0, correct: 0, wrong: 0, wrongAnswers: [] };
+    // Assicuriamoci che wrongAnswers sia un array (nel caso esista ma sia undefined)
+    if (!Array.isArray(sub.wrongAnswers)) {
+        sub.wrongAnswers = [];
+    }
+
     sub.total++;
     if (isCorrect) sub.correct++; else sub.wrong++;
 
@@ -141,7 +146,9 @@ function updateStats(isCorrect) {
 
     if (!isCorrect) {
         const qId = AppState.currentQuestion?.id;
-        if (qId && !sub.wrongAnswers.includes(qId)) sub.wrongAnswers.push(qId);
+        if (qId && !sub.wrongAnswers.includes(qId)) {
+            sub.wrongAnswers.push(qId);
+        }
     }
 
     Auth.updateCurrentUser({
@@ -156,9 +163,13 @@ function updateReviewQueue(qId, isCorrect) {
     const user = Auth.getCurrentUser();
     if (!user) return;
     const sub = user.data.stats[SUBJECT] || { wrongAnswers: [] };
-    let wrong = [...(sub.wrongAnswers || [])];
-    if (isCorrect) wrong = wrong.filter(id => id !== qId);
-    else if (!wrong.includes(qId)) wrong.push(qId);
+    if (!Array.isArray(sub.wrongAnswers)) sub.wrongAnswers = [];
+    let wrong = [...sub.wrongAnswers];
+    if (isCorrect) {
+        wrong = wrong.filter(id => id !== qId);
+    } else if (!wrong.includes(qId)) {
+        wrong.push(qId);
+    }
     Auth.updateCurrentUser({ stats: { [SUBJECT]: { ...sub, wrongAnswers: wrong } } });
 }
 
@@ -203,15 +214,27 @@ function renderQuestion(question) {
     }
     if (UI.questionText) UI.questionText.textContent = question.question;
 
-    // Gestione immagine della domanda
+    // Gestione immagine domanda principale
     const imgWrap = document.getElementById('question-image-wrap');
     const imgEl = document.getElementById('question-image');
+
     if (imgWrap && imgEl) {
-        if (question.image) {
+        if (question.image && question.image !== null) {
             imgWrap.classList.remove('hidden');
-            setupImage(imgEl, question.image, 'Immagine domanda non disponibile');
+            imgEl.src = question.image;
+            imgEl.alt = `Immagine per ${question.id}`;
+            imgEl.onload = () => imgEl.style.display = 'inline-block';
+            imgEl.onerror = () => {
+                imgEl.style.display = 'none';
+                const fallback = document.createElement('span');
+                fallback.className = 'text-sm text-muted';
+                fallback.textContent = '⚠ Immagine non disponibile';
+                imgWrap.innerHTML = '';
+                imgWrap.appendChild(fallback);
+            };
         } else {
             imgWrap.classList.add('hidden');
+            imgEl.src = '';
         }
     }
 
@@ -224,21 +247,24 @@ function renderQuestion(question) {
             const btn = document.createElement('button');
             btn.className = 'choice-btn';
 
-            // Costruisci il contenuto del bottone
-            let btnContent = `<span class="choice-label">${choice.label}</span>`;
+            // Mostra l'etichetta e il testo
+            btn.innerHTML = `<span class="choice-label">${choice.label}</span><span>${escapeHtml(choice.text)}</span>`;
 
-            // Se c'è un'immagine nella scelta, mostrala
+            // Salva il percorso dell'immagine come data attribute
             if (choice.image) {
-                btnContent += `<img src="${choice.image}" alt="Opzione ${choice.label}" class="choice-image" onerror="this.style.display='none'">`;
+                btn.dataset.choiceImage = choice.image;
             }
-
-            btnContent += `<span>${escapeHtml(choice.text)}</span>`;
-            btn.innerHTML = btnContent;
 
             btn.addEventListener('click', () => handleChoiceClick(btn, choice));
             li.appendChild(btn);
             UI.choicesList.appendChild(li);
         });
+    }
+
+    // Nascondi l'immagine della scelta all'inizio
+    const choiceImageContainer = document.getElementById('choice-image-container');
+    if (choiceImageContainer) {
+        choiceImageContainer.classList.add('hidden');
     }
 
     if (UI.explanationBox) UI.explanationBox.classList.add('hidden');
@@ -264,6 +290,7 @@ function handleChoiceClick(btn, choice) {
     const isCorrect = choice.soluzione === true;
     const feedback = choice.feedback || '';
 
+    // ── SIMULAZIONE ─────────────────────────────────────
     if (AppState.mode === 'simulation') {
         if (AppState.answered) return;
         AppState.answered = true;
@@ -277,8 +304,11 @@ function handleChoiceClick(btn, choice) {
         return;
     }
 
+    // ── ALLENAMENTO / RIPASSO ───────────────────────────
+    // Se è già stata data una risposta corretta, non fare nulla
     if (AppState.answered) return;
 
+    // GESTIONE RISPOSTA CORRETTA
     if (isCorrect) {
         AppState.answered = true;
         document.querySelectorAll('.choice-btn').forEach(b => b.disabled = true);
@@ -286,25 +316,65 @@ function handleChoiceClick(btn, choice) {
         updateStats(true);
         if (AppState.mode === 'review') updateReviewQueue(AppState.currentQuestion.id, true);
 
-        // Mostra feedback e immagine spiegazione se presente
+        // Mostra feedback e immagini
         if (UI.explanationBox && UI.explanationText) {
             UI.explanationText.textContent = feedback || 'Corretto! ✓';
 
-            // Gestisci immagine spiegazione
-            if (UI.explanationImage && AppState.currentQuestion.imageExplanation) {
-                setupImage(UI.explanationImage, AppState.currentQuestion.imageExplanation, 'Immagine spiegazione non disponibile');
-                if (UI.explanationImageWrap) UI.explanationImageWrap.classList.remove('hidden');
-            } else if (UI.explanationImageWrap) {
-                UI.explanationImageWrap.classList.add('hidden');
+            // Immagine della scelta selezionata
+            const choiceImageContainer = document.getElementById('choice-image-container');
+            const choiceImageEl = document.getElementById('choice-image');
+
+            if (choiceImageContainer && choiceImageEl) {
+                if (choice.image) {
+                    choiceImageContainer.classList.remove('hidden');
+                    choiceImageEl.src = choice.image;
+                    choiceImageEl.alt = `Immagine per risposta ${choice.label}`;
+                    choiceImageEl.onload = () => choiceImageEl.style.display = 'inline-block';
+                    choiceImageEl.onerror = () => {
+                        choiceImageEl.style.display = 'none';
+                        choiceImageContainer.innerHTML = '<span class="text-sm text-muted">⚠ Immagine non disponibile</span>';
+                    };
+                } else {
+                    choiceImageContainer.classList.add('hidden');
+                    choiceImageEl.src = '';
+                }
+            }
+
+            // Immagine spiegazione della domanda
+            const expImgWrap = document.getElementById('explanation-image-wrap');
+            const expImgEl = document.getElementById('explanation-image');
+
+            if (expImgWrap && expImgEl) {
+                if (AppState.currentQuestion.imageExplanation) {
+                    expImgWrap.classList.remove('hidden');
+                    expImgEl.src = AppState.currentQuestion.imageExplanation;
+                    expImgEl.alt = 'Immagine spiegazione';
+                    expImgEl.onload = () => expImgEl.style.display = 'inline-block';
+                    expImgEl.onerror = () => {
+                        expImgEl.style.display = 'none';
+                        expImgWrap.innerHTML = '<span class="text-sm text-muted">⚠ Immagine spiegazione non disponibile</span>';
+                    };
+                } else {
+                    expImgWrap.classList.add('hidden');
+                    expImgEl.src = '';
+                }
             }
 
             UI.explanationBox.classList.remove('hidden');
+            UI.explanationBox.className = 'explanation-box'; // reset classe
         }
         if (UI.btnContinue) UI.btnContinue.classList.remove('hidden');
-    } else {
+    }
+
+    // GESTIONE RISPOSTA SBAGLIATA
+    else {
+        // Evidenzia temporaneamente l'errore
         btn.classList.add('wrong');
-        setTimeout(() => btn.classList.remove('wrong'), 300);
+
+        // Aggiorna statistiche (registra l'errore)
         updateStats(false);
+
+        // Aggiorna coda errori
         if (AppState.mode === 'review') {
             updateReviewQueue(AppState.currentQuestion.id, false);
         } else {
@@ -312,8 +382,10 @@ function handleChoiceClick(btn, choice) {
             if (user) {
                 const sub = user.data.stats[SUBJECT] || { wrongAnswers: [] };
                 const wrongs = [...(sub.wrongAnswers || [])];
-                if (!wrongs.includes(AppState.currentQuestion.id)) wrongs.push(AppState.currentQuestion.id);
-                Auth.updateCurrentUser({ stats: { [SUBJECT]: { ...sub, wrongAnswers: wrongs } } });
+                if (!wrongs.includes(AppState.currentQuestion.id)) {
+                    wrongs.push(AppState.currentQuestion.id);
+                    Auth.updateCurrentUser({ stats: { [SUBJECT]: { ...sub, wrongAnswers: wrongs } } });
+                }
             }
         }
 
@@ -321,17 +393,58 @@ function handleChoiceClick(btn, choice) {
         if (UI.explanationBox && UI.explanationText) {
             UI.explanationText.textContent = feedback || 'Sbagliato! Riprova.';
 
-            // Anche in caso di errore, mostra l'immagine spiegazione se presente
-            if (UI.explanationImage && AppState.currentQuestion.imageExplanation) {
-                setupImage(UI.explanationImage, AppState.currentQuestion.imageExplanation, 'Immagine spiegazione non disponibile');
-                if (UI.explanationImageWrap) UI.explanationImageWrap.classList.remove('hidden');
-            } else if (UI.explanationImageWrap) {
-                UI.explanationImageWrap.classList.add('hidden');
+            // Immagine della scelta selezionata (anche per errore)
+            const choiceImageContainer = document.getElementById('choice-image-container');
+            const choiceImageEl = document.getElementById('choice-image');
+
+            if (choiceImageContainer && choiceImageEl) {
+                if (choice.image) {
+                    choiceImageContainer.classList.remove('hidden');
+                    choiceImageEl.src = choice.image;
+                    choiceImageEl.alt = `Immagine per risposta ${choice.label}`;
+                    choiceImageEl.onload = () => choiceImageEl.style.display = 'inline-block';
+                    choiceImageEl.onerror = () => {
+                        choiceImageEl.style.display = 'none';
+                        choiceImageContainer.innerHTML = '<span class="text-sm text-muted">⚠ Immagine non disponibile</span>';
+                    };
+                } else {
+                    choiceImageContainer.classList.add('hidden');
+                    choiceImageEl.src = '';
+                }
             }
 
-            UI.explanationBox.className = 'explanation-box wrong-expl';
+            // Immagine spiegazione della domanda (anche per errore)
+            const expImgWrap = document.getElementById('explanation-image-wrap');
+            const expImgEl = document.getElementById('explanation-image');
+
+            if (expImgWrap && expImgEl) {
+                if (AppState.currentQuestion.imageExplanation) {
+                    expImgWrap.classList.remove('hidden');
+                    expImgEl.src = AppState.currentQuestion.imageExplanation;
+                    expImgEl.alt = 'Immagine spiegazione';
+                    expImgEl.onload = () => expImgEl.style.display = 'inline-block';
+                    expImgEl.onerror = () => {
+                        expImgEl.style.display = 'none';
+                        expImgWrap.innerHTML = '<span class="text-sm text-muted">⚠ Immagine spiegazione non disponibile</span>';
+                    };
+                } else {
+                    expImgWrap.classList.add('hidden');
+                    expImgEl.src = '';
+                }
+            }
+
             UI.explanationBox.classList.remove('hidden');
+            UI.explanationBox.className = 'explanation-box wrong-expl';
         }
+
+        // Rimuovi l'evidenziazione dell'errore dopo un po'
+        setTimeout(() => {
+            btn.classList.remove('wrong');
+        }, 300);
+
+        // NON disabilitare i pulsanti - si può riprovare
+        // NON mostrare il pulsante continua
+        // NON impostare AppState.answered = true
     }
 }
 
