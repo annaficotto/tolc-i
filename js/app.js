@@ -9,7 +9,13 @@ function getSubjectFromPath() {
         'logica-tutor': 'logica-tutor',
         'matematica1-tutor': 'matematica1-tutor',
         'matematica2-tutor': 'matematica2-tutor',
-        'scienze-tutor': 'scienze-tutor'
+        'scienze-tutor': 'scienze-tutor',
+        'fisica-esempio2': 'fisica-esempio2',
+        'logica-esempio1': 'logica-esempio1',
+        'logica-esempio2': 'logica-esempio2',
+        'matematica-esempio1': 'matematica-esempio1',
+        'matematica-esempio2': 'matematica-esempio2',
+        'scienze-esempio1': 'scienze-esempio1'
     };
     
     return subjectMap[fileName] || 'logica-tutor'; // default logica
@@ -77,10 +83,17 @@ async function loadQuestions() {
         
         // Aggiorna il titolo della pagina
         const titleMap = {
-            logica: 'Logica',
-            matematica1: 'Matematica 1',
-            matematica2: 'Matematica 2',
-            scienze: 'Scienze'
+            logica_tutor: 'Logica (Tutor)',
+            matematica1_tutor: 'Matematica 1 (Tutor)',
+            matematica2_tutor: 'Matematica 2 (Tutor)',
+            scienze_tutor: 'Scienze (Tutor)',
+            fisicaEsempio2: 'Fisica (Esempio 2)',
+            logicaEsempio1: 'Logica (Esempio 1)',
+            logicaEsempio2: 'Logica (Esempio 2)',
+            matematicaEsempio1: 'Matematica (Esempio 1)',
+            matematicaEsempio2: 'Matematica (Esempio 2)',
+            scienzeEsempio1: 'Scienze (Esempio 1)'
+
         };
         document.title = `TOLC Trainer — ${titleMap[SUBJECT]}`;
         

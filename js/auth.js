@@ -54,10 +54,16 @@ function createUserData(passwordHash) {
         createdAt: new Date().toISOString(),
         stats: {
             global: { total: 0, correct: 0, wrong: 0 },
-            logica: { ...materiaBase },
-            matematica1: { ...materiaBase },
-            matematica2: { ...materiaBase },
-            scienze: { ...materiaBase }
+            logicaTutor: { ...materiaBase },
+            matematica1Tutor: { ...materiaBase },
+            matematica2Tutor: { ...materiaBase },
+            scienzeTutor: { ...materiaBase },
+            fisicaEsempio2: { ...materiaBase },
+            logicaEsempio1: { ...materiaBase },
+            logicaEsempio2: { ...materiaBase },
+            matematicaEsempio1: { ...materiaBase },
+            matematicaEsempio2: { ...materiaBase },
+            scienzeEsempio1: { ...materiaBase }
         },
         history: []
     };
@@ -214,10 +220,16 @@ const Auth = {
 
         userData.stats = {
             global: { total: 0, correct: 0, wrong: 0 },
-            logica: { ...materiaBase },
-            matematica1: { ...materiaBase },
-            matematica2: { ...materiaBase },
-            scienze: { ...materiaBase }
+            logicaTutor: { ...materiaBase },
+            matematica1Tutor: { ...materiaBase },
+            matematica2Tutor: { ...materiaBase },
+            scienzeTutor: { ...materiaBase },
+            fisicaEsempio2: { ...materiaBase },
+            logicaEsempio1: { ...materiaBase },
+            logicaEsempio2: { ...materiaBase },
+            matematicaEsempio1: { ...materiaBase },
+            matematicaEsempio2: { ...materiaBase },
+            scienzeEsempio1: { ...materiaBase }
         };
         
         userData.history = [];
@@ -235,7 +247,7 @@ const Auth = {
         const userData = users[user.username];
         if (!userData) return false;
 
-        const subjects = ['logica', 'matematica1', 'matematica2', 'scienze'];
+        const subjects = ['logica-tutor', 'matematica1-tutor', 'matematica2-tutor', 'scienze-tutor', 'fisica-esempio2', 'logica-esempio1', 'logica-esempio2', 'matematica-esempio1', 'matematica-esempio2', 'scienze-esempio1'];
         
         subjects.forEach(sub => {
             if (userData.stats[sub]) {
