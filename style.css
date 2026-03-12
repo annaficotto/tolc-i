@@ -990,3 +990,26 @@ input::placeholder {
         font-size: 1.5rem;
     }
 }
+
+
+/* Icone nelle mode-card */
+.mode-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.mode-icon-img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+
+.fallback-emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
