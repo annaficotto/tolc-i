@@ -1,0 +1,2051 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Orientamento ICT — Ca' Foscari & UNIPD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="dashboard.html" class="navbar-brand">
+                <span class="bracket">[</span>TOLC<span class="bracket">]</span>
+            </a>
+            <div class="navbar-actions">
+                <span class="badge badge-muted text-mono" style="font-size:0.68rem">📋 Report Orientativo</span>
+                <a href="dashboard.html" class="btn btn-ghost text-sm">← Dashboard</a>
+                <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="report-hero fade-in">
+        <h1>Report Orientamento <span class="text-accent">ICT</span></h1>
+        <p class="subtitle" style="font-size:0.95rem;max-width:520px;margin:0.5rem auto 0">
+            Analisi comparativa dei corsi universitari in ambito informatico e ingegneristico —
+            <span class="text-mono" style="color:var(--accent)">Ca' Foscari</span> e
+            <span class="text-mono" style="color:var(--accent2)">UNIPD</span>
+        </p>
+        <div class="meta-row">
+            <span class="meta-chip">📅 A.A. 2025/26</span>
+            <span class="meta-chip">🎓 Triennali &amp; Magistrali</span>
+            <span class="meta-chip">⚠️ Verificare sui siti ufficiali degli atenei</span>
+        </div>
+    </div>
+
+
+    <div class="report-layout">
+
+        <aside class="toc-sidebar">
+            <div class="toc-card">
+                <div class="toc-title">// Indice</div>
+                <ul class="toc-list">
+                    <li><a href="#s0">0. Premessa</a></li>
+                    <li class="toc-section">Ca' Foscari</li>
+                        <li><a href="#cf-tsi" class="toc-sub">Informatica — TSI</a></li>
+                        <li><a href="#cf-ds" class="toc-sub">Informatica — Data Science</a></li>
+                    <li class="toc-section">UNIPD — Triennali</li>
+                        <li><a href="#pd-inf" class="toc-sub">Informatica L-31 R</a></li>
+                        <li><a href="#pd-ie" class="toc-sub">Information Engineering L-8 R</a></li>
+                        <li><a href="#pd-ii" class="toc-sub">Ingegneria Informatica L-8 R</a></li>
+                    <li class="toc-section">Ca' Foscari — Magistrale</li>
+                        <li><a href="#cf-csit" class="toc-sub">Computer Science and Information Technology LM-18</a></li>
+                    <li class="toc-section">UNIPD — Magistrali</li>
+                        <li><a href="#pd-ce" class="toc-sub">Computer Engineering LM-32</a></li>
+                        <li><a href="#pd-ics" class="toc-sub">International Cybersecurity LM-66</a></li>
+                        <li><a href="#pd-cs" class="toc-sub">Cybersecurity LM-66</a></li>
+                        <li><a href="#pd-ds" class="toc-sub">Data Science LM-DATA</a></li>
+                    <li class="toc-section">Analisi</li>
+                        <li><a href="#s4">Confronti Triennali</a></li>
+                        <li><a href="#s4b">Confronti Magistrali</a></li>
+                        <li><a href="#s5">Percorsi di Accesso</a></li>
+                        <li><a href="#s6">Il Verdetto</a></li>
+                </ul>
+            </div>
+        </aside>
+
+
+
+        <article class="report-content">
+
+            <!-- ── S0: PREMESSA ── -->
+            <div class="r-card card-accent" id="s0">
+                <div class="section-header">
+                    <span class="section-num">00</span>
+                    <h2>Premessa Metodologica</h2>
+                </div>
+                <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.7;margin-bottom:0.75rem">
+                    Il presente report è uno strumento decisionale comparativo per la scelta del percorso universitario
+                    in ambito ICT.
+                    L'analisi si fonda su: piani di studio ufficiali e manifesti degli studi, obiettivi formativi
+                    dichiarati nelle schede SUA-CdS,
+                    classi di laurea ministeriali come indicatore del profilo formativo, e prospettive di carriera
+                    desunte da dati Almalaurea e dal mercato ICT.
+                </p>
+                <div class="nota-info">
+                    ⚠️ I piani di studio, i CFU e le denominazioni degli esami sono soggetti a variazione annuale.
+                    Verificare sempre sui siti ufficiali <strong>unive.it</strong> e <strong>unipd.it</strong>.
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.75rem">
+                    <span class="badge badge-muted">Triennali analizzate: 5</span>
+                    <span class="badge badge-muted">Magistrali analizzate: 5</span>
+                    <span class="badge badge-accent">Classi: L-31 / L-8 / LM-32 / LM-66 / LM-18 / LM-DATA</span>
+                </div>
+            </div>
+
+
+
+
+            <!-- ═════════════════════ CA' FOSCARI TRIENNALI ═════════════════════ -->
+            <div class="section-gap">
+                <div class="section-header">
+                    <span class="section-num">01</span>
+                    <h2>Ca' Foscari Venezia — Triennali</h2>
+                </div>
+            </div>
+
+            <!-- VE - Informatica — Curriculum Tecnologie e Scienze dell'Informazione -->
+            <div class="r-card" id="cf-tsi">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Informatica — Curriculum Tecnologie e Scienze dell'Informazione</h3>
+                        <div class="r-card-sub">Università Ca' Foscari Venezia · Campus Scientifico, Mestre</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge badge-accent">L-31</span>
+                        <span class="badge badge-muted">3 anni · 180 CFU</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>L-31</strong> — Scienze e Tecnologie Informatiche (impostazione <em>scientifica</em>, non ingegneristica)</td>
+                    </tr>
+                    <tr>
+                        <td>Lingua</td>
+                        <td>Italiano, con alcuni insegnamenti in inglese</td>
+                    </tr>
+                    <tr>
+                        <td>Albo Ingegneri</td>
+                        <td><span class="no">✗ Non abilitante</span></td>
+                    </tr>
+                    <tr>
+                        <td>Obiettivo</td>
+                        <td>Formare un informatico con solida base teorica e pratica: algoritmi, programmazione, basi di dati, reti, software engineering.</td>
+                    </tr>
+                </table>
+
+                <div class="area-label">▶ Area Matematica e Fondamenti</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze trasmesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Calcolo / Analisi Mat. 1</td>
+                            <td>Limiti, derivate, integrali. Base per ottimizzazione e machine learning.</td>
+                        </tr>
+                        <tr>
+                            <td>Matematica Discreta</td>
+                            <td>Logica, insiemi, grafi, combinatoria. Fondamento teorico dell'informatica.</td>
+                        </tr>
+                        <tr>
+                            <td>Algebra Lineare</td>
+                            <td>Matrici, autovalori. Indispensabile per grafica computazionale e ML.</td>
+                        </tr>
+                        <tr>
+                            <td>Probabilità e Statistica</td>
+                            <td>Base per analisi dei dati e sistemi stocastici.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="area-label">▶ Area Programmazione e Ingegneria del Software</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze trasmesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Programmazione 1</td>
+                            <td>Paradigma imperativo e strutturato (Python/Java). Fondamento di tutto il percorso.</td>
+                        </tr>
+                        <tr>
+                            <td>Programmazione 2</td>
+                            <td>OOP, design pattern, gestione della complessità.</td>
+                        </tr>
+                        <tr>
+                            <td>Algoritmi e Strutture Dati</td>
+                            <td>Analisi della complessità, grafi, tecniche algoritmiche. Il cuore teorico
+                                dell'informatica.</td>
+                        </tr>
+                        <tr>
+                            <td>Ingegneria del Software</td>
+                            <td>Metodologie Agile/Scrum, testing, Git, documentazione.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="area-label">▶ Area Sistemi, Reti e Architetture</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze trasmesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Architettura degli Elaboratori</td>
+                            <td>CPU, memoria, assembly. Fondamentale per performance e sicurezza a basso livello.</td>
+                        </tr>
+                        <tr>
+                            <td>Sistemi Operativi</td>
+                            <td>Processi, memoria, file system, concorrenza. Imprescindibile per cloud e cybersecurity.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Reti di Calcolatori</td>
+                            <td>TCP/IP, client-server, sicurezza di rete.</td>
+                        </tr>
+                        <tr>
+                            <td>Basi di Dati (1 e 2)</td>
+                            <td>SQL, progettazione schemi, NoSQL, basi distribuite.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Equilibrio teoria/pratica con attenzione al software engineering</li>
+                            <li>Ateneo internazionale con forte rete di partnership</li>
+                            <li>Classi più contenute → rapporto studente/docente favorevole</li>
+                            <li>Flessibilità per specializzazioni future (anche magistrali LM-32 con integrazioni)</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>L-31: nessun accesso diretto all'Albo degli Ingegneri</li>
+                            <li>Meno matematica "pesante" (no Fisica, no Analisi 2) rispetto all'L-8</li>
+                            <li>Passaggio a LM-32 richiede debiti formativi in Fisica/Analisi 2</li>
+                            <li>Meno laboratori industriali rispetto al DEI di Padova</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Sbocchi Professionali</span>
+                    <div class="sbocchi-list">
+                        <span class="sbocco-tag">Software Developer</span>
+                        <span class="sbocco-tag">Database Administrator</span>
+                        <span class="sbocco-tag">Sistemista / Net Admin</span>
+                        <span class="sbocco-tag">Analista di Sistema</span>
+                        <span class="sbocco-tag">IT Consultant</span>
+                        <span class="sbocco-tag">Data Scientist <em>(con magistrale)</em></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VE - Informatica — Curriculum Data Science -->
+            <div class="r-card" id="cf-ds">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Informatica — Curriculum Data Science</h3>
+                        <div class="r-card-sub">Università Ca' Foscari Venezia · Campus Scientifico, Mestre</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge badge-accent">L-31</span>
+                        <span class="badge badge-muted">3 anni · 180 CFU</span>
+                        <span class="badge"
+                            style="background:rgba(14,165,233,0.15);color:var(--accent2)">Data-oriented</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>L-31</strong> — Stesso corso, curriculum specializzato in analisi dei dati</td>
+                    </tr>
+                    <tr>
+                        <td>Lingua</td>
+                        <td>Italiano / Inglese (quota significativa in inglese)</td>
+                    </tr>
+                    <tr>
+                        <td>Albo Ingegneri</td>
+                        <td><span class="no">✗ Non abilitante</span></td>
+                    </tr>
+                    <tr>
+                        <td>Obiettivo</td>
+                        <td>Formare figure con doppia competenza: informatica di base + specializzazione precoce su gestione, analisi e valorizzazione dei dati.</td>
+                    </tr>
+                </table>
+
+                <div class="nota-info">La base comune con il curriculum Tecnologie e Scienze Informatiche (Programmazione, Algoritmi, Basi di Dati,
+                    Reti, SO) è condivisa. Le differenze emergono nel 3° anno.</div>
+
+                <div class="area-label">▶ Area Differenziante: Data Science & AI</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze trasmesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Statistica e Analisi dei Dati</td>
+                            <td>Regressione, inferenza, test di ipotesi su dataset reali.</td>
+                        </tr>
+                        <tr>
+                            <td>Machine Learning</td>
+                            <td>Algoritmi supervisionati/non, valutazione dei modelli. Nucleo della DS.</td>
+                        </tr>
+                        <tr>
+                            <td>Data Management e Big Data</td>
+                            <td>Spark, Hadoop, Data Lake, ETL pipeline.</td>
+                        </tr>
+                        <tr>
+                            <td>Data Visualization</td>
+                            <td>Python/matplotlib, Tableau. Comunicare i dati efficacemente.</td>
+                        </tr>
+                        <tr>
+                            <td>Intelligenza Artificiale</td>
+                            <td>Ricerca, ragionamento, basi di reti neurali.</td>
+                        </tr>
+                        <tr>
+                            <td>Ottimizzazione</td>
+                            <td>Gradient descent, programmazione lineare — il motore matematico del ML.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Specializzazione precoce in settore ad altissima domanda</li>
+                            <li>Ottima preparazione per magistrali in DS e AI (LM-DATA quasi accesso diretto)</li>
+                            <li>Ca' Foscari ha tradizione forte in ambito economico-quantitativo</li>
+                            <li>Curricolo moderno, orientato alle tecnologie emergenti</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Meno flessibilità per riorientarsi verso sistemi o reti</li>
+                            <li>Base matematica meno "pesante" dell'L-8 → integrazioni per alcune magistrali</li>
+                            <li>Nessun accesso all'Albo degli Ingegneri</li>
+                            <li>Mercato DS sempre più competitivo: magistrale quasi necessaria</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Sbocchi Professionali</span>
+                    <div class="sbocchi-list">
+                        <span class="sbocco-tag">Junior Data Analyst</span>
+                        <span class="sbocco-tag">BI Analyst</span>
+                        <span class="sbocco-tag">Data Engineer Jr.</span>
+                        <span class="sbocco-tag">ML Engineer <em>(con magistrale)</em></span>
+                        <span class="sbocco-tag">Data Scientist Senior <em>(con magistrale)</em></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ═════════════════════ UNIPD TRIENNALI ═════════════════════ -->
+            <div class="section-gap">
+                <div class="section-header">
+                    <span class="section-num">02</span>
+                    <h2>UNIPD — Triennali</h2>
+                </div>
+            </div>
+
+            <!-- PD - Informatica -->
+            <div class="r-card" id="pd-inf">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Informatica</h3>
+                        <div class="r-card-sub">Università di Padova · Dipartimento di Matematica / DEI</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge badge-accent">L-31 R</span>
+                        <span class="badge badge-muted">3 anni · 180 CFU</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>L-31</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Lingua</td>
+                        <td>Italiano (materiali anche in inglese)</td>
+                    </tr>
+                    <tr>
+                        <td>Albo Ingegneri</td>
+                        <td><span class="no">✗ Non abilitante</span></td>
+                    </tr>
+                    <tr>
+                        <td>Obiettivo</td>
+                        <td>Uno dei corsi L-31 più rigorosi in Italia. Solida base teorica (computabilità, complessità) con forte attenzione all'interdisciplinarità.</td>
+                    </tr>
+                </table>
+
+                <div class="area-label">▶ Area Matematica (particolarmente robusta)</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze trasmesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Analisi Matematica 1</td>
+                            <td>Fondamento di tutto il percorso: limiti, derivate, integrali.</td>
+                        </tr>
+                        <tr>
+                            <td>Algebra e Matematica Discreta</td>
+                            <td>Strutture algebriche, logica formale, grafi. Base teorica dell'informatica.</td>
+                        </tr>
+                        <tr>
+                            <td>Probabilità e Statistica</td>
+                            <td>Modelli probabilistici, inferenza statistica.</td>
+                        </tr>
+                        <tr>
+                            <td>Ricerca Operativa</td>
+                            <td>Ottimizzazione, programmazione lineare e intera. Utile per AI e logistica.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="area-label">▶ Area Programmazione e Teoria</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze trasmesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Programmazione 1 &amp; 2</td>
+                            <td>Da C/C++ a Java/Python. Paradigmi imperativo, OOP, funzionale.</td>
+                        </tr>
+                        <tr>
+                            <td>Algoritmi e Strutture Dati</td>
+                            <td>Il cuore del corso: profondità teorica e applicativa eccellente.</td>
+                        </tr>
+                        <tr>
+                            <td>Paradigmi di Programmazione</td>
+                            <td>Funzionale, logico. Amplia la visione del problema computazionale.</td>
+                        </tr>
+                        <tr>
+                            <td>Linguaggi e Compilatori</td>
+                            <td>Grammatiche formali, lexer/parser, costruzione di compilatori.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Eccellente reputazione del Dip. di Matematica UNIPD a livello nazionale</li>
+                            <li>Base teorica molto solida: ottima per dottorati e magistrali di eccellenza</li>
+                            <li>Grande ateneo: ampia rete di partnership, Erasmus, laboratori</li>
+                            <li>Buona flessibilità nel piano di studi (esami a scelta)</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Nessun accesso diretto all'Esame di Stato per Ingegneri</li>
+                            <li>Rigore matematico elevato → tasso di abbandono nei primi 2 anni più alto</li>
+                            <li>Per sbocchi ingegneristici (embedded, HW) la preparazione è meno mirata vs L-8</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Sbocchi Professionali</span>
+                    <div class="sbocchi-list">
+                        <span class="sbocco-tag">Software Developer</span>
+                        <span class="sbocco-tag">Ricercatore <em>(con dottorato)</em></span>
+                        <span class="sbocco-tag">Progettista di Algoritmi</span>
+                        <span class="sbocco-tag">Data Scientist <em>(con magistrale)</em></span>
+                        <span class="sbocco-tag">IT Consultant</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PD - Information Engineering -->
+            <div class="r-card" id="pd-ie">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Information Engineering</h3>
+                        <div class="r-card-sub">Università di Padova · DEI — Dip. Ingegneria dell'Informazione</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge" style="background:rgba(245,158,11,0.15);color:var(--warn)">L-8 R</span>
+                        <span class="badge badge-muted">3 anni · 180 CFU</span>
+                        <span class="badge badge-success">Albo Ingegneri Sez. B</span>
+                        <span class="badge" style="background:rgba(14,165,233,0.15);color:var(--accent2)">🇬🇧 Inglese</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>L-8 R</strong> — Ingegneria dell'Informazione. Abilita all'Albo Ingegneri <em>Sez. B</em> (Junior) previo Esame di Stato.</td>
+                    </tr>
+                    <tr>
+                        <td>Lingua</td>
+                        <td><strong>Interamente in inglese</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Albo Ingegneri</td>
+                        <td><span class="ok">✓ Sez. B (Junior)</span> — abilita anche a LM-32 per Sez. A</td>
+                    </tr>
+                    <tr>
+                        <td>Obiettivo</td>
+                        <td>Corso <strong>ibrido</strong> tra informatica e ingegneria: informatica, elettronica,
+                            telecomunicazioni, automatica. Il "jolly" dell'offerta UNIPD per chi è indeciso.</td>
+                    </tr>
+                </table>
+
+                <div class="area-label">▶ Area Matematica e Fisica (ingegneristica)</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze trasmesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Calculus 1 &amp; 2</td>
+                            <td>Due corsi completi: il 2° introduce equazioni differenziali, serie di Fourier, analisi
+                                complessa.</td>
+                        </tr>
+                        <tr>
+                            <td>Linear Algebra and Geometry</td>
+                            <td>Autovalori, decomposizioni. Usato in elaborazione segnali, controlli, ML.</td>
+                        </tr>
+                        <tr>
+                            <td>Physics 1 &amp; 2</td>
+                            <td>Meccanica ed elettromagnetismo. Base fisica per elettronica e telecomunicazioni.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="area-label">▶ Area Ingegneristica Specifica</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze trasmesse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Signals and Systems</td>
+                            <td>Analisi nel dominio tempo/frequenza (Fourier, Laplace). Nucleo dell'ing.
+                                dell'informazione.</td>
+                        </tr>
+                        <tr>
+                            <td>Digital Electronics</td>
+                            <td>Porte logiche, circuiti combinatori/sequenziali, FPGA.</td>
+                        </tr>
+                        <tr>
+                            <td>Control Systems</td>
+                            <td>Feedback, stabilità, risposta in frequenza.</td>
+                        </tr>
+                        <tr>
+                            <td>Telecommunications</td>
+                            <td>Modulazioni, canali, codifica dell'informazione.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Massima flessibilità magistrale: LM-32, LM-27, LM-25, LM-29 tutte aperte</li>
+                            <li>Erogato in inglese → CV internazionale, abitudine al linguaggio tecnico globale</li>
+                            <li>Accesso all'Albo Ingegneri Sez. B</li>
+                            <li>Ideale per chi non ha ancora scelto la specializzazione</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Molto impegnativo: informatica + elettronica + fisica + matematica avanzata</li>
+                            <li>L'inglese obbligatorio può essere un ostacolo iniziale</li>
+                            <li>Generalista: meno profondità in ogni singola area rispetto a corsi dedicati</li>
+                            <li>Piano rigido nel biennio: poca flessibilità nei primi 2 anni</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Sbocchi Professionali</span>
+                    <div class="sbocchi-list">
+                        <span class="sbocco-tag">Ingegnere dell'Informazione (Albo)</span>
+                        <span class="sbocco-tag">Embedded Systems Engineer</span>
+                        <span class="sbocco-tag">Telecomunicazioni</span>
+                        <span class="sbocco-tag">Control Systems Engineer</span>
+                        <span class="sbocco-tag">AI / Robotics Engineer <em>(con LM-32)</em></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PD - Ingegneria Informatica -->
+            <div class="r-card" id="pd-ii">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Ingegneria Informatica — Curriculum Generale &amp; Applicativo</h3>
+                        <div class="r-card-sub">Università di Padova · DEI — Dip. Ingegneria dell'Informazione</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge" style="background:rgba(245,158,11,0.15);color:var(--warn)">L-8 R</span>
+                        <span class="badge badge-muted">3 anni · 180 CFU</span>
+                        <span class="badge badge-success">Albo Ingegneri Sez. B</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>L-8 R</strong> — Focus specifico su informatica ingegneristica (vs. Info Engineering che è trasversale)</td>
+                    </tr>
+                    <tr>
+                        <td>Lingua</td>
+                        <td>Italiano (materiali in inglese)</td>
+                    </tr>
+                    <tr>
+                        <td>Albo Ingegneri</td>
+                        <td><span class="ok">✓ Sez. B (Junior)</span></td>
+                    </tr>
+                    <tr>
+                        <td>Obiettivo</td>
+                        <td>Il percorso più <strong>direttamente ingegneristico</strong>: progettazione di sistemi software e hardware, reti, embedded, automazione.</td>
+                    </tr>
+                </table>
+
+                <div class="area-label">▶ Differenze tra i due Curricula</div>
+                <div class="cmp-wrap">
+                    <table class="cmp-table">
+                        <thead>
+                            <tr>
+                                <th>Caratteristica</th>
+                                <th>Curriculum Generale</th>
+                                <th>Curriculum Applicativo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Focus</td>
+                                <td>Formazione ampia e bilanciata</td>
+                                <td>Specializzazione precoce (AI, IoT, sicurezza)</td>
+                            </tr>
+                            <tr>
+                                <td>Flessibilità</td>
+                                <td>Più esami a scelta libera</td>
+                                <td>Piano più strutturato verso applicazioni</td>
+                            </tr>
+                            <tr>
+                                <td>Preparazione magistrale</td>
+                                <td>Ottima per LM-32 in tutte le declinazioni</td>
+                                <td>Ottima con vantaggio nella specializzazione scelta</td>
+                            </tr>
+                            <tr>
+                                <td>Consigliato se...</td>
+                                <td>Indeciso sulla magistrale</td>
+                                <td>Idea già abbastanza precisa della carriera</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="area-label">▶ Piano di Studi (comune ai due curricula)</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Area</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Analisi Matematica 1 &amp; 2</td>
+                            <td>Matematica</td>
+                        </tr>
+                        <tr>
+                            <td>Geometria e Algebra Lineare</td>
+                            <td>Matematica</td>
+                        </tr>
+                        <tr>
+                            <td>Fisica 1 (Meccanica)</td>
+                            <td>Scienze di base</td>
+                        </tr>
+                        <tr>
+                            <td>Fondamenti di Informatica 1 &amp; 2 (C/C++)</td>
+                            <td>Programmazione</td>
+                        </tr>
+                        <tr>
+                            <td>Algoritmi e Strutture Dati</td>
+                            <td>Programmazione</td>
+                        </tr>
+                        <tr>
+                            <td>Architettura degli Elaboratori</td>
+                            <td>Sistemi</td>
+                        </tr>
+                        <tr>
+                            <td>Sistemi Operativi</td>
+                            <td>Sistemi</td>
+                        </tr>
+                        <tr>
+                            <td>Reti di Calcolatori</td>
+                            <td>Sistemi</td>
+                        </tr>
+                        <tr>
+                            <td>Basi di Dati</td>
+                            <td>Sistemi</td>
+                        </tr>
+                        <tr>
+                            <td>Ingegneria del Software</td>
+                            <td>Progettazione</td>
+                        </tr>
+                        <tr>
+                            <td>Segnali e Sistemi</td>
+                            <td>Ing. Informatica</td>
+                        </tr>
+                        <tr>
+                            <td>Calcolatori Elettronici / Sistemi di Controllo</td>
+                            <td>Ing. Informatica</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Accesso diretto all'Esame di Stato → Albo Ingegneri</li>
+                            <li>Formazione ingegneristica completa e rigorosa</li>
+                            <li>"Ingegneria Informatica Padova" è brand molto apprezzato dai datori di lavoro</li>
+                            <li>Accesso privilegiato a tutte le magistrali LM-32 di UNIPD</li>
+                            <li>Forte rete di stage e partnership industriali del DEI</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Carico di lavoro molto elevato nel biennio: tasso di abbandono alto</li>
+                            <li>Fisica ed Elettronica "dispersive" per chi vuole lavorare solo nel software</li>
+                            <li>Meno libertà di personalizzazione vs L-31</li>
+                            <li>Rigidità del percorso può non fare per tutti</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Sbocchi Professionali</span>
+                    <div class="sbocchi-list">
+                        <span class="sbocco-tag">Software Architect</span>
+                        <span class="sbocco-tag">Embedded / IoT Engineer</span>
+                        <span class="sbocco-tag">DevOps / Cloud Engineer</span>
+                        <span class="sbocco-tag">Robotics Engineer <em>(con LM-32 AI&amp;R)</em></span>
+                        <span class="sbocco-tag">Cybersecurity Engineer</span>
+                        <span class="sbocco-tag">CTO</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ═════════════════════ CA' FOSCARI MAGISTRALE ═════════════════════ -->
+            <div class="section-gap">
+                <div class="section-header">
+                    <span class="section-num">03b</span>
+                    <h2>Ca' Foscari Venezia — Magistrale</h2>
+                </div>
+            </div>
+
+            <!-- VE - Computer Science and Information Technology -->
+            <div class="r-card" id="cf-csit">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Computer Science and Information Technology</h3>
+                        <div class="r-card-sub">Università Ca' Foscari Venezia · Campus Scientifico, Mestre · 2 anni · 120 CFU</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge badge-accent">LM-18</span>
+                        <span class="badge badge-muted">No Albo Ingegneri</span>
+                        <span class="badge" style="background:rgba(14,165,233,0.15);color:var(--accent2)">🇬🇧 Inglese</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>LM-18</strong> (Informatica). Il corso ha un forte orientamento informatico-scientifico, quindi è presumibilmente affine alla classe LM-18. Tuttavia, la denominazione "Information Technology" e alcuni curricula suggeriscono possibili punti di contatto con l'ingegneria. <strong>È necessario verificare la classe esatta sul sito dell'Ateneo per eventuali implicazioni sull'Albo.</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Lingua</td>
+                        <td><strong>Interamente in inglese</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Albo Ingegneri</td>
+                        <td><span class="no">✗ Non abilitante</span></td>
+                    </tr>
+                    <tr>
+                        <td>Curricula</td>
+                        <td>Dall'analisi degli orari 2025/26 si evince una solida offerta con tre percorsi principali:
+                            <ul style="margin-top:0.3rem; list-style:disc; padding-left:1.2rem;">
+                                <li><strong>Artificial Intelligence and Data Engineering</strong></li>
+                                <li><strong>Cybersecurity</strong></li>
+                                <li><strong>Software Development and Engineering</strong></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Curriculum AI and Data Engineering -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge badge-accent">A</span> Artificial Intelligence and Data Engineering
+                    </div>
+                    <div class="curr-block-desc">Focus su machine learning avanzato, deep learning, ingegneria dei dati e sistemi intelligenti. Un percorso che unisce la teoria dell'AI alla pratica di gestione e elaborazione di grandi moli di dati.</div>
+                    <div style="margin-top:0.5rem;">
+                        <span class="area-label" style="margin-top:0; font-size:0.7rem;">Possibili insegnamenti (da orari)</span>
+                        <table class="esami-table" style="margin-top:0.5rem">
+                            <thead>
+                                <tr>
+                                    <th>Esame (dedotto da docenti e orari)</th>
+                                    <th>Competenze trasmesse</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Machine Learning / Apprendimento Automatico</td><td>Fondamenti teorici e pratici del ML.</td></tr>
+                                <tr><td>Data Engineering / Big Data</td><td>Strumenti e architetture per la gestione di dati su larga scala (es. Spark).</td></tr>
+                                <tr><td>Computer Vision / Artificial Intelligence</td><td>Tecniche di visione artificiale e AI avanzata.</td></tr>
+                                <tr><td>Probabilistic and Statistical Models</td><td>Modelli probabilistici per l'analisi dati.</td></tr>
+                                <tr><td>Ottimizzazione / Ricerca Operativa</td><td>Metodi di ottimizzazione per il machine learning.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sbocchi-list" style="margin-top:0.8rem">
+                        <span class="sbocco-tag">AI Engineer</span>
+                        <span class="sbocco-tag">ML Engineer</span>
+                        <span class="sbocco-tag">Data Engineer</span>
+                        <span class="sbocco-tag">Data Scientist</span>
+                    </div>
+                </div>
+
+                <!-- Curriculum Cybersecurity -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge badge-danger">B</span> Cybersecurity
+                    </div>
+                    <div class="curr-block-desc">Formazione tecnica e applicata sulla sicurezza informatica, con un approccio che bilancia teoria crittografica e pratica operativa (sicurezza di reti, sistemi e software).</div>
+                    <div style="margin-top:0.5rem;">
+                        <span class="area-label" style="margin-top:0; font-size:0.7rem;">Possibili insegnamenti (da orari)</span>
+                        <table class="esami-table" style="margin-top:0.5rem">
+                            <thead>
+                                <tr>
+                                    <th>Esame (dedotto da docenti e orari)</th>
+                                    <th>Competenze trasmesse</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Crittografia / Sicurezza</td><td>Fondamenti di crittografia e protocolli sicuri.</td></tr>
+                                <tr><td>Sicurezza delle Reti e dei Sistemi</td><td>Analisi e difesa di infrastrutture di rete.</td></tr>
+                                <tr><td>Penetration Testing / Vulnerability Analysis</td><td>Tecniche di ethical hacking e analisi delle vulnerabilità.</td></tr>
+                                <tr><td>Sicurezza del Software</td><td>Analisi statica e dinamica per codice sicuro.</td></tr>
+                                <tr><td>Digital Forensics</td><td>Analisi post-incidente e recupero prove digitali.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sbocchi-list" style="margin-top:0.8rem">
+                        <span class="sbocco-tag">Security Analyst</span>
+                        <span class="sbocco-tag">Penetration Tester</span>
+                        <span class="sbocco-tag">Cybersecurity Specialist</span>
+                        <span class="sbocco-tag">Security Consultant</span>
+                    </div>
+                </div>
+
+                <!-- Curriculum Software Development and Engineering -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge badge-muted">C</span> Software Development and Engineering
+                    </div>
+                    <div class="curr-block-desc">Percorso dedicato alla progettazione e sviluppo di software complesso, con focus su metodologie di ingegneria del software, architetture moderne, e tecnologie per il web e i sistemi distribuiti.</div>
+                    <div style="margin-top:0.5rem;">
+                        <span class="area-label" style="margin-top:0; font-size:0.7rem;">Possibili insegnamenti (da orari)</span>
+                        <table class="esami-table" style="margin-top:0.5rem">
+                            <thead>
+                                <tr>
+                                    <th>Esame (dedotto da docenti e orari)</th>
+                                    <th>Competenze trasmesse</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Ingegneria del Software Avanzata</td><td>Metodologie agili, DevOps, continuous integration.</td></tr>
+                                <tr><td>Sistemi Distribuiti / Cloud Computing</td><td>Architetture scalabili, microservizi, container.</td></tr>
+                                <tr><td>Tecnologie Web / Sviluppo Web Avanzato</td><td>Framework moderni per il web e lo sviluppo di applicazioni.</td></tr>
+                                <tr><td>Programmazione di Sistema / Concorrente</td><td>Sviluppo ad alte prestazioni e gestione della concorrenza.</td></tr>
+                                <tr><td>Interazione Uomo-Macchina</td><td>Principi di usabilità e progettazione di interfacce.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="sbocchi-list" style="margin-top:0.8rem">
+                        <span class="sbocco-tag">Software Architect</span>
+                        <span class="sbocco-tag">Senior Developer</span>
+                        <span class="sbocco-tag">Cloud/DevOps Engineer</span>
+                        <span class="sbocco-tag">Full-stack Developer</span>
+                    </div>
+                </div>
+
+                <div class="pro-contro" style="margin-top:1.5rem;">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Offerta formativa moderna e completa, copre le tre aree chiave dell'ICT: AI/Data, Cybersecurity e Software Engineering.</li>
+                            <li>Interamente in inglese: prepara al mercato del lavoro internazionale e attrae una faculty con esperienza globale.</li>
+                            <li>Dimensione contenuta dell'ateneo: favorisce il rapporto con i docenti e un ambiente di studio più raccolto.</li>
+                            <li>Eccellente trampolino per carriere in aziende tech innovative e per dottorati di ricerca.</li>
+                            <li>Per studenti L-31, il passaggio è generalmente diretto, senza i debiti in Fisica richiesti per LM-32.</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li><strong>Accesso all'Albo Ingegneri: da verificare.</strong> Se la classe è LM-18, non abilita. Questo è un punto cruciale per chi ambisce alla professione di ingegnere.</li>
+                            <li>Meno "branding ingegneristico" rispetto al Computer Engineering di UNIPD, che ha un forte riconoscimento nel mondo industriale classico.</li>
+                            <li>Pur essendo in crescita, l'ecosistema di partnership industriali potrebbe essere meno esteso di quello del DEI di Padova, storicamente legato a grandi aziende.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Accesso da Triennali</span>
+                    <div style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem;">
+                        <p>Progettato principalmente per laureati in classi L-31 (Informatica) e affini. L'accesso è generalmente diretto per chi proviene dai corsi di laurea in Informatica di Ca' Foscari (TSI e DS) e da UNIPD Informatica (L-31), data la forte affinità disciplinare. Per chi proviene da ingegneria (L-8), potrebbero essere richieste integrazioni curriculari su aspetti più teorico-scientifici dell'informatica, ma il percorso è assolutamente possibile.</p>
+                    </div>
+                </div>
+                <div style="margin-top:0.8rem">
+                    <span class="area-label" style="margin-top:0">▶ Opportunità e Stage</span>
+                    <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6; margin-top:0.5rem;">Ca' Foscari ha solide partnership con aziende del territorio e multinazionali (es. Amazon, Benetton, ZTE) e partecipa a programmi Erasmus+ con università di prestigio in Europa. Il Placement office di ateneo supporta attivamente gli studenti in stage e tirocini.</p>
+                </div>
+            </div>
+
+
+
+            <!-- ═════════════════════ UNIPD MAGISTRALI ═════════════════════ -->
+            <div class="section-gap">
+                <div class="section-header">
+                    <span class="section-num">03</span>
+                    <h2>UNIPD — Magistrali</h2>
+                </div>
+            </div>
+
+            <!-- PD - Computer Engineering -->
+            <div class="r-card" id="pd-ce">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Computer Engineering</h3>
+                        <div class="r-card-sub">Università di Padova · DEI — 2 anni · 120 CFU · Interamente in inglese
+                        </div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge" style="background:rgba(245,158,11,0.15);color:var(--warn)">LM-32</span>
+                        <span class="badge badge-success">Albo Ingegneri Sez. A</span>
+                        <span class="badge" style="background:rgba(14,165,233,0.15);color:var(--accent2)">🇬🇧 Inglese</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>LM-32</strong> — Ingegneria Informatica Magistrale. Con Esame di Stato →
+                            <strong>Albo Ingegneri Sez. A</strong> (massimo livello).</td>
+                    </tr>
+                    <tr>
+                        <td>Lingua</td>
+                        <td>Interamente in inglese</td>
+                    </tr>
+                    <tr>
+                        <td>Curricula</td>
+                        <td>AI &amp; Robotics · Bioinformatics · High Performance &amp; Big Data · Web Information &amp; Data Engineering</td>
+                    </tr>
+                </table>
+
+                <!-- AI & Robotics -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge badge-accent">A</span> Artificial Intelligence and Robotics
+                    </div>
+                    <div class="curr-block-desc">Focus: ML, Deep Learning, Computer Vision, Robotica, Sistemi Autonomi, NLP.</div>
+                    <div class="sbocchi-list" style="margin-top:0.4rem">
+                        <span class="sbocco-tag">AI Engineer</span>
+                        <span class="sbocco-tag">ML Engineer</span>
+                        <span class="sbocco-tag">Robotics Engineer</span>
+                        <span class="sbocco-tag">Computer Vision Eng.</span>
+                        <span class="sbocco-tag">Research Scientist</span>
+                    </div>
+                </div>
+
+                <!-- Bioinformatics -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge badge-muted">B</span> Bioinformatics
+                    </div>
+                    <div class="curr-block-desc">Focus: Genomica computazionale, analisi sequenze biologiche, ML
+                        applicato a Life Sciences. <strong>Di nicchia ma in forte crescita.</strong></div>
+                    <div class="sbocchi-list" style="margin-top:0.4rem">
+                        <span class="sbocco-tag">Bioinformatician</span>
+                        <span class="sbocco-tag">Computational Biologist</span>
+                        <span class="sbocco-tag">DS in Life Sciences</span>
+                    </div>
+                </div>
+
+                <!-- HPC -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge" style="background:rgba(245,158,11,0.15);color:var(--warn)">C</span> High
+                        Performance and Big Data Computing
+                    </div>
+                    <div class="curr-block-desc">Focus: HPC (MPI, CUDA, OpenMP), Cloud (AWS/GCP/Azure), Spark, Kafka,
+                        architetture parallele.</div>
+                    <div class="sbocchi-list" style="margin-top:0.4rem">
+                        <span class="sbocco-tag">HPC Engineer</span>
+                        <span class="sbocco-tag">Cloud Architect</span>
+                        <span class="sbocco-tag">Data Engineer Sr.</span>
+                        <span class="sbocco-tag">SRE / Platform Eng.</span>
+                    </div>
+                </div>
+
+                <!-- WIDE -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge badge-accent">D</span> Web Information and Data Engineering
+                    </div>
+                    <div class="curr-block-desc">Focus: Architetture web su larga scala, Information Retrieval,
+                        Knowledge Graphs, Semantic Web, sistemi di raccomandazione.</div>
+                    <div class="sbocchi-list" style="margin-top:0.4rem">
+                        <span class="sbocco-tag">Backend Engineer Sr.</span>
+                        <span class="sbocco-tag">Search Engineer</span>
+                        <span class="sbocco-tag">Knowledge Graph Eng.</span>
+                        <span class="sbocco-tag">Product Data Scientist</span>
+                    </div>
+                </div>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Titolo ingegneristico magistrale + Albo Sez. A (massimo livello professionale)</li>
+                            <li>Interamente in inglese → CV di livello internazionale</li>
+                            <li>4 specializzazioni che coprono quasi l'intero spettro ICT moderno</li>
+                            <li>Eccellente placement industriale e accesso a dottorati competitivi</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Esame di Stato: facoltativo, ma richiede tempo e costi aggiuntivi</li>
+                            <li>Curriculum Bioinformatics richiede background biologico non scontato</li>
+                            <li>Per studenti L-31: possibili debiti formativi in Fisica e Analisi 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PD - International Cybersecurity -->
+            <div class="r-card" id="pd-ics">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">International Cybersecurity and Cyberintelligence</h3>
+                        <div class="r-card-sub">Università di Padova · DEI + SPGI · 2 anni · 120 CFU</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge badge-danger">LM-66 R</span>
+                        <span class="badge badge-muted">No Albo Ingegneri</span>
+                        <span class="badge" style="background:rgba(14,165,233,0.15);color:var(--accent2)">🇬🇧
+                            Inglese</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>LM-66 R</strong> — Sicurezza Informatica Magistrale. <span class="no">Non abilita
+                                all'Albo degli Ingegneri.</span></td>
+                    </tr>
+                    <tr>
+                        <td>Natura</td>
+                        <td><strong>Interdisciplinare</strong>: competenze tecniche di cybersecurity + geopolitica +
+                            diritto internazionale + intelligence</td>
+                    </tr>
+                    <tr>
+                        <td>Profilo ideale</td>
+                        <td>Chi vuole capire la cybersecurity nel contesto globale, non solo "sporcarsi le mani"
+                            tecnicamente</td>
+                    </tr>
+                </table>
+
+                <div class="nota-info">
+                    ⚠️ Nonostante condivida la classe LM-66 con "Cybersecurity", questo è un corso <strong>completamente
+                        diverso</strong>:
+                    la componente geopolitico-legale lo distingue radicalmente.
+                </div>
+
+                <div class="area-label">▶ Componente Tecnica</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Network Security</td>
+                            <td>Firewall, IDS/IPS, VPN, sicurezza dei protocolli.</td>
+                        </tr>
+                        <tr>
+                            <td>Cryptography</td>
+                            <td>Crittografia sim./asim., TLS, SSH.</td>
+                        </tr>
+                        <tr>
+                            <td>Penetration Testing</td>
+                            <td>Ethical hacking, OSINT, vulnerability assessment.</td>
+                        </tr>
+                        <tr>
+                            <td>Malware Analysis</td>
+                            <td>Analisi statica e dinamica del malware.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="area-label">▶ Componente Geopolitica, Legale e di Intelligence</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>International Law &amp; Cybersecurity</td>
+                            <td>Diritto internazionale nel cyberspazio: attribuzioni, conflitti, cooperazione.</td>
+                        </tr>
+                        <tr>
+                            <td>Geopolitics of Cyberspace</td>
+                            <td>Cyberwar, operazioni di influenza, sicurezza nazionale.</td>
+                        </tr>
+                        <tr>
+                            <td>Cyberintelligence</td>
+                            <td>Raccolta, analisi e utilizzo dell'intelligence nel contesto digitale.</td>
+                        </tr>
+                        <tr>
+                            <td>EU/National Cybersecurity Policy</td>
+                            <td>NIS2, CER Directive, DORA, framework europeo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Profilo unico in Italia: pochissimi corsi combinano questa duplice competenza</li>
+                            <li>Mercato: ENISA, ACN, aziende difesa, studi legali specializzati, NATO</li>
+                            <li>In inglese → carriere in organizzazioni internazionali</li>
+                            <li>La componente legale/geopolitica è un valore aggiunto per ruoli CISO e strategici</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Nessun accesso all'Albo degli Ingegneri (LM-66)</li>
+                            <li>Componente tecnica meno approfondita rispetto a "Cybersecurity" puro</li>
+                            <li>Richiede genuino interesse per diritto e geopolitica</li>
+                            <li>Mercato promettente ma più ristretto e specifico</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Sbocchi Professionali</span>
+                    <div class="sbocchi-list">
+                        <span class="sbocco-tag">Threat Intelligence Analyst</span>
+                        <span class="sbocco-tag">Cyberintelligence Analyst</span>
+                        <span class="sbocco-tag">CISO strategico</span>
+                        <span class="sbocco-tag">Funzionario ENISA / ACN</span>
+                        <span class="sbocco-tag">Consulente Cyber Strategica</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PD - Cybersecurity -->
+            <div class="r-card" id="pd-cs">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Cybersecurity</h3>
+                        <div class="r-card-sub">Università di Padova · DEI · 2 anni · 120 CFU</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge badge-danger">LM-66 R</span>
+                        <span class="badge badge-muted">No Albo Ingegneri</span>
+                        <span class="badge"
+                            style="background:rgba(34,197,94,0.15);color:var(--success)">Tecnico-specialistico</span>
+                    </div>
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>LM-66 R</strong> — Sicurezza Informatica Magistrale. Orientamento prevalentemente
+                            <strong>tecnico-operativo</strong>.</td>
+                    </tr>
+                    <tr>
+                        <td>Lingua</td>
+                        <td>Italiano / Inglese (misto, prevalentemente italiano)</td>
+                    </tr>
+                    <tr>
+                        <td>Profilo ideale</td>
+                        <td>Chi vuole "sporcarsi le mani": penetration testing, forensics, malware, crittografia
+                            applicata.</td>
+                    </tr>
+                </table>
+
+                <div class="area-label">▶ Crittografia e Matematica della Sicurezza</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Crittografia Applicata</td>
+                            <td>AES, RSA, ECC, funzioni hash, protocolli sicuri.</td>
+                        </tr>
+                        <tr>
+                            <td>Sicurezza Quantistica</td>
+                            <td>Algoritmi post-quantistici, QKD: la frontiera della crittografia.</td>
+                        </tr>
+                        <tr>
+                            <td>Blockchain e Sistemi Decentralizzati</td>
+                            <td>Smart contract, DLT, sicurezza criptovalute.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="area-label">▶ Offensive &amp; Defensive Security</div>
+                <table class="esami-table">
+                    <thead>
+                        <tr>
+                            <th>Esame</th>
+                            <th>Competenze</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Penetration Testing</td>
+                            <td>Metodologie complete ethical hacking (OWASP, PTES, MITRE ATT&amp;CK).</td>
+                        </tr>
+                        <tr>
+                            <td>Digital Forensics</td>
+                            <td>Prove digitali, catena di custodia, analisi post-incidente.</td>
+                        </tr>
+                        <tr>
+                            <td>Sicurezza del Software</td>
+                            <td>Buffer overflow, SQL injection, XSS, fuzzing, static analysis.</td>
+                        </tr>
+                        <tr>
+                            <td>Reverse Engineering &amp; Malware</td>
+                            <td>Disassemblaggio binario, sandbox, analisi statica/dinamica.</td>
+                        </tr>
+                        <tr>
+                            <td>Incident Response &amp; SOC</td>
+                            <td>SIEM, playbook di risposta, gestione degli incidenti.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Competenze tecniche molto spendibili: cybersecurity specialist tra i più ricercati in
+                                Europa</li>
+                            <li>Si integra perfettamente con certificazioni internazionali (OSCP, CEH, CISSP)</li>
+                            <li>Ottimo collegamento con Polizia Postale, CSIRT, aziende di consulenza</li>
+                            <li>Maggiore profondità tecnica rispetto al corso "International"</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Nessun accesso all'Albo degli Ingegneri (LM-66)</li>
+                            <li>Il settore richiede aggiornamento continuo: certificazioni indispensabili</li>
+                            <li>Manca la dimensione geopolitica/legale per ruoli dirigenziali strategici</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Sbocchi Professionali</span>
+                    <div class="sbocchi-list">
+                        <span class="sbocco-tag">Penetration Tester</span>
+                        <span class="sbocco-tag">Security Analyst SOC</span>
+                        <span class="sbocco-tag">Malware Analyst</span>
+                        <span class="sbocco-tag">Digital Forensics Inv.</span>
+                        <span class="sbocco-tag">Security Architect</span>
+                        <span class="sbocco-tag">DevSecOps Engineer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PD - Data Science LM-DATA -->
+            <div class="r-card" id="pd-ds">
+                <div class="r-card-header">
+                    <div>
+                        <h3 class="r-card-title">Data Science</h3>
+                        <div class="r-card-sub">Università di Padova · Dip. di Matematica / DEI · 2 anni · 120 CFU</div>
+                    </div>
+                    <div class="badge-cluster">
+                        <span class="badge badge-accent">LM-DATA</span>
+                        <span class="badge badge-muted">No Albo Ingegneri</span>
+                    </div>
+                </div>
+
+                <div class="nota-critica">
+                    ⚠️ <strong>NOTA CRITICA:</strong> LM-DATA <strong>NON è LM-32</strong>. I laureati di questo corso
+                    <strong>non possono sostenere l'Esame di Stato</strong> per iscriversi all'Albo degli Ingegneri,
+                    indipendentemente dalla triennale di provenienza. Il Data Scientist non è una professione
+                    regolamentata
+                    (non richiede un albo), ma questo è un vincolo da considerare per percorsi futuri.
+                </div>
+
+                <table class="info-table">
+                    <tr>
+                        <td>Classe</td>
+                        <td><strong>LM-DATA</strong> — Nuova classe ministeriale (DM 2022), interdisciplinare tra
+                            informatica, statistica e matematica applicata.</td>
+                    </tr>
+                    <tr>
+                        <td>Curricula</td>
+                        <td>Biological Data Analytics · Machine Learning for Intelligent Systems</td>
+                    </tr>
+                </table>
+
+                <!-- Curriculum Biological -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge" style="background:rgba(34,197,94,0.15);color:var(--success)">A</span>
+                        Biological Data Analytics
+                    </div>
+                    <div class="curr-block-desc">Applicazione di tecniche di data science a dati biologici, biomedici e
+                        genomici.</div>
+                    <table class="esami-table" style="margin-top:0.5rem">
+                        <thead>
+                            <tr>
+                                <th>Esame chiave</th>
+                                <th>Competenze</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Computational Biology</td>
+                                <td>Algoritmi e modelli per dati biologici.</td>
+                            </tr>
+                            <tr>
+                                <td>Genomics and Bioinformatics</td>
+                                <td>Analisi del genoma, single-cell, trascrittomica.</td>
+                            </tr>
+                            <tr>
+                                <td>Clinical Data Analysis</td>
+                                <td>Trial clinici, sopravvivenza, dati longitudinali.</td>
+                            </tr>
+                            <tr>
+                                <td>Statistical Learning</td>
+                                <td>Regressione avanzata, classificazione, model selection.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Curriculum ML -->
+                <div class="curr-block">
+                    <div class="curr-block-title">
+                        <span class="badge badge-accent">B</span> Machine Learning for Intelligent Systems
+                    </div>
+                    <div class="curr-block-desc">ML avanzato, AI, sistemi intelligenti. Uno dei curricula più aggiornati
+                        disponibili in Italia.</div>
+                    <table class="esami-table" style="margin-top:0.5rem">
+                        <thead>
+                            <tr>
+                                <th>Esame chiave</th>
+                                <th>Competenze</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Advanced Machine Learning</td>
+                                <td>Deep learning, transformer, generative models, uncertainty quantification.</td>
+                            </tr>
+                            <tr>
+                                <td>Statistical Learning Theory</td>
+                                <td>PAC learning, VC dimension, fondamenti teorici del ML.</td>
+                            </tr>
+                            <tr>
+                                <td>Reinforcement Learning</td>
+                                <td>Q-learning, policy gradient, robotica e gaming AI.</td>
+                            </tr>
+                            <tr>
+                                <td>Explainable AI</td>
+                                <td>SHAP, LIME, fairness, interpretabilità dei modelli.</td>
+                            </tr>
+                            <tr>
+                                <td>NLP</td>
+                                <td>LLM, BERT, RAG, elaborazione del linguaggio naturale.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pro-contro">
+                    <div class="pro-box">
+                        <h4>✅ Pro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li>Alta domanda di mercato: DS tra le figure più ricercate con retribuzioni elevate</li>
+                            <li>Approccio matematicamente rigoroso: forma professionisti di altissimo livello</li>
+                            <li>Curriculum ML è uno dei più aggiornati in Italia</li>
+                            <li>Ottima preparazione per dottorati in ML, AI, statistica</li>
+                        </ul>
+                    </div>
+                    <div class="contro-box">
+                        <h4>❌ Contro</h4>
+                        <ul style="list-style:none;padding:0;margin:0">
+                            <li><strong>NON accede all'Albo degli Ingegneri</strong> → chi vuole LM-32 deve scegliere
+                                Computer Engineering</li>
+                            <li>Mercato DS più selettivo: portfolio di progetti concreti indispensabile</li>
+                            <li>Curriculum Biological richiede buona base di biologia/statistica</li>
+                            <li>Per provenienza L-8: possibili debiti in ambito statistico avanzato</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <span class="area-label" style="margin-top:0">▶ Sbocchi Professionali</span>
+                    <div class="sbocchi-list">
+                        <span class="sbocco-tag">Data Scientist Senior</span>
+                        <span class="sbocco-tag">ML Engineer</span>
+                        <span class="sbocco-tag">AI Research Scientist</span>
+                        <span class="sbocco-tag">NLP Engineer</span>
+                        <span class="sbocco-tag">Bioinformatician <em>(Curriculum A)</em></span>
+                        <span class="sbocco-tag">Biostatistician <em>(Curriculum A)</em></span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ═════════════════════ CONFRONTI ═════════════════════ -->
+            <div class="section-gap">
+                <div class="section-header" id="s4">
+                    <span class="section-num">04</span>
+                    <h2>Confronti: Triennali</h2>
+                </div>
+            </div>
+
+            <div class="r-card">
+                <h3 style="font-family:var(--font-mono);font-size:0.95rem;margin-bottom:1rem;color:var(--text)">
+                    Tabella Comparativa — Corsi Triennali
+                </h3>
+                <div class="cmp-wrap">
+                    <table class="cmp-table">
+                        <thead>
+                            <tr>
+                                <th>Criterio</th>
+                                <th>CF TSI (L-31)</th>
+                                <th>CF Data Sci. (L-31)</th>
+                                <th>UNIPD Inf. (L-31 R)</th>
+                                <th>UNIPD Info Eng. (L-8 R)</th>
+                                <th>UNIPD Ing. Inf. (L-8 R)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Approccio</td>
+                                <td>Scientifico-pratico</td>
+                                <td>Scientifico + DS</td>
+                                <td>Scientifico-teorico</td>
+                                <td>Ing. generalista</td>
+                                <td>Ing. specialista</td>
+                            </tr>
+                            <tr>
+                                <td>Matematica</td>
+                                <td><span class="stars">★★★</span><span class="stars-empty">★★</span></td>
+                                <td><span class="stars">★★★</span><span class="stars-empty">★★</span></td>
+                                <td><span class="stars">★★★★</span><span class="stars-empty">★</span></td>
+                                <td><span class="stars">★★★★★</span></td>
+                                <td><span class="stars">★★★★★</span></td>
+                            </tr>
+                            <tr>
+                                <td>Fisica</td>
+                                <td><span class="no">✗</span></td>
+                                <td><span class="no">✗</span></td>
+                                <td><span class="no">✗</span></td>
+                                <td><span class="stars">★★★★</span><span class="stars-empty">★</span></td>
+                                <td><span class="stars">★★★★</span><span class="stars-empty">★</span></td>
+                            </tr>
+                            <tr>
+                                <td>Data Science / AI</td>
+                                <td><span class="stars">★★</span><span class="stars-empty">★★★</span></td>
+                                <td><span class="stars">★★★★</span><span class="stars-empty">★</span></td>
+                                <td><span class="stars">★★</span><span class="stars-empty">★★★</span></td>
+                                <td><span class="stars">★★</span><span class="stars-empty">★★★</span></td>
+                                <td><span class="stars">★★</span><span class="stars-empty">★★★</span></td>
+                            </tr>
+                            <tr>
+                                <td>Albo Ingegneri</td>
+                                <td><span class="no">✗</span></td>
+                                <td><span class="no">✗</span></td>
+                                <td><span class="no">✗</span></td>
+                                <td><span class="ok">✓ Sez.B</span></td>
+                                <td><span class="ok">✓ Sez.B</span></td>
+                            </tr>
+                            <tr>
+                                <td>Flessibilità piano</td>
+                                <td><span class="stars">★★★★</span><span class="stars-empty">★</span></td>
+                                <td><span class="stars">★★★</span><span class="stars-empty">★★</span></td>
+                                <td><span class="stars">★★★★</span><span class="stars-empty">★</span></td>
+                                <td><span class="stars">★★</span><span class="stars-empty">★★★</span></td>
+                                <td><span class="stars">★★</span><span class="stars-empty">★★★</span></td>
+                            </tr>
+                            <tr>
+                                <td>Difficoltà</td>
+                                <td>Media</td>
+                                <td>Media</td>
+                                <td>Media–Alta</td>
+                                <td>Alta</td>
+                                <td>Molto Alta</td>
+                            </tr>
+                            <tr>
+                                <td>Accesso a LM-32 UNIPD</td>
+                                <td><span class="warn-text">⚠ Con debiti</span></td>
+                                <td><span class="warn-text">⚠ Con debiti</span></td>
+                                <td><span class="warn-text">⚠ Con debiti</span></td>
+                                <td><span class="ok">✓ Diretto</span></td>
+                                <td><span class="ok">✓ Diretto</span></td>
+                            </tr>
+                            <tr>
+                                <td>Accesso a LM-DATA UNIPD</td>
+                                <td><span class="ok">✓ Diretto</span></td>
+                                <td><span class="ok">✓ Diretto</span></td>
+                                <td><span class="ok">✓ Diretto</span></td>
+                                <td><span class="warn-text">⚠ Con debiti</span></td>
+                                <td><span class="warn-text">⚠ Con debiti</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="divider"></div>
+
+                <h4 style="font-family:var(--font-mono);font-size:0.85rem;color:var(--text);margin-bottom:1rem">// Quale
+                    corso per quale studente?</h4>
+
+                <div style="display:flex;flex-direction:column;gap:0.6rem">
+                    <div
+                        style="background:var(--surface2);border-radius:var(--radius);padding:0.9rem;font-size:0.82rem">
+                        <span style="font-family:var(--font-mono);color:var(--accent)">🎯 Solo software, no
+                            fisica/elettronica</span><br>
+                        <span style="color:var(--text-muted);margin-top:0.3rem;display:block">→ <strong
+                                style="color:var(--text)">Ca' Foscari Informatica TSI</strong> o <strong
+                                style="color:var(--text)">UNIPD Informatica L-31 R</strong>. UNIPD è teoricamente più
+                            rigoroso; Ca' Foscari è più bilanciato.</span>
+                    </div>
+                    <div
+                        style="background:var(--surface2);border-radius:var(--radius);padding:0.9rem;font-size:0.82rem">
+                        <span style="font-family:var(--font-mono);color:var(--accent)">🎯 Dati, ML, AI — senza ambizioni
+                            ingegneristiche</span><br>
+                        <span style="color:var(--text-muted);margin-top:0.3rem;display:block">→ <strong
+                                style="color:var(--text)">Ca' Foscari Informatica Data Science</strong> → poi <strong
+                                style="color:var(--text)">LM-DATA UNIPD</strong> (ML for Intelligent Systems). Percorso
+                            ottimizzato dalla triennale.</span>
+                    </div>
+                    <div
+                        style="background:var(--surface2);border-radius:var(--radius);padding:0.9rem;font-size:0.82rem">
+                        <span style="font-family:var(--font-mono);color:var(--accent)">🎯 Indeciso — vuole tenere tutte
+                            le porte aperte</span><br>
+                        <span style="color:var(--text-muted);margin-top:0.3rem;display:block">→ <strong
+                                style="color:var(--text)">UNIPD Information Engineering L-8 R</strong>. Il "jolly": apre
+                            LM-32, LM-27, LM-25, LM-29. In inglese, impegnativo, ma massima versatilità.</span>
+                    </div>
+                    <div
+                        style="background:var(--surface2);border-radius:var(--radius);padding:0.9rem;font-size:0.82rem">
+                        <span style="font-family:var(--font-mono);color:var(--accent)">🎯 Vuole diventare Ingegnere
+                            Informatico iscritto all'Albo</span><br>
+                        <span style="color:var(--text-muted);margin-top:0.3rem;display:block">→ <strong
+                                style="color:var(--text)">UNIPD Ingegneria Informatica L-8 R</strong> → <strong
+                                style="color:var(--text)">Computer Engineering LM-32</strong> → Esame di Stato. La via
+                            maestra. Impegnativa ma il percorso più diretto.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Confronti Magistrali -->
+            <div class="section-gap">
+                <div class="section-header" id="s4b">
+                    <span class="section-num">04b</span>
+                    <h2>Confronti: Magistrali UNIPD</h2>
+                </div>
+            </div>
+
+            <div class="r-card">
+                <h3 style="font-family:var(--font-mono);font-size:0.95rem;margin-bottom:1rem;color:var(--text)">
+                    // Albero Decisionale — Quale magistrale scegliere?
+                </h3>
+
+                <pre class="tree">
+Qual è il tuo obiettivo principale?
+├── INGEGNERIA INFORMATICA (con accesso Albo Ingegneri)
+│   └── Computer Engineering (LM-32)
+│       ├── AI, Robotica, Deep Learning → Curriculum AI and Robotics
+│       ├── Biologia + Dati → Curriculum Bioinformatics
+│       ├── Cloud, HPC, Big Data → Curriculum High Performance &amp; Big Data
+│       └── Web, Search, Knowledge Graphs → Curriculum Web Information &amp; Data Engineering
+│
+├── SICUREZZA INFORMATICA (con accesso Albo Ingegneri)
+│   ├── Prevalentemente TECNICA (hacking, forensics, crittografia)
+│   │   └── Cybersecurity (LM-66)
+│   └── TECNICA + GEOPOLITICA / INTELLIGENCE / DIRITTO
+│       └── International Cybersecurity &amp; Cyberintelligence (LM-66)
+│
+├── DATA SCIENCE / ML (senza necessità Albo Ingegneri)
+│   ├── Applicazioni biologiche/biomediche
+│   │   └── LM-DATA – Biological Data Analytics
+│   └── ML puro, AI, Sistemi Intelligenti
+│       └── LM-DATA – ML for Intelligent Systems
+│
+└── COMPUTER SCIENCE / SOFTWARE ENGINEERING (senza Albo)
+    └── Ca' Foscari – Computer Science and IT (LM-18)
+        ├── AI & Data Engineering → Curriculum AI and Data Engineering
+        ├── Cybersecurity → Curriculum Cybersecurity
+        └── Software Development → Curriculum Software Development and Engineering
+                </pre>
+
+                <div class="divider"></div>
+
+                <h4 style="font-family:var(--font-mono);font-size:0.85rem;color:var(--text);margin-bottom:0.75rem">//
+                    LM-32 Computer Engineering vs LM-DATA Data Science</h4>
+                <div class="cmp-wrap">
+                    <table class="cmp-table">
+                        <thead>
+                            <tr>
+                                <th>Dimensione</th>
+                                <th>Computer Engineering (LM-32)</th>
+                                <th>Data Science (LM-DATA)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Approccio</td>
+                                <td>Ingegneristico, progettuale</td>
+                                <td>Scientifico-statistico, analitico</td>
+                            </tr>
+                            <tr>
+                                <td>Albo Ingegneri</td>
+                                <td><span class="ok">✓ Sì (con Esame di Stato)</span></td>
+                                <td><span class="no">✗ No</span></td>
+                            </tr>
+                            <tr>
+                                <td>Focus ML/AI</td>
+                                <td>Visione sistemistica, produzione</td>
+                                <td>Visione teorico-statistica, ricerca</td>
+                            </tr>
+                            <tr>
+                                <td>Tipo di lavoro</td>
+                                <td>Progettare e implementare sistemi AI</td>
+                                <td>Analizzare, modellare, predire su dati</td>
+                            </tr>
+                            <tr>
+                                <td>Lingua</td>
+                                <td>Inglese</td>
+                                <td>Inglese (prevalentemente)</td>
+                            </tr>
+                            <tr>
+                                <td>Dottorato di ricerca</td>
+                                <td>PhD in Ing. Informatica</td>
+                                <td>PhD in ML, Statistica, AI</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="nota-info" style="margin-top:0.75rem">
+                    <strong>Sintesi:</strong> Vuoi <em>progettare sistemi AI in produzione</em> (pipeline ML, architetture cloud, robot)?
+                    → <strong>LM-32 AI &amp; Robotics</strong>. Vuoi <em>sviluppare algoritmi e fare ricerca su LLM/data</em>?
+                    → <strong>LM-DATA ML for Intelligent Systems</strong>.
+                </div>
+
+                <div class="divider"></div>
+
+                <h4 style="font-family:var(--font-mono);font-size:0.85rem;color:var(--text);margin-bottom:0.75rem">//
+                    Cybersecurity vs International Cybersecurity — NON sono lo stesso corso</h4>
+                <div class="cmp-wrap">
+                    <table class="cmp-table">
+                        <thead>
+                            <tr>
+                                <th>Dimensione</th>
+                                <th>Cybersecurity (LM-66)</th>
+                                <th>Int'l Cybersecurity &amp; Cyberintelligence (LM-66)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Natura</td>
+                                <td>Tecnico-specialistico</td>
+                                <td>Interdisciplinare (tecnico + legale + geopolitico)</td>
+                            </tr>
+                            <tr>
+                                <td>Lingua</td>
+                                <td>Italiano/Inglese misto</td>
+                                <td>Inglese</td>
+                            </tr>
+                            <tr>
+                                <td>Profondità tecnica</td>
+                                <td><span class="stars">★★★★★</span></td>
+                                <td><span class="stars">★★★</span><span class="stars-empty">★★</span></td>
+                            </tr>
+                            <tr>
+                                <td>Profondità geopolitica/legale</td>
+                                <td><span class="stars">★★</span><span class="stars-empty">★★★</span></td>
+                                <td><span class="stars">★★★★★</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sbocchi tipici</td>
+                                <td>Settore privato, SOC, consulenza tecnica</td>
+                                <td>Istituzioni, difesa, intelligence, NATO, ENISA</td>
+                            </tr>
+                            <tr>
+                                <td>Profilo ideale</td>
+                                <td>Chi vuole fare il pen tester / malware analyst</td>
+                                <td>Chi aspira a ruoli istituzionali e strategici</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <!-- ═════════════════════ PERCORSI DI ACCESSO ═════════════════════ -->
+            <div class="section-gap">
+                <div class="section-header" id="s5">
+                    <span class="section-num">05</span>
+                    <h2>Percorsi di Accesso: Triennali → Magistrali</h2>
+                </div>
+            </div>
+
+            <div class="r-card">
+                <div class="access-legend">
+                    <div><span class="is-success">✓ Diretto</span> — compatibile senza debiti o con OFA minimi</div>
+                    <div><span class="warn-text">⚠ Con debiti</span> — richiede integrazioni (tipicamente Fisica, Analisi 2, Segnali)</div>
+                    <div><span class="no">✗ Difficile</span> — profilo molto distante</div>
+                </div>
+                <div class="cmp-wrap">
+                    <table class="cmp-table">
+                        <thead>
+                            <tr>
+                                <th>Triennale di partenza</th>
+                                <th>LM-32 Computer Eng. (PD)</th>
+                                <th>LM-66 Cybersecurity (PD)</th>
+                                <th>LM-66 Int'l Cyber (PD)</th>
+                                <th>LM-DATA Data Science (PD)</th>
+                                <th>LM-18 Computer Science & IT (VE)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ca' Foscari – Inf. TSI (L-31)</td>
+                                <td><span class="warn-text">⚠</span> Mancano Fisica, Analisi 2, Segnali</td>
+                                <td><span class="warn-text">⚠</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>Ca' Foscari – Inf. Data Science (L-31)</td>
+                                <td><span class="warn-text">⚠</span> Mancano Fisica, Analisi 2</td>
+                                <td><span class="warn-text">⚠</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>UNIPD – Informatica (L-31)</td>
+                                <td><span class="warn-text">⚠</span> Mancano Fisica, Segnali; forte base algoritmica
+                                </td>
+                                <td><span class="warn-text">⚠</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                            </tr>
+                            <tr>
+                                <td>UNIPD – Information Engineering (L-8)</td>
+                                <td><span class="ok">✓ Accesso diretto</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="warn-text">⚠</span> Manca base statistica avanzata</td>
+                                <td><span class="warn-text">⚠</span> Possibili integrazioni in informatica teorica</td>
+                            </tr>
+                            <tr>
+                                <td>UNIPD – Ing. Informatica (L-8) – Gen.</td>
+                                <td><span class="ok">✓ Accesso diretto</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="warn-text">⚠</span> Manca base statistica avanzata</td>
+                                <td><span class="warn-text">⚠</span> Possibili integrazioni</td>
+                            </tr>
+                            <tr>
+                                <td>UNIPD – Ing. Informatica (L-8) – App.</td>
+                                <td><span class="ok">✓ Accesso diretto</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="ok">✓</span></td>
+                                <td><span class="warn-text">⚠</span></td>
+                                <td><span class="warn-text">⚠</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="divider"></div>
+
+                <h4 style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text);margin-bottom:0.6rem">//
+                    Debiti L-31 → LM-32: cosa manca tipicamente?</h4>
+                <div style="display:flex;flex-direction:column;gap:0.4rem;font-size:0.82rem;color:var(--text-muted)">
+                    <div>📌 <strong style="color:var(--text)">Fisica 1 e/o 2</strong> (6–12 CFU) — il debito più comune
+                        per chi viene da L-31</div>
+                    <div>📌 <strong style="color:var(--text)">Analisi Matematica 2</strong> (6 CFU) — equazioni
+                        differenziali, serie di Fourier</div>
+                    <div>📌 <strong style="color:var(--text)">Segnali e Sistemi</strong> (6–9 CFU) — fondamentale per
+                        LM-32</div>
+                </div>
+                <div class="nota-info" style="margin-top:0.75rem">
+                    I debiti possono essere sostenuti come esami singoli o inclusi come superobblighi nel piano
+                    magistrale.
+                    Si raccomanda di <strong>contattare direttamente la segreteria didattica del DEI</strong> per la
+                    situazione aggiornata anno per anno.
+                </div>
+
+                <div class="divider"></div>
+
+                <h4 style="font-family:var(--font-mono);font-size:0.82rem;color:var(--text);margin-bottom:0.6rem">//
+                    Requisiti per l'accesso a LM-DATA</h4>
+                <div style="font-size:0.82rem;color:var(--text-muted)">
+                    LM-DATA è più inclusiva per profili interdisciplinari. I requisiti tipici sono:
+                    solida base di <strong style="color:var(--text)">programmazione</strong> (Python o R),
+                    fondamenti di <strong style="color:var(--text)">probabilità e statistica</strong>,
+                    ed elementi di <strong style="color:var(--text)">algebra lineare</strong>.
+                    Per laureati L-31 con curricula orientati ai dati (es. Ca' Foscari DS), l'accesso tende a essere
+                    quasi diretto.
+                </div>
+
+
+                <div class="nota-info" style="margin-top:1.5rem; line-height:1.6">
+                    ⚠️ <strong>Nota bene</strong><br>
+                    Per verificare con precisione i <strong>requisiti di accesso</strong> alle lauree magistrali dell’Università di Padova, consulta sempre la documentazione ufficiale:
+    
+                    <ol style="margin-top:0.5rem; padding-left:1.2rem">
+                        <li>Vai su <a href="https://unipd.coursecatalogue.cineca.it/corsi/2025" target="_blank">unipd.coursecatalogue.cineca.it/corsi/2025</a>, seleziona il corso di laurea e scarica il <strong>Regolamento Didattico</strong> (Articolo 2: requisiti di accesso).</li>
+                        <li>Per il piano di studi completo, scarica l’<strong>Allegato 3</strong> (più leggibile) o, in alternativa, l’<strong>Allegato 2</strong>.</li>
+                        <li>Per dettagli sugli esami: vai su <strong>Attività formative proposte per la coorte selezionata</strong>, scegli il percorso dal menu a tendina e clicca sull’esame di interesse.</li>
+                    </ol>
+
+                    Per quanto riguarda, invece, l'Università Ca' Foscari (UNIVE), consulta le informazioni ufficiali sui corsi accessibili alla pagina <a href="https://www.unive.it/data/8321/" target="_blank">https://www.unive.it/data/8321/</a>:
+                    <ol>
+                        <li>Selezionare il corso desiderato.</li>
+                        <li>Cliccare su Insegnamenti e orari.</li>
+                        <li>Dopo aver scelto l'anno accademico (1°, 2° o 3°) aprire la tendina del curriculum di cui si vuole approfondire gli esami. Cliccare sul nome degli esami per accedere alla scheda completa</li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <!-- ═════════════════════ IL VERDETTO ═════════════════════ -->
+            <div class="section-gap">
+                <div class="section-header" id="s6">
+                    <span class="section-num">06</span>
+                    <h2>Considerazioni Finali — Il Verdetto</h2>
+                </div>
+            </div>
+
+            <!-- Profili -->
+            <div class="profilo-card" style="border-left-color:var(--warn)">
+                <h4>👷 Profilo 1 — "L'Ingegnere Convinto"</h4>
+                <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.5rem">
+                    Obiettivo: iscrizione all'Albo degli Ingegneri, lavoro in grandi aziende o studi di consulenza
+                    tecnica.
+                </p>
+                <div class="percorso">UNIPD – Ingegneria Informatica (L-8 R) → Computer Engineering (LM-32) → Esame di
+                    Stato → Albo Ing. Sez. A</div>
+                <p>Il percorso "classico" e più diretto. La triennale L-8 fornisce le basi fisico-matematiche richieste
+                    dall'LM-32,
+                    eliminando la necessità di recuperare debiti. La scelta del curriculum magistrale determina la
+                    specializzazione finale.
+                    <strong style="color:var(--warn)">Attenzione:</strong> il biennio triennale è molto pesante —
+                    valutare onestamente la propria resistenza alla matematica e alla fisica.
+                </p>
+            </div>
+
+            <div class="profilo-card" style="border-left-color:var(--accent)">
+                <h4>🧠 Profilo 2 — "Il Data Scientist / AI Enthusiast"</h4>
+                <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.5rem">
+                    Obiettivo: ML, data science, AI. Non interessato alla qualifica ingegneristica.
+                </p>
+                <div class="percorso">Opzione A (rapida): Ca' Foscari DS (L-31) → LM-DATA UNIPD (ML for Intelligent
+                    Systems)</div>
+                <div class="percorso" style="margin-top:0.4rem">Opzione B (rigorosa): UNIPD Informatica (L-31 R) →
+                    LM-DATA UNIPD (ML for Intelligent Systems)</div>
+                <p>L'opzione A ottimizza il percorso sulla data science sin dalla triennale. L'opzione B parte da basi
+                    teoriche più solide
+                    (meglio per chi punta a un dottorato di ricerca). Chi vuole la <em>qualifica ingegneristica</em> e
+                    l'AI deve scegliere LM-32 AI&amp;R invece di LM-DATA.</p>
+            </div>
+
+            <div class="profilo-card" style="border-left-color:var(--accent2)">
+                <h4>🤔 Profilo 3 — "L'Indeciso Strategico"</h4>
+                <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.5rem">
+                    Obiettivo: non ha le idee chiare, vuole il maggior numero di porte aperte possibile.
+                </p>
+                <div class="percorso">UNIPD – Information Engineering (L-8 R)</div>
+                <p>L'unico corso che apre simultaneamente le porte a LM-32, LM-27 (TLC), LM-25 (Automatica), LM-29
+                    (Elettronica), LM-66.
+                    Tutto in inglese e con titolo internazionale. Il prezzo è un percorso impegnativo e generalista, ma
+                    per chi vuole decidere
+                    <em>durante</em> il percorso universitario, è la scelta con il minore "rimpianto potenziale".
+                </p>
+            </div>
+
+            <div class="profilo-card" style="border-left-color:var(--danger)">
+                <h4>🔐 Profilo 4 — "Il Futuro Esperto di Sicurezza"</h4>
+                <p style="color:var(--text-muted);font-size:0.82rem;margin-bottom:0.5rem">
+                    Obiettivo: lavorare nella cybersecurity.
+                </p>
+                <div class="percorso">Tecnico-operativo: UNIPD Informatica o Ing. Informatica → Cybersecurity (LM-66)
+                </div>
+                <div class="percorso" style="margin-top:0.4rem">Strategico-istituzionale: qualsiasi buona triennale
+                    informatica → International Cybersecurity &amp; Cyberintelligence (LM-66)</div>
+                <p>La scelta dipende da <em>dove</em> si vuole lavorare. Chi vuole fare il penetration tester o il SOC
+                    analyst in un'azienda privata
+                    sceglie il percorso tecnico. Chi aspira a ruoli istituzionali, intelligence o consulenza strategica
+                    ad alto livello sceglie il percorso "International".</p>
+            </div>
+
+
+            <!-- Note conclusive -->
+            <div class="r-card mt-lg" style="border-top:3px solid var(--accent)">
+                <h3 style="font-family:var(--font-mono);font-size:0.95rem;margin-bottom:1.2rem;color:var(--text)">
+                    📌 Note Conclusive: Tempistiche, Sedi e Opportunità
+                </h3>
+
+                <div class="area-label" style="margin-top:0">▶ Tempistiche di iscrizione</div>
+                <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6;margin-bottom:0.75rem">
+                    Le immatricolazioni aprono tipicamente tra <strong style="color:var(--text)">luglio e settembre</strong>.
+                    Molti corsi UNIPD prevedono un test di ammissione <strong style="color:var(--text)">TOLC-I</strong> (Ingegneria e Informatica).
+                    Si consiglia di sostenerlo entro <strong style="color:var(--text)">giugno/luglio</strong> per essere pronti alle finestre estive.
+                </p>
+
+                <div class="area-label">▶ Sede e Logistica</div>
+                <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6;margin-bottom:0.75rem">
+                    Il Campus Scientifico di Ca' Foscari è a <strong style="color:var(--text)">Mestre</strong> (non Venezia centro).
+                    Il DEI di UNIPD è in <strong style="color:var(--text)">Via Gradenigo, Padova</strong>, vicino alla stazione.
+                    La distanza Mestre–Padova è circa <strong style="color:var(--text)">30 minuti in treno regionale</strong>:
+                    triennale a Venezia + magistrale a Padova è una combinazione gestibilissima.
+                </p>
+
+                <div class="area-label">▶ Opportunità Internazionali &amp; Stage</div>
+                <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">
+                    Entrambi gli atenei aderiscono a <strong style="color:var(--text)">Erasmus+</strong>.
+                    UNIPD partecipa alla rete <strong style="color:var(--text)">EUNICE</strong> (European University Alliance).
+                    Alcuni corsi magistrali DEI offrono <strong style="color:var(--text)">doppio titolo</strong> con università straniere.
+                    Il DEI ha partnership con Leonardo, Electrolux, Teamsystem, Zucchetti e un ecosistema di startup del Nord-Est in forte crescita.
+                </p>
+
+                <div class="divider"></div>
+
+                <div style="display:flex;flex-wrap:wrap;gap:0.5rem;font-size:0.78rem">
+                    <a href="https://www.unive.it" target="_blank" class="btn btn-outline text-sm">→ Ca' Foscari</a>
+                    <a href="https://www.dei.unipd.it" target="_blank" class="btn btn-outline text-sm">→ DEI UNIPD</a>
+                    <a href="https://www.universitaly.it" target="_blank" class="btn btn-outline text-sm">→ Universitaly (SUA-CdS)</a>
+                    <a href="https://www.almalaurea.it" target="_blank" class="btn btn-outline text-sm">→ Almalaurea</a>
+                    <a href="https://www.cisiaonline.it" target="_blank" class="btn btn-outline text-sm">→ CISIA / TOLC</a>
+                </div>
+            </div>
+
+        </article>
+    </div>
+
+    <!-- Back to top -->
+    <button id="back-top" title="Torna su">↑</button>
+
+    <script>
+        // Theme toggle
+        const toggle = document.getElementById('theme-toggle');
+        const setTheme = (light) => {
+            document.body.classList.toggle('light', light);
+            toggle.textContent = light ? '☾' : '☀';
+            localStorage.setItem('theme', light ? 'light' : 'dark');
+        };
+        toggle?.addEventListener('click', () => setTheme(!document.body.classList.contains('light')));
+        if (localStorage.getItem('theme') === 'light') setTheme(true);
+
+        // Back to top
+        const backTop = document.getElementById('back-top');
+        window.addEventListener('scroll', () => {
+            backTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // TOC active link on scroll
+        const tocLinks = document.querySelectorAll('.toc-list a[href^="#"]');
+        const sections = [...tocLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    tocLinks.forEach(a => a.classList.remove('active'));
+                    const active = [...tocLinks].find(a => a.getAttribute('href') === '#' + entry.target.id);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-20% 0px -70% 0px' });
+        sections.forEach(s => observer.observe(s));
+    </script>
+</body>
+
+</html>

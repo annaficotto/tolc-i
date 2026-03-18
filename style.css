@@ -1013,3 +1013,699 @@ input::placeholder {
     margin-bottom: 1rem;
     display: block;
 }
+
+
+
+/* ── Report-specific layout ── */
+.report-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 2rem;
+    align-items: start;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Sidebar TOC ── */
+.toc-sidebar {
+    position: sticky;
+    top: 72px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.toc-sidebar::-webkit-scrollbar {
+    width: 3px;
+}
+
+.toc-sidebar::-webkit-scrollbar-thumb {
+    background: var(--border);
+}
+
+.toc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.2rem;
+}
+
+.toc-title {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+}
+
+.toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+}
+
+.toc-list a {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    transition: all var(--transition);
+    line-height: 1.4;
+}
+
+.toc-list a:hover,
+.toc-list a.active {
+    color: var(--accent);
+    background: rgba(51, 199, 186, 0.08);
+}
+
+.toc-list .toc-sub {
+    padding-left: 1.1rem;
+    font-size: 0.68rem;
+    opacity: 0.85;
+}
+
+.toc-list .toc-section {
+    color: var(--text-dim);
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 0.5rem 0.15rem;
+    pointer-events: none;
+}
+
+/* ── Report content ── */
+.report-content {
+    min-width: 0;
+}
+
+/* ── Section headers ── */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-num {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background: var(--surface2);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.section-header h2 {
+    font-size: 1.35rem;
+    color: var(--text);
+    margin: 0;
+}
+
+/* ── Report card ── */
+.r-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.6rem;
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    scroll-margin-top: 80px;
+}
+
+.r-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.r-card-title {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.r-card-sub {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+
+.badge-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+/* ── Scheda info table ── */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.2rem;
+    font-size: 0.84rem;
+}
+
+.info-table td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.3);
+    vertical-align: top;
+    line-height: 1.5;
+}
+
+.info-table td:first-child {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    width: 130px;
+}
+
+.info-table td:last-child {
+    color: var(--text);
+}
+
+/* ── Area label ── */
+.area-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background: rgba(51, 199, 186, 0.08);
+    border: 1px solid rgba(51, 199, 186, 0.2);
+    border-radius: 4px;
+    padding: 0.2rem 0.6rem;
+    display: inline-block;
+    margin: 1rem 0 0.6rem;
+}
+
+/* ── Esami table ── */
+.esami-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.83rem;
+    margin-bottom: 0.5rem;
+}
+
+.esami-table thead tr {
+    background: var(--surface2);
+}
+
+.esami-table th {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+}
+
+.esami-table td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.25);
+    vertical-align: top;
+    line-height: 1.5;
+    color: var(--text);
+}
+
+.esami-table td:first-child {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+}
+
+.esami-table td:last-child {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.esami-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ── Comparison table ── */
+.cmp-wrap {
+    overflow-x: auto;
+    margin-bottom: 1.2rem;
+}
+
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+    min-width: 600px;
+}
+
+.cmp-table th {
+    background: var(--surface2);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--text-muted);
+    padding: 0.6rem 0.75rem;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+    white-space: nowrap;
+}
+
+.cmp-table td {
+    padding: 0.55rem 0.75rem;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.25);
+    vertical-align: middle;
+    color: var(--text);
+    line-height: 1.4;
+}
+
+.cmp-table td:first-child {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.cmp-table tr:last-child td {
+    border-bottom: none;
+}
+
+.cmp-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.ok {
+    color: var(--success);
+    font-weight: 700;
+}
+
+.no {
+    color: var(--danger);
+    font-weight: 700;
+}
+
+.warn-text {
+    color: var(--warn);
+    font-weight: 700;
+}
+
+/* Stars */
+.stars {
+    color: var(--accent);
+    letter-spacing: -1px;
+    font-size: 0.8rem;
+}
+
+.stars-empty {
+    color: var(--text-dim);
+    letter-spacing: -1px;
+    font-size: 0.8rem;
+}
+
+/* ── Pro/Contro ── */
+.pro-contro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.pro-box,
+.contro-box {
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+.pro-box {
+    background: rgba(34, 197, 94, 0.06);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.contro-box {
+    background: rgba(244, 63, 94, 0.06);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+}
+
+.pro-box h4 {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--success);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.contro-box h4 {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--danger);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.pro-box li,
+.contro-box li {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 0.35rem;
+    padding-left: 1.1rem;
+    position: relative;
+}
+
+.pro-box li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+
+.contro-box li::before {
+    content: '−';
+    position: absolute;
+    left: 0;
+    color: var(--danger);
+    font-weight: 700;
+    font-family: var(--font-mono);
+}
+
+/* ── Sbocchi ── */
+.sbocchi-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+}
+
+.sbocco-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    transition: all var(--transition);
+}
+
+/* ── Section divider ── */
+.section-gap {
+    margin-top: 2.5rem;
+}
+
+/* ── Nota critica ── */
+.nota-critica {
+    background: rgba(244, 63, 94, 0.07);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    border-left: 3px solid var(--danger);
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.82rem;
+    color: var(--text);
+    font-family: var(--font-mono);
+}
+
+.nota-critica strong {
+    color: var(--danger);
+}
+
+.nota-info {
+    background: rgba(14, 165, 233, 0.07);
+    border: 1px solid rgba(14, 165, 233, 0.25);
+    border-left: 3px solid var(--accent2);
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+/* ── Decision tree ── */
+.decision-tree {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    overflow-x: auto;
+    line-height: 1.9;
+}
+
+.decision-tree .node-root {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.decision-tree .node-branch {
+    color: var(--accent);
+}
+
+.decision-tree .node-leaf {
+    color: var(--warn);
+}
+
+.decision-tree .node-result {
+    color: var(--accent2);
+}
+
+/* ── Profilo card ── */
+.profilo-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.profilo-card h4 {
+    font-family: var(--font-mono);
+    font-size: 0.88rem;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profilo-card .percorso {
+    background: var(--surface2);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--accent);
+    margin: 0.5rem 0;
+}
+
+.profilo-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+/* ── Access table ── */
+.access-legend {
+    gap: 1rem;
+    margin-bottom: 0.9rem;
+}
+
+.access-legend span {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+/* ── Hero ── */
+.report-hero {
+    text-align: center;
+    padding: 3.5rem 1rem 2.5rem;
+    position: relative;
+    z-index: 1;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.report-hero h1 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 0.6rem;
+}
+
+.report-hero h1 .text-accent {
+    color: var(--accent);
+}
+
+.report-hero .meta-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.2rem;
+}
+
+.meta-chip {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+}
+
+/* ── Curriculum sub-section ── */
+.curr-block {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem;
+    margin: 0.75rem 0;
+}
+
+.curr-block-title {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.curr-block-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.6rem;
+}
+
+/* ── Back to top ── */
+#back-top {
+    position: fixed;
+    bottom: 1.8rem;
+    right: 1.8rem;
+    z-index: 50;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 999px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+    box-shadow: var(--shadow);
+}
+
+#back-top:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+#back-top.visible {
+    display: flex;
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+    .report-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .toc-sidebar {
+        position: static;
+        max-height: none;
+    }
+
+    .toc-card {
+        display: none;
+    }
+
+    .pro-contro {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .esami-table td:first-child {
+        white-space: normal;
+    }
+}
+
+.requisiti-box {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.9rem;
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.requisiti-box ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.requisiti-box li {
+    margin-bottom: 0.3rem;
+    color: var(--text-muted);
+}
+
+.requisiti-box strong {
+    color: var(--text);
+}
+
+
+.tree {
+    font-family: "Courier New", monospace;
+    padding: 16px;
+    border-radius: 12px;
+    line-height: 1.4;
+    white-space: pre;
+    overflow-x: scroll;
+}
+
+
+
+a {
+    color: var(--accent);
+}
