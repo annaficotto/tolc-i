@@ -41,22 +41,24 @@
             <!-- generate da js -->
         </div>
 
-        <a class="orientamento" href="./orientamento.html">
-            <div class="mode-card" role="button">
-                <span class="mode-icon">🧭</span>
-                <h3>Orientamento</h3>
-                <p>Una guida comparativa per orientarsi tra le lauree triennali e magistrali in ambito informatico 
-                    offerte da due dei principali atenei del Veneto.</p>
-            </div>
-        </a>
-
-        <a class="materiale" href="./materiale/">
-            <div class="mode-card" role="button">
-                <span class="mode-icon">📚</span>
-                <h3>Materiale PDF</h3>
-                <p>Materiale in PDF comprendente manuali, esercizi guidati, spiegazioni passo passo, tutor ufficiali CISIA e simulazioni dei test con file di risposte separati.</p>
-            </div>
-        </a>
+        <div class="mode-grid" id="subject-cards">
+            <a class="orientamento" href="./orientamento.html">
+                <div class="mode-card" role="button">
+                    <span class="mode-icon">🧭</span>
+                    <h3>Orientamento</h3>
+                    <p>Una guida comparativa per orientarsi tra le lauree triennali e magistrali in ambito informatico 
+                        offerte da due dei principali atenei del Veneto.</p>
+                </div>
+            </a>
+    
+            <a class="materiale" href="./materiale/">
+                <div class="mode-card" role="button">
+                    <span class="mode-icon">📚</span>
+                    <h3>Materiale PDF</h3>
+                    <p>Materiale in PDF comprendente manuali, esercizi guidati, spiegazioni passo passo, tutor ufficiali CISIA e simulazioni dei test con file di risposte separati.</p>
+                </div>
+            </a>
+        </div>
 
         <!-- Ultime sessioni -->
         <div class="card mt-lg">
@@ -73,6 +75,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             const toggle = document.getElementById('theme-toggle');
             if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
+            document.getElementById('btn-logout')?.addEventListener('click', () => Auth.logout());
         });
     </script>
 </body>

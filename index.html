@@ -16,151 +16,48 @@
                 <div class="logo-sub">Trainer per Ingegneria &amp; Informatica</div>
             </div>
             <div class="card card-accent">
-                <div class="tab-bar mb-lg" id="auth-tabs">
-                    <button class="tab-btn active" data-tab="login">Login</button>
-                    <button class="tab-btn" data-tab="register">Registrati</button>
+                <div class="form-group">
+                    <label for="input-name">Come ti chiami?</label>
+                    <input type="text" id="input-name" placeholder="es. Marco" autocomplete="given-name" autofocus />
                 </div>
-                <div id="tab-login">
-                    <div class="form-group">
-                        <label for="login-username">Username</label>
-                        <input type="text" id="login-username" placeholder="il tuo username" autocomplete="username" />
-                    </div>
-                    <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <input type="password" id="login-password" placeholder="••••••••"
-                            autocomplete="current-password" />
-                    </div>
-                    <button class="btn btn-primary btn-full mt-md" id="btn-login">→ Accedi</button>
-                    <div class="alert" id="login-alert"></div>
-                </div>
-                <div id="tab-register" class="hidden">
-                    <div class="form-group">
-                        <label for="reg-username">Username</label>
-                        <input type="text" id="reg-username" placeholder="scegli un username" autocomplete="username" />
-                    </div>
-                    <div class="form-group">
-                        <label for="reg-password">Password</label>
-                        <input type="password" id="reg-password" placeholder="almeno 6 caratteri"
-                            autocomplete="new-password" />
-                    </div>
-                    <div class="form-group">
-                        <label for="reg-confirm">Conferma Password</label>
-                        <input type="password" id="reg-confirm" placeholder="ripeti la password"
-                            autocomplete="new-password" />
-                    </div>
-                    <button class="btn btn-primary btn-full mt-md" id="btn-register">→ Crea account</button>
-                    <div class="alert" id="register-alert"></div>
-                </div>
+                <button class="btn btn-primary btn-full mt-md" id="btn-enter">→ Entra</button>
+                <div class="alert" id="enter-alert"></div>
             </div>
             <p class="text-center text-sm text-muted mt-md">
                 Dati salvati localmente · Nessun server
             </p>
         </div>
     </div>
+
     <button class="theme-toggle" id="theme-toggle" title="Cambia tema"
         style="position:fixed;bottom:1.5rem;right:1.5rem;z-index:50">☀</button>
+
     <script src="js/auth.js"></script>
     <script>
         'use strict';
         Auth.applyTheme();
-        Auth.redirectIfLoggedIn('dashboard.html');
 
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const tab = btn.dataset.tab;
-                document.getElementById('tab-login').classList.toggle('hidden', tab !== 'login');
-                document.getElementById('tab-register').classList.toggle('hidden', tab !== 'register');
-            });
-        });
+        // Se ha già un nome salvato, vai diretto alla dashboard
+        if (Auth.getName()) window.location.replace('dashboard.html');
 
-        if (!crypto || !crypto.subtle) {
-            const warn = document.createElement('div');
-            warn.className = 'alert alert-info show';
-            warn.style.maxWidth = '420px';
-            warn.style.margin = '0 auto 1rem';
-            warn.style.position = 'relative';
-            warn.style.zIndex = '10';
-            warn.textContent = '⚠ Stai usando file:// — la crittografia usa un fallback. Per sicurezza completa usa GitHub Pages (HTTPS).';
-            document.querySelector('.auth-wrap').insertAdjacentElement('beforebegin', warn);
+        const input = document.getElementById('input-name');
+        const btn = document.getElementById('btn-enter');
+        const alert = document.getElementById('enter-alert');
+
+        function showAlert(msg) {
+            alert.className = 'alert alert-error show';
+            alert.textContent = msg;
         }
 
-        function showAlert(id, msg, type) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            el.className = `alert alert-${type} show`;
-            el.textContent = msg;
+        function enter() {
+            const name = input.value.trim();
+            if (!name) { showAlert('Inserisci il tuo nome per continuare.'); return; }
+            Auth.setName(name);
+            window.location.href = 'dashboard.html';
         }
 
-        document.getElementById('btn-login').addEventListener('click', async () => {
-            const btn = document.getElementById('btn-login');
-            const username = document.getElementById('login-username').value;
-            const password = document.getElementById('login-password').value;
-            if (!username || !password) {
-                showAlert('login-alert', 'Inserisci username e password.', 'error');
-                return;
-            }
-            btn.disabled = true;
-            btn.textContent = 'Accesso…';
-            try {
-                const result = await Auth.login(username, password);
-                if (result.ok) {
-                    window.location.href = 'dashboard.html';
-                } else {
-                    showAlert('login-alert', result.error, 'error');
-                    btn.disabled = false;
-                    btn.textContent = '→ Accedi';
-                }
-            } catch (err) {
-                showAlert('login-alert', 'Errore inatteso: ' + err.message, 'error');
-                btn.disabled = false;
-                btn.textContent = '→ Accedi';
-            }
-        });
-
-        ['login-username', 'login-password'].forEach(id => {
-            document.getElementById(id).addEventListener('keydown', e => {
-                if (e.key === 'Enter') document.getElementById('btn-login').click();
-            });
-        });
-
-        document.getElementById('btn-register').addEventListener('click', async () => {
-            const btn = document.getElementById('btn-register');
-            const username = document.getElementById('reg-username').value;
-            const password = document.getElementById('reg-password').value;
-            const confirm = document.getElementById('reg-confirm').value;
-            if (!username || !password) {
-                showAlert('register-alert', 'Compila tutti i campi.', 'error');
-                return;
-            }
-            if (password !== confirm) {
-                showAlert('register-alert', 'Le password non coincidono.', 'error');
-                return;
-            }
-            btn.disabled = true;
-            btn.textContent = 'Creazione…';
-            try {
-                const result = await Auth.register(username, password);
-                if (result.ok) {
-                    window.location.href = 'dashboard.html';
-                } else {
-                    showAlert('register-alert', result.error, 'error');
-                    btn.disabled = false;
-                    btn.textContent = '→ Crea account';
-                }
-            } catch (err) {
-                showAlert('register-alert', 'Errore inatteso: ' + err.message, 'error');
-                btn.disabled = false;
-                btn.textContent = '→ Crea account';
-            }
-        });
-
-        ['reg-username', 'reg-password', 'reg-confirm'].forEach(id => {
-            document.getElementById(id).addEventListener('keydown', e => {
-                if (e.key === 'Enter') document.getElementById('btn-register').click();
-            });
-        });
+        btn.addEventListener('click', enter);
+        input.addEventListener('keydown', e => { if (e.key === 'Enter') enter(); });
 
         document.getElementById('theme-toggle').addEventListener('click', () => {
             Auth.toggleTheme();

@@ -31,13 +31,11 @@
         <div class="flex-between mb-lg">
             <div>
                 <h1>👤 <span id="profile-username">—</span></h1>
-                <p class="text-sm text-muted mt-sm">Account creato il <span id="profile-created">—</span></p>
+                <p class="text-sm text-muted mt-sm">Progresso salvato localmente</p>
             </div>
             <div class="flex gap-sm">
                 <button class="btn btn-outline" id="btn-reset-errors">🗑 Reset errori</button>
-                <button class="btn btn-outline" id="btn-change-password">🔑 Cambia password</button>
                 <button class="btn btn-outline" id="btn-reset-progress">↺ Reset progresso</button>
-                <button class="btn btn-danger" id="btn-delete-account">✕ Elimina account</button>
             </div>
         </div>
 
@@ -105,53 +103,6 @@
         </div>
     </div>
 
-    <!-- Modal Cambia Password -->
-    <div class="modal-overlay" id="modal-change-password">
-        <div class="modal">
-            <div class="modal-header">
-                <h3>🔑 Cambia Password</h3>
-                <button class="btn btn-ghost" onclick="closeModal('modal-change-password')">✕</button>
-            </div>
-            <div class="alert" id="pwd-alert"></div>
-            <div class="form-group">
-                <label>Password attuale</label>
-                <input type="password" id="input-old-pwd" placeholder="••••••••">
-            </div>
-            <div class="form-group">
-                <label>Nuova password</label>
-                <input type="password" id="input-new-pwd" placeholder="••••••••">
-            </div>
-            <div class="form-group">
-                <label>Conferma nuova password</label>
-                <input type="password" id="input-conf-pwd" placeholder="••••••••">
-            </div>
-            <div class="flex gap-sm">
-                <button class="btn btn-primary flex-1" id="btn-confirm-change-pwd">Aggiorna</button>
-                <button class="btn btn-outline flex-1" id="btn-cancel-change-pwd">Annulla</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal Elimina Account -->
-    <div class="modal-overlay" id="modal-delete-account">
-        <div class="modal">
-            <div class="modal-header">
-                <h3>⚠ Elimina Account</h3>
-                <button class="btn btn-ghost" onclick="closeModal('modal-delete-account')">✕</button>
-            </div>
-            <div class="alert" id="delete-alert"></div>
-            <p class="text-sm text-muted mb-md">Questa azione è irreversibile. Tutti i tuoi dati verranno eliminati
-                permanentemente.</p>
-            <div class="form-group">
-                <label>Inserisci la password per confermare</label>
-                <input type="password" id="input-delete-pwd" placeholder="••••••••">
-            </div>
-            <div class="flex gap-sm">
-                <button class="btn btn-danger flex-1" id="btn-confirm-delete">Elimina definitivamente</button>
-                <button class="btn btn-outline flex-1" id="btn-cancel-delete">Annulla</button>
-            </div>
-        </div>
-    </div>
 
     <script src="js/auth.js"></script>
     <script src="js/profile.js"></script>
