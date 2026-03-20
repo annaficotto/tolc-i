@@ -1,11 +1,10 @@
 'use strict';
 
 // ============================================================
-// auth.js — versione senza password, solo nome utente
+// auth.js — nessun login, nessun nome utente
 // ============================================================
 
-const STORAGE_ANON_KEY  = 'tolc_anon_user';
-const STORAGE_NAME_KEY  = 'tolc_name';
+const STORAGE_ANON_KEY = 'tolc_anon_user';
 
 function getAnonData() {
     try { return JSON.parse(localStorage.getItem(STORAGE_ANON_KEY) || 'null'); }
@@ -42,23 +41,10 @@ function createAnonData() {
 })();
 
 const Auth = {
-    // ── Nome ─────────────────────────────────────────────────
-    getName() {
-        return localStorage.getItem(STORAGE_NAME_KEY) || '';
-    },
-    setName(name) {
-        localStorage.setItem(STORAGE_NAME_KEY, name.trim());
-    },
-    clearName() {
-        localStorage.removeItem(STORAGE_NAME_KEY);
-    },
-
-    // ── Dati / stats ──────────────────────────────────────────
     getCurrentUser() {
         let data = getAnonData();
         if (!data) { data = createAnonData(); saveAnonData(data); }
-        const name = this.getName() || 'utente';
-        return { username: name, data };
+        return { username: '', data };
     },
 
     updateCurrentUser(newData) {
@@ -90,27 +76,18 @@ const Auth = {
         return true;
     },
 
-    // ── Navigazione ───────────────────────────────────────────
-    // "logout" = dimentica il nome e torna alla schermata iniziale
-    logout() {
-        this.clearName();
-        window.location.href = 'index.html';
-    },
+    // stub — non fanno nulla ma evitano errori JS se chiamati da codice vecchio
+    requireAuth()          { return true; },
+    redirectIfLoggedIn()   {},
+    getName()              { return ''; },
+    setName()              {},
+    clearName()            {},
+    logout()               { window.location.href = 'index.html'; },
+    async register()       { return { ok: true }; },
+    async login()          { return { ok: true }; },
+    async changePassword() { return { ok: true }; },
+    async deleteAccount()  { saveAnonData(createAnonData()); return { ok: true }; },
 
-    // Blocca l'accesso se non c'è un nome impostato
-    requireAuth(redirectTo = 'index.html') {
-        if (!this.getName()) {
-            window.location.href = redirectTo;
-            return false;
-        }
-        return true;
-    },
-
-    redirectIfLoggedIn(redirectTo = 'dashboard.html') {
-        if (this.getName()) window.location.href = redirectTo;
-    },
-
-    // ── Tema ──────────────────────────────────────────────────
     applyTheme() {
         document.body.classList.toggle('light', localStorage.getItem('tolc_theme') === 'light');
     },
@@ -118,13 +95,7 @@ const Auth = {
         const isLight = document.body.classList.contains('light');
         document.body.classList.toggle('light', !isLight);
         localStorage.setItem('tolc_theme', !isLight ? 'light' : 'dark');
-    },
-
-    // ── Stub metodi non più usati ─────────────────────────────
-    async register() { return { ok: true }; },
-    async login()    { return { ok: true }; },
-    async changePassword() { return { ok: true }; },
-    async deleteAccount() { saveAnonData(createAnonData()); this.logout(); return { ok: true }; }
+    }
 };
 
 window.Auth = Auth;
