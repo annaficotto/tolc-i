@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TOLC Trainer — Profilo</title>
+    <title>TOLC Trainer — Statistiche</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -15,10 +15,8 @@
                 <span class="bracket">[</span>TOLC<span class="bracket">]</span>
             </a>
             <div class="navbar-actions">
-                <span class="text-sm text-mono text-muted" id="nav-username"></span>
                 <a href="dashboard.html" class="btn btn-ghost text-sm">← Dashboard</a>
                 <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
-                <button class="btn btn-outline text-sm" id="btn-logout">Esci</button>
             </div>
         </div>
     </nav>
@@ -29,10 +27,7 @@
 
     <main class="container fade-in" style="padding-top:2rem;padding-bottom:4rem">
         <div class="flex-between mb-lg">
-            <div>
-                <h1>👤 <span id="profile-username">—</span></h1>
-                <p class="text-sm text-muted mt-sm">Progresso salvato localmente</p>
-            </div>
+            <h1>📊 Statistiche</h1>
             <div class="flex gap-sm">
                 <button class="btn btn-outline" id="btn-reset-errors">🗑 Reset errori</button>
                 <button class="btn btn-outline" id="btn-reset-progress">↺ Reset progresso</button>
@@ -40,7 +35,7 @@
         </div>
 
         <div class="card card-accent mb-lg">
-            <h3 class="mb-md">📊 Statistiche globali</h3>
+            <h3 class="mb-md">Globale</h3>
             <div class="stat-grid">
                 <div class="stat-item">
                     <div class="stat-value text-accent" id="stat-total">0</div>
@@ -60,12 +55,14 @@
                 </div>
                 <div class="stat-item">
                     <div class="stat-value" style="color:var(--warn)" id="stat-errors">0</div>
-                    <div class="stat-label">Errori totali</div>
+                    <div class="stat-label">Errori attivi</div>
                 </div>
             </div>
             <div class="mt-md">
-                <div class="flex-between mb-sm"><span class="text-sm text-muted">Precisione globale</span><span
-                        class="text-sm text-mono text-accent" id="stat-pct-label">0%</span></div>
+                <div class="flex-between mb-sm">
+                    <span class="text-sm text-muted">Precisione globale</span>
+                    <span class="text-sm text-mono text-accent" id="stat-pct-label">0%</span>
+                </div>
                 <div class="progress-bar-wrap">
                     <div class="progress-bar-fill" id="stat-progress-bar" style="width:0%"></div>
                 </div>
@@ -103,7 +100,6 @@
         </div>
     </div>
 
-
     <script src="js/auth.js"></script>
     <script src="js/profile.js"></script>
     <script>
@@ -113,7 +109,8 @@
             const pctEl = document.getElementById('stat-pct');
             const pctLabel = document.getElementById('stat-pct-label');
             if (pctEl && pctLabel) {
-                new MutationObserver(() => pctLabel.textContent = pctEl.textContent).observe(pctEl, { childList: true, characterData: true, subtree: true });
+                new MutationObserver(() => pctLabel.textContent = pctEl.textContent)
+                    .observe(pctEl, { childList: true, characterData: true, subtree: true });
             }
         });
     </script>
