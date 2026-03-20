@@ -15,10 +15,8 @@
                 <span class="bracket">[</span>TOLC<span class="bracket">]</span>
             </a>
             <div class="navbar-actions">
-                <span class="text-sm text-mono text-muted" id="nav-username"></span>
-                <a href="profile.html" class="btn btn-ghost text-sm">👤 Profilo</a>
+                <a href="profile.html" class="btn btn-ghost text-sm">📊 Statistiche</a>
                 <button class="theme-toggle" id="theme-toggle" title="Cambia tema">☀</button>
-                <button class="btn btn-outline text-sm" id="btn-logout">Esci</button>
             </div>
         </div>
     </nav>
@@ -28,10 +26,12 @@
     </div>
 
     <main class="container fade-in" style="padding-top:2rem;padding-bottom:4rem">
+        <!--
         <div class="main-hero">
-            <h1>Ciao, <span id="welcome-name" class="text-accent"></span></h1>
+            <h1>Ciao, <span id="welcome-name" class="text-accent">Anna</span></h1>
             <p class="subtitle">Scegli una materia per iniziare l'allenamento.</p>
         </div>
+        -->
 
         <!-- Statistiche globali rapide -->
         <div id="global-stats" class="mb-lg"></div>
@@ -41,21 +41,22 @@
             <!-- generate da js -->
         </div>
 
-        <div class="mode-grid" id="subject-cards">
+        <div class="mode-grid" style="margin-top:0.85rem">
             <a class="orientamento" href="./orientamento.html">
                 <div class="mode-card" role="button">
                     <span class="mode-icon">🧭</span>
                     <h3>Orientamento</h3>
-                    <p>Una guida comparativa per orientarsi tra le lauree triennali e magistrali in ambito informatico 
+                    <p>Una guida comparativa per orientarsi tra le lauree triennali e magistrali in ambito informatico
                         offerte da due dei principali atenei del Veneto.</p>
                 </div>
             </a>
-    
+
             <a class="materiale" href="./materiale/">
                 <div class="mode-card" role="button">
                     <span class="mode-icon">📚</span>
                     <h3>Materiale PDF</h3>
-                    <p>Materiale in PDF comprendente manuali, esercizi guidati, spiegazioni passo passo, tutor ufficiali CISIA e simulazioni dei test con file di risposte separati.</p>
+                    <p>Materiale in PDF comprendente manuali, esercizi guidati, spiegazioni passo passo, tutor ufficiali
+                        CISIA e simulazioni dei test con file di risposte separati.</p>
                 </div>
             </a>
         </div>
@@ -75,7 +76,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             const toggle = document.getElementById('theme-toggle');
             if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
-            document.getElementById('btn-logout')?.addEventListener('click', () => Auth.logout());
         });
     </script>
 </body>
