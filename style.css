@@ -1996,3 +1996,18 @@ a {
     margin-top: 0.5rem;
     font-size: 0.95rem;
 }
+
+
+
+h4 .mono {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+
+.badge .english {
+    background: rgba(14,165,233,0.15);
+    color:var(--accent2);
+}
