@@ -39,15 +39,12 @@ function renderDashboard() {
     // Card materie
     const subjects = [
         { id: 'logica-tutor', name: 'Logica (tutor)', icon: '🧠', file: 'logica-tutor.html' },
-        { id: 'matematica1-tutor', name: 'Matematica 1 (tutor)', icon: '📐', file: 'matematica1-tutor.html' },
-        { id: 'matematica2-tutor', name: 'Matematica 2 (tutor)', icon: '📏', file: 'matematica2-tutor.html' },
+        { id: 'matematica', name: 'Matematica (tutor)', icon: '📐', file: 'matematica-tutor.html' },
         { id: 'scienze-tutor', name: 'Scienze (tutor)', icon: '🔬', file: 'scienze-tutor.html' },
-        { id: 'logica-esempio1', name: 'Logica (Esempio 1)', icon: '🧩', file: 'logica-esempio1.html' },
-        { id: 'logica-esempio2', name: 'Logica (Esempio 2)', icon: '💡', file: 'logica-esempio2.html' },
-        { id: 'matematica-esempio1', name: 'Matematica (Esempio 1)', icon: '🧮', file: 'matematica-esempio1.html' },
-        { id: 'matematica-esempio2', name: 'Matematica (Esempio 2)', icon: '➗', file: 'matematica-esempio2.html' },
-        { id: 'scienze-esempio1', name: 'Scienze (Esempio 1)', icon: '🧪', file: 'scienze-esempio1.html' },
-        { id: 'fisica-esempio2', name: 'Fisica (Esempio 2)', icon: '🧲', file: 'fisica-esempio2.html' }
+        { id: 'logica-esempio', name: 'Logica', icon: '🧩', file: 'logica.html' },
+        { id: 'matematica', name: 'Matematica', icon: '🧮', file: 'matematicahtml' },
+        { id: 'scienze', name: 'Scienze', icon: '🧪', file: 'scienze.html' },
+        { id: 'fisica', name: 'Fisica', icon: '🧲', file: 'fisica.html' }
     ];
 
     const cardsEl = $('subject-cards');

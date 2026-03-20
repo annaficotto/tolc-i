@@ -784,6 +784,396 @@
                     "feedback": "96 sarebbe il termine DOPO 48 (48×2). Il prossimo termine dopo 24 è 48."
                 }
             ]
+        },
+        {
+            "id": "L21",
+            "question": "Dobbiamo dimostrare che un certo numero x è inferiore a un altro numero y diverso da x. Quante fra le seguenti affermazioni permettono di dedurre la nostra tesi?\n(1) esiste un numero compreso tra di loro;\n(2) ogni numero non superiore a x è minore di y;\n(3) tutti i numeri sono inferiori a y o superiori a x;\n(4) nessun numero supera y e non supera x.",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "3",
+                    "soluzione": false,
+                    "feedback": "Solo l'affermazione (2) permette di dedurre x < y. L'affermazione (1) non basta (potrebbe esserci un numero tra y e x con y < x). Le affermazioni (3) e (4) non danno informazioni dirette sulla posizione relativa di x e y."
+                },
+                {
+                    "label": "B",
+                    "text": "1",
+                    "soluzione": true,
+                    "feedback": "Corretto! Solo l'affermazione (2) consente la deduzione. 'Ogni numero n ≤ x è anche < y' implica in particolare che x stesso, essendo ≤ x, è < y, quindi x < y. Le altre tre affermazioni non escludono che y sia minore di x."
+                },
+                {
+                    "label": "C",
+                    "text": "4",
+                    "soluzione": false,
+                    "feedback": "Non tutte e quattro le affermazioni sono utili. Solo la (2) implica direttamente x < y. La (1), (3) e (4) sono compatibili anche con y < x."
+                },
+                {
+                    "label": "D",
+                    "text": "2",
+                    "soluzione": false,
+                    "feedback": "Non sono due. Solo l'affermazione (2) è sufficiente. Le affermazioni (3) e (4) non forniscono informazioni certe sulla relazione d'ordine tra x e y."
+                },
+                {
+                    "label": "E",
+                    "text": "0",
+                    "soluzione": false,
+                    "feedback": "L'affermazione (2) ('ogni numero non superiore a x è minore di y') consente di dedurre x < y: essendo x ≤ x, si ha x < y. Quindi almeno una delle quattro affermazioni è utile."
+                }
+            ]
+        },
+        {
+            "id": "L22",
+            "question": "Sia data la seguente sequenza di ottagoni in cui il numero centrale è dato dalla somma algebrica dei numeri dello stesso colore (presi con segno '+' se la freccia è diretta verso il centro, con segno '-' se è diretta verso l'esterno). Quale degli ottagoni proposti è coerente con questa regola?",
+            "image": "https://www.inggiovannigaleone.it/images/Test_altre_facolta/Test_facolta_ingegneria/ottagoni_traccia.png",
+            "imageExplanation": "https://www.inggiovannigaleone.it/images/Test_altre_facolta/Test_facolta_ingegneria/ottagoni_risposte.png",
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "L'ottagono 3",
+                    "soluzione": false,
+                    "feedback": "L'ottagono 3 non rispetta la regola. Applicando il criterio (somma algebrica con segni determinati dalle frecce), il numero centrale non corrisponde al risultato atteso."
+                },
+                {
+                    "label": "B",
+                    "text": "L'ottagono 2",
+                    "soluzione": false,
+                    "feedback": "L'ottagono 2 non soddisfa la regola. Il numero centrale non è uguale alla somma algebrica dei valori periferici con i segni indicati dalle frecce."
+                },
+                {
+                    "label": "C",
+                    "text": "L'ottagono 4",
+                    "soluzione": true,
+                    "feedback": "Corretto! L'ottagono 4 rispetta la regola: il numero centrale (-4) è uguale alla somma algebrica dei valori grigi con segni determinati dalle frecce: 8 - 2 - 6 - 4 = -4. ✓"
+                },
+                {
+                    "label": "D",
+                    "text": "L'ottagono 5",
+                    "soluzione": false,
+                    "feedback": "L'ottagono 5 non soddisfa la regola. Verificando la somma algebrica con i segni delle frecce, il risultato non corrisponde al numero centrale indicato."
+                },
+                {
+                    "label": "E",
+                    "text": "L'ottagono 1",
+                    "soluzione": false,
+                    "feedback": "L'ottagono 1 non rispetta la regola definita dalla sequenza. La somma algebrica dei valori periferici (con i segni delle frecce) non dà il numero centrale indicato."
+                }
+            ]
+        },
+        {
+            "id": "L23",
+            "question": "Alla fine dei 6 incontri di un torneo all'italiana di tennis fra 4 amici è risultato che tutti hanno perso almeno un incontro e tutti hanno vinto almeno un incontro. Quale fra le seguenti affermazioni può essere dedotta?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Tutti e quattro hanno vinto due incontri",
+                    "soluzione": false,
+                    "feedback": "Non è necessariamente vero. Con 6 partite totali e 4 giocatori, la distribuzione può essere 2-2-1-1. Esempio: A batte B e C; B batte C e D; C batte D; D batte A → A(2v,1p), B(2v,1p), C(1v,2p), D(1v,2p). Non tutti hanno vinto 2."
+                },
+                {
+                    "label": "B",
+                    "text": "Non abbiamo elementi sufficienti per poter trarre queste conclusioni",
+                    "soluzione": false,
+                    "feedback": "Abbiamo elementi sufficienti. Dal vincolo (tutti vincono e perdono almeno un incontro su 6 partite totali), si può dedurre che esattamente due giocatori hanno vinto due incontri."
+                },
+                {
+                    "label": "C",
+                    "text": "Esattamente tre persone hanno vinto due incontri",
+                    "soluzione": false,
+                    "feedback": "Se tre persone avessero vinto 2 incontri ciascuna, farebbero già 6 vittorie. La quarta persona avrebbe 0 vittorie, violando il vincolo 'tutti hanno vinto almeno un incontro'."
+                },
+                {
+                    "label": "D",
+                    "text": "Esattamente due persone hanno vinto due incontri",
+                    "soluzione": true,
+                    "feedback": "Corretto! Con 6 partite totali e 4 giocatori (tutti con almeno 1 vittoria e 1 sconfitta), l'unica distribuzione possibile è 2-2-1-1 vittorie. Esempio: A batte B, C; B batte C, D; C batte D; D batte A → A e B vincono 2 incontri, C e D ne vincono 1."
+                },
+                {
+                    "label": "E",
+                    "text": "Una sola persona ha vinto due incontri fra i tre disputati",
+                    "soluzione": false,
+                    "feedback": "Con 6 partite e tutti con almeno 1 vittoria, la distribuzione è necessariamente 2-2-1-1. Non è possibile che solo una persona abbia vinto 2 incontri (le vittorie totali sono esattamente 6: 1·x + altri, ma il conto non torna)."
+                }
+            ]
+        },
+        {
+            "id": "L24",
+            "question": "Dire quale delle seguenti coppie di numeri continua la successione: 3-17; 5-16; 9-14; 17-11; 33-7; ?-?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "51 e 2",
+                    "soluzione": false,
+                    "feedback": "Il primo numero è sbagliato. I primi valori seguono la regola +2, +4, +8, +16, +32: 33+32 = 65. I secondi seguono -1, -2, -3, -4, -5: 7-5 = 2. Ma il primo numero è 65, non 51."
+                },
+                {
+                    "label": "B",
+                    "text": "65 e 3",
+                    "soluzione": false,
+                    "feedback": "Il primo numero (65) è corretto. Ma i secondi valori si riducono di quantità crescenti: 17-1=16, 16-2=14, 14-3=11, 11-4=7, 7-5=2. Il secondo numero è 2, non 3."
+                },
+                {
+                    "label": "C",
+                    "text": "51 e 3",
+                    "soluzione": false,
+                    "feedback": "Entrambi i valori sono sbagliati. Primo: 3→5→9→17→33→65 (incrementi raddoppianti: +2,+4,+8,+16,+32). Secondo: 17→16→14→11→7→2 (decrementi crescenti: -1,-2,-3,-4,-5). Coppia corretta: 65-2."
+                },
+                {
+                    "label": "D",
+                    "text": "15 e 1",
+                    "soluzione": false,
+                    "feedback": "Nessuno dei due valori è corretto. I primi numeri raddoppiano il loro incremento (+2,+4,+8,+16,+32) → 65. I secondi si riducono di quantità crescenti → 2."
+                },
+                {
+                    "label": "E",
+                    "text": "65 e 2",
+                    "soluzione": true,
+                    "feedback": "Corretto! Primi numeri: 3+2=5, 5+4=9, 9+8=17, 17+16=33, 33+32=65 (incrementi che raddoppiano). Secondi numeri: 17-1=16, 16-2=14, 14-3=11, 11-4=7, 7-5=2 (decrementi crescenti di 1)."
+                }
+            ]
+        },
+        {
+            "id": "L25",
+            "question": "Ad un pranzo di sei persone ogni partecipante conosce almeno altri due convitati e, prima di iniziare, presenta fra di loro ogni coppia di suoi conoscenti, se già non si conoscono. Quando si siedono, si conoscono tutti fra di loro. Perciò:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Tutti i convitati ne conoscevano almeno tre",
+                    "soluzione": false,
+                    "feedback": "Non è necessariamente vero. Si possono costruire scenari in cui tutti conoscono inizialmente solo 2 persone e, attraverso le presentazioni a catena, tutti finiscono per conoscersi. Non tutti devono averne conosciuti almeno 3."
+                },
+                {
+                    "label": "B",
+                    "text": "L'avvenimento descritto non è possibile",
+                    "soluzione": false,
+                    "feedback": "L'avvenimento è possibile. Basta che la rete di conoscenze iniziali permetta di raggiungere tutti tramite presentazioni a catena. Non c'è contraddizione logica."
+                },
+                {
+                    "label": "C",
+                    "text": "Ogni convitato ne conosceva esattamente due",
+                    "soluzione": false,
+                    "feedback": "Non è necessariamente vero. Alcuni convitati potrebbero averne conosciuti più di due. La condizione 'almeno due' non implica 'esattamente due'."
+                },
+                {
+                    "label": "D",
+                    "text": "Uno dei convitati conosceva tutti",
+                    "soluzione": false,
+                    "feedback": "Non è deducibile. Anche se nessuno conosceva tutti inizialmente, tramite presentazioni a catena si può arrivare a conoscersi tutti, purché almeno uno ne conoscesse almeno 3."
+                },
+                {
+                    "label": "E",
+                    "text": "Almeno uno dei convitati ne conosceva almeno altri tre",
+                    "soluzione": true,
+                    "feedback": "Corretto! Se un convitato A conosce solo B e C, affinché D, E, F vengano a conoscere A (direttamente o tramite presentazioni), o lo conoscevano già (e quindi A ne conosce almeno 3), oppure sono stati presentati da B o C, il che significa che B o C conosceva almeno 3 persone (A + almeno due tra D, E, F)."
+                }
+            ]
+        },
+        {
+            "id": "L26",
+            "question": "Giocando a Risiko, Giulio Cesare ha vinto più di suo nipote Augusto, ma non di Napoleone. Alessandro Magno ha vinto meno di Carlo Magno, ma non più di Napoleone. Chi ha vinto meno?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Carlo Magno",
+                    "soluzione": false,
+                    "feedback": "Carlo Magno è il più vincente in assoluto. Dalla seconda proposizione: Napoleone ≤ Alessandro < Carlo Magno. Dalla prima: Augusto < Giulio Cesare ≤ Napoleone. Ordine completo: Augusto < Giulio Cesare ≤ Napoleone ≤ Alessandro < Carlo Magno."
+                },
+                {
+                    "label": "B",
+                    "text": "Alessandro Magno",
+                    "soluzione": false,
+                    "feedback": "Alessandro Magno è tra i più forti. Dalla seconda proposizione: Alessandro Magno < Carlo Magno e Alessandro ≥ Napoleone. Augusto è chi ha vinto meno."
+                },
+                {
+                    "label": "C",
+                    "text": "Napoleone",
+                    "soluzione": false,
+                    "feedback": "Napoleone è nella fascia alta. Dalla prima proposizione: Giulio Cesare ≤ Napoleone. Augusto < Giulio Cesare ≤ Napoleone ≤ Alessandro < Carlo Magno. Augusto è il meno vincente."
+                },
+                {
+                    "label": "D",
+                    "text": "Augusto",
+                    "soluzione": true,
+                    "feedback": "Corretto! Dalla prima proposizione: Augusto < Giulio Cesare ≤ Napoleone. Dalla seconda: Napoleone ≤ Alessandro < Carlo Magno. Ordine complessivo: Augusto < Giulio Cesare ≤ Napoleone ≤ Alessandro < Carlo Magno. Augusto è il meno vincente."
+                },
+                {
+                    "label": "E",
+                    "text": "Giulio Cesare",
+                    "soluzione": false,
+                    "feedback": "Giulio Cesare è secondo da fondo. Augusto ha vinto meno di lui: la prima proposizione dice esplicitamente che Giulio Cesare ha vinto più di Augusto."
+                }
+            ]
+        },
+        {
+            "id": "L27",
+            "question": "La frase «Sul tavolo ci sono due bicchieri» implica che sul tavolo:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Ci sono due bicchieri e una bottiglia",
+                    "soluzione": false,
+                    "feedback": "La presenza di una bottiglia non è implicata dalla frase. Potrebbe esserci una bottiglia, ma non è un'informazione deducibile con certezza."
+                },
+                {
+                    "label": "B",
+                    "text": "Non ci sono bottiglie",
+                    "soluzione": false,
+                    "feedback": "La frase non dice nulla sulle bottiglie. Non si può dedurre né la loro presenza né la loro assenza."
+                },
+                {
+                    "label": "C",
+                    "text": "Ci sono due bicchieri e due tazzine di caffè",
+                    "soluzione": false,
+                    "feedback": "La presenza di tazzine non è deducibile. La frase fornisce informazioni solo sui bicchieri."
+                },
+                {
+                    "label": "D",
+                    "text": "C'è un bicchiere",
+                    "soluzione": true,
+                    "feedback": "Corretto! Se sul tavolo ci sono DUE bicchieri, è certamente vero che c'è (almeno) UN bicchiere. È una deduzione per specializzazione: 'ci sono due' implica logicamente 'ce n'è almeno uno'."
+                },
+                {
+                    "label": "E",
+                    "text": "Non ci sono tre bicchieri",
+                    "soluzione": false,
+                    "feedback": "La frase dice che ci sono due bicchieri, ma non specifica che ce ne sono SOLO due. Potrebbe esserci anche un terzo bicchiere non menzionato. Non si può escludere."
+                }
+            ]
+        },
+        {
+            "id": "L28",
+            "question": "Per numerare le pagine di un libro sono state usate in totale 3300 cifre. Le pagine del libro sono:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Tra 1500 e 2000",
+                    "soluzione": false,
+                    "feedback": "Le prime 999 pagine usano 9 + 180 + 2700 = 2889 cifre. Con altre 411 cifre disponibili (da pagina 1000), a 4 cifre/pagina si arrivano a circa 102 pagine aggiuntive. Totale: poco più di 1100 pagine. Non tra 1500 e 2000."
+                },
+                {
+                    "label": "B",
+                    "text": "Tra 2000 e 3000",
+                    "soluzione": false,
+                    "feedback": "Cifre per p.1-999: 9+180+2700=2889. Restano 3300-2889=411 cifre. A 4 cifre per pagina dal 1000: 411/4≈102 pagine. Totale ≈1102. Non tra 2000 e 3000."
+                },
+                {
+                    "label": "C",
+                    "text": "Meno di 1000",
+                    "soluzione": false,
+                    "feedback": "Le sole pagine da 1 a 999 consumano già 9+180+2700=2889 cifre < 3300. Il libro supera le 999 pagine."
+                },
+                {
+                    "label": "D",
+                    "text": "Più di 3000",
+                    "soluzione": false,
+                    "feedback": "Fino a pagina 1149 si usano 2889 + 150×4 = 3489 > 3300 cifre. Il libro si ferma prima di pagina 1150, quindi è ampiamente sotto le 3000 pagine."
+                },
+                {
+                    "label": "E",
+                    "text": "Tra 1000 e 1500",
+                    "soluzione": true,
+                    "feedback": "Corretto! Cifre usate: pag. 1-9 → 9; pag. 10-99 → 180; pag. 100-999 → 2700. Totale fino a 999: 2889. Restano 3300-2889=411 cifre. Da pag. 1000 ogni pagina ha 4 cifre: 411÷4 ≈ 102 pagine aggiuntive. Totale: circa 1102 pagine, compreso tra 1000 e 1500."
+                }
+            ]
+        },
+        {
+            "id": "L29",
+            "question": "Totti tirerà 12 rigori a Buffon: per ogni rigore parato Totti dà 50€ a Buffon, per ogni rigore segnato Buffon dà 40€ a Totti. Al termine, Totti deve ricevere 120€. Quanti rigori ha parato Buffon?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "9",
+                    "soluzione": false,
+                    "feedback": "Con 9 parati e 3 segnati: Totti guadagna 3×40=120€, Buffon guadagna 9×50=450€. Saldo Totti: 120-450 = -330€ (Totti paga 330€). Non corrisponde."
+                },
+                {
+                    "label": "B",
+                    "text": "5",
+                    "soluzione": false,
+                    "feedback": "Con 5 parati e 7 segnati: saldo Totti = 7×40 - 5×50 = 280-250 = +30€. Non è 120€."
+                },
+                {
+                    "label": "C",
+                    "text": "6",
+                    "soluzione": false,
+                    "feedback": "Con 6 parati e 6 segnati: saldo = 6×40 - 6×50 = 240-300 = -60€ (Totti paga 60€). Non corrisponde."
+                },
+                {
+                    "label": "D",
+                    "text": "4",
+                    "soluzione": true,
+                    "feedback": "Corretto! Sistema: RS+RP=12 e 40·RS - 50·RP = 120. Sostituendo RS=12-RP: 40(12-RP)-50RP=120 → 480-90RP=120 → RP=4. RS=8. Verifica: Totti guadagna 8×40=320€, paga 4×50=200€. Saldo: +120€. ✓"
+                },
+                {
+                    "label": "E",
+                    "text": "12",
+                    "soluzione": false,
+                    "feedback": "Con 12 parati e 0 segnati: Totti paga 12×50=600€ e non guadagna nulla. Saldo = -600€. Non corrisponde."
+                }
+            ]
+        },
+        {
+            "id": "L30",
+            "question": "Di una famiglia si sa che:\n1) almeno un maschio non è celibe;\n2) tutti i laureati sono celibi;\n3) non è vero che almeno un maschio non è maggiorenne.\nSolo una delle seguenti proposizioni è deducibile dalle premesse. Quale?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "logica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Nessun maggiorenne non è coniugato",
+                    "soluzione": false,
+                    "feedback": "Questa affermazione equivale a 'tutti i maggiorenni sono coniugati', che non è deducibile. Dalle premesse sappiamo solo che ALMENO UN maggiorenne è coniugato, non che lo siano tutti."
+                },
+                {
+                    "label": "B",
+                    "text": "Tutti i celibi sono laureati",
+                    "soluzione": false,
+                    "feedback": "La premessa (2) dice 'tutti i laureati sono celibi', ma non è convertibile: non implica che tutti i celibi siano laureati. La relazione non è bidirezionale."
+                },
+                {
+                    "label": "C",
+                    "text": "Almeno un maggiorenne è coniugato",
+                    "soluzione": true,
+                    "feedback": "Corretto! Dalla (3), riformulata: 'tutti i maschi sono maggiorenni'. Dalla (1): 'almeno un maschio è coniugato' (non celibe). Combinando: quel maschio coniugato è anche maggiorenne → almeno un maggiorenne è coniugato."
+                },
+                {
+                    "label": "D",
+                    "text": "Almeno un celibe non è maggiorenne",
+                    "soluzione": false,
+                    "feedback": "Non deducibile. La premessa (3) afferma che tutti i maschi sono maggiorenni, ma non dice nulla sui celibi in relazione alla maggiore età."
+                },
+                {
+                    "label": "E",
+                    "text": "Almeno un maggiorenne non è coniugato",
+                    "soluzione": false,
+                    "feedback": "Non deducibile. Dalle premesse sappiamo che almeno un maggiorenne È coniugato, ma non possiamo dedurre che qualcuno non lo sia."
+                }
+            ]
         }
     ]
 }

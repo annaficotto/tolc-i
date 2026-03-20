@@ -1178,6 +1178,396 @@
                     "feedback": "120 = 5! = P₅ (permutazioni). Le combinazioni C(5,2) = 5!/(2!·3!) = 10."
                 }
             ]
+        },
+        {
+            "id": "M31",
+            "question": "La retta passante per il punto (1; 2) e parallela alla bisettrice del primo e terzo quadrante ha equazione:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "y = x - 1",
+                    "soluzione": false,
+                    "feedback": "La retta deve avere m = 1 (parallela a y = x) e passare per (1, 2). Imponendo 2 = 1 + q si ottiene q = 1, quindi y = x + 1. Con q = -1 la retta passa per (1, 0), non per (1, 2)."
+                },
+                {
+                    "label": "B",
+                    "text": "2y = x + 3",
+                    "soluzione": false,
+                    "feedback": "Riscrivendo: y = x/2 + 3/2. Il coefficiente angolare m = 1/2 ≠ 1, quindi questa retta non è parallela alla bisettrice y = x."
+                },
+                {
+                    "label": "C",
+                    "text": "y = 3 - x",
+                    "soluzione": false,
+                    "feedback": "Il coefficiente angolare è m = -1: questa retta è parallela alla bisettrice del II e IV quadrante (y = -x), non del I e III."
+                },
+                {
+                    "label": "D",
+                    "text": "y = 1 + x",
+                    "soluzione": true,
+                    "feedback": "Corretto! La bisettrice del I e III quadrante è y = x (m = 1). La retta parallela ha la stessa pendenza: y = x + q. Imponendo il passaggio per (1, 2): 2 = 1 + q → q = 1. Equazione: y = x + 1."
+                },
+                {
+                    "label": "E",
+                    "text": "y = x - 2",
+                    "soluzione": false,
+                    "feedback": "La pendenza m = 1 è corretta, ma q = -2 è sbagliato. Sostituendo (1, 2): 2 = 1 - 2 = -1, falso. La retta giusta è y = x + 1."
+                }
+            ]
+        },
+        {
+            "id": "M32",
+            "question": "Per quali valori di x è definita la funzione f(x) = log(x² + x + 1)? (log in base e)",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Per ogni x appartenente ai numeri reali",
+                    "soluzione": true,
+                    "feedback": "Corretto! Il logaritmo richiede l'argomento > 0. Calcolando il discriminante di x² + x + 1 = 0: Δ = 1 - 4 = -3 < 0. Poiché Δ < 0 e il coefficiente di x² è positivo, il trinomio è sempre positivo per ogni x ∈ ℝ."
+                },
+                {
+                    "label": "B",
+                    "text": "Per x ≤ 0",
+                    "soluzione": false,
+                    "feedback": "Non è una restrizione necessaria. Il discriminante di x² + x + 1 è negativo, quindi il trinomio è sempre positivo per ogni reale, anche per x > 0."
+                },
+                {
+                    "label": "C",
+                    "text": "Per nessun valore di x",
+                    "soluzione": false,
+                    "feedback": "Al contrario: poiché Δ = 1 - 4 = -3 < 0 e il coefficiente del termine quadratico è positivo, l'argomento x² + x + 1 è sempre strettamente positivo. Il logaritmo è sempre definito."
+                },
+                {
+                    "label": "D",
+                    "text": "Per x > 0",
+                    "soluzione": false,
+                    "feedback": "Anche per x ≤ 0 la funzione è definita. Ad esempio, per x = -1: (-1)² + (-1) + 1 = 1 > 0. Il discriminante negativo garantisce che l'argomento è sempre positivo su tutti i reali."
+                },
+                {
+                    "label": "E",
+                    "text": "Per x compreso tra -1 e 1",
+                    "soluzione": false,
+                    "feedback": "L'argomento x² + x + 1 ha Δ = -3 < 0, quindi non ha zeri reali ed è sempre positivo. Il dominio non è limitato all'intervallo (-1, 1)."
+                }
+            ]
+        },
+        {
+            "id": "M33",
+            "question": "Tra 100 studenti, 70 seguono un corso di fisica e 50 di matematica. Sapendo che tutti gli studenti seguono almeno uno dei due corsi, quanti li seguono entrambi?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Più di 50",
+                    "soluzione": false,
+                    "feedback": "Per il principio di inclusione-esclusione: |F ∪ M| = |F| + |M| - |F ∩ M|. Con 100 studenti totali: 100 = 70 + 50 - |F ∩ M| → |F ∩ M| = 20. Non più di 50."
+                },
+                {
+                    "label": "B",
+                    "text": "Esattamente 50",
+                    "soluzione": false,
+                    "feedback": "Se 50 seguissero entrambi, si avrebbe: 100 = 70 + 50 - 50 = 70. Ma gli studenti totali sono 100. Il calcolo corretto dà 20."
+                },
+                {
+                    "label": "C",
+                    "text": "Non più di 20",
+                    "soluzione": false,
+                    "feedback": "In realtà il numero è esattamente 20, non 'non più di 20'. La formula è: |F ∩ M| = 70 + 50 - 100 = 20, un valore preciso."
+                },
+                {
+                    "label": "D",
+                    "text": "Da 20 a 50",
+                    "soluzione": false,
+                    "feedback": "Poiché tutti seguono almeno un corso, il totale è fisso a 100. Il numero di studenti che seguono entrambi è univocamente determinato: 70 + 50 - 100 = 20."
+                },
+                {
+                    "label": "E",
+                    "text": "Esattamente 20",
+                    "soluzione": true,
+                    "feedback": "Corretto! Per il principio di inclusione-esclusione: |F ∪ M| = |F| + |M| - |F ∩ M|. Poiché tutti i 100 studenti seguono almeno un corso: 100 = 70 + 50 - |F ∩ M| → |F ∩ M| = 20."
+                }
+            ]
+        },
+        {
+            "id": "M34",
+            "question": "Sia k un parametro reale. L'equazione x² + (k+2)x + k² = 0, nell'incognita x, non ammette soluzioni reali:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Per due valori di k",
+                    "soluzione": false,
+                    "feedback": "Imponendo Δ < 0: (k+2)² - 4k² < 0 → -3k² + 4k + 4 < 0. L'equazione -3k² + 4k + 4 = 0 ha due soluzioni reali (k = -2/3 e k = 2), e la disequazione è soddisfatta nell'intervallo aperto (-2/3; 2), che contiene infiniti valori reali."
+                },
+                {
+                    "label": "B",
+                    "text": "Per un solo valore di k",
+                    "soluzione": false,
+                    "feedback": "Non è un solo valore. La condizione Δ < 0 porta a -3k² + 4k + 4 < 0, verificata per tutti i k ∈ (-2/3; 2): infiniti valori."
+                },
+                {
+                    "label": "C",
+                    "text": "Per infiniti valori di k",
+                    "soluzione": true,
+                    "feedback": "Corretto! Δ < 0 → (k+2)² - 4k² < 0 → -3k² + 4k + 4 < 0. Risolvendo l'equazione associata: k = -2/3 e k = 2. La disequazione è verificata per -2/3 < k < 2, un intervallo contenente infiniti valori reali."
+                },
+                {
+                    "label": "D",
+                    "text": "Per ogni valore positivo di k",
+                    "soluzione": false,
+                    "feedback": "Non per ogni k > 0. Ad esempio per k = 3: Δ = (5)² - 4·9 = 25 - 36 = -11 < 0 ✓, ma per k = 10: Δ = 144 - 400 < 0 ✓. Tuttavia per k = 5 > 2 si ha Δ > 0, quindi l'equazione ammette soluzioni."
+                },
+                {
+                    "label": "E",
+                    "text": "Per nessun valore di k",
+                    "soluzione": false,
+                    "feedback": "Falso. Per k = 0, ad esempio: Δ = (0+2)² - 0 = 4 > 0, l'equazione ammette soluzioni. Ma per k = 1: Δ = 9 - 4 = 5 > 0. Per k = 0,5 ∈ (-2/3; 2): Δ < 0 → nessuna soluzione reale."
+                }
+            ]
+        },
+        {
+            "id": "M35",
+            "question": "Quanto vale la somma dei primi cinque termini della progressione geometrica di ragione 4 e il cui primo termine vale 2?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "400",
+                    "soluzione": false,
+                    "feedback": "I termini sono 2, 8, 32, 128, 512. La loro somma è 682, non 400. Usa la formula Sₙ = a₁·(1-qⁿ)/(1-q) = 2·(1-4⁵)/(1-4) = 682."
+                },
+                {
+                    "label": "B",
+                    "text": "1364",
+                    "soluzione": false,
+                    "feedback": "1364 sarebbe la somma dei primi 6 termini (2+8+32+128+512+682 no). Verifica: 2+8+32+128+512 = 682. Forse hai usato n = 6 nella formula."
+                },
+                {
+                    "label": "C",
+                    "text": "124",
+                    "soluzione": false,
+                    "feedback": "124 non corrisponde alla somma corretta. I cinque termini sono: 2, 8, 32, 128, 512. Somma = 682."
+                },
+                {
+                    "label": "D",
+                    "text": "312",
+                    "soluzione": false,
+                    "feedback": "Errore di calcolo. Sₙ = 2·(1-4⁵)/(1-4) = 2·(1-1024)/(-3) = 2·1023/3 = 2·341 = 682."
+                },
+                {
+                    "label": "E",
+                    "text": "682",
+                    "soluzione": true,
+                    "feedback": "Corretto! Formula: Sₙ = a₁·(1-qⁿ)/(1-q) = 2·(1-4⁵)/(1-4) = 2·(1-1024)/(-3) = 2·341 = 682. Verifica diretta: 2+8+32+128+512 = 682."
+                }
+            ]
+        },
+        {
+            "id": "M36",
+            "question": "L'equazione x² - 6x + 10 = |x² - 2| ammette:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Nessuna soluzione",
+                    "soluzione": false,
+                    "feedback": "La prima equazione (con valore assoluto positivo) dà x² - 6x + 10 = x² - 2 → x = 2. Verifica: 4 - 12 + 10 = 2 e |4 - 2| = 2. ✓ Esiste la soluzione x = 2."
+                },
+                {
+                    "label": "B",
+                    "text": "La sola soluzione x = 2",
+                    "soluzione": true,
+                    "feedback": "Corretto! Caso 1: x² - 6x + 10 = x² - 2 → -6x = -12 → x = 2. ✓ Caso 2: x² - 6x + 10 = -(x² - 2) → 2x² - 6x + 8 = 0 → Δ = 36 - 64 = -28 < 0 (nessuna soluzione reale). L'unica soluzione è x = 2."
+                },
+                {
+                    "label": "C",
+                    "text": "Infinite soluzioni",
+                    "soluzione": false,
+                    "feedback": "Le equazioni derivanti dal valore assoluto hanno rispettivamente 1 soluzione (x = 2) e 0 soluzioni (Δ < 0). Non ci sono infinite soluzioni."
+                },
+                {
+                    "label": "D",
+                    "text": "Le sole due soluzioni x = -√2 e x = √2",
+                    "soluzione": false,
+                    "feedback": "Verifica: per x = √2: (√2)² - 6√2 + 10 = 12 - 6√2 ≈ 3,51, mentre |2-2| = 0. Non soddisfa l'equazione. La soluzione è x = 2."
+                },
+                {
+                    "label": "E",
+                    "text": "La sola soluzione x = 16/13",
+                    "soluzione": false,
+                    "feedback": "x = 16/13 non soddisfa l'equazione. La verifica con x = 2 dà: 4 - 12 + 10 = 2 e |4 - 2| = 2. ✓"
+                }
+            ]
+        },
+        {
+            "id": "M37",
+            "question": "L'espressione [sin(π/12) - cos(π/12)]² è uguale a:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "1 - (√3/2)",
+                    "soluzione": false,
+                    "feedback": "1 - √3/2 ≈ 0,134. Il risultato corretto è 1/2 = 0,5. Sviluppando il quadrato: sin²- 2sin·cos + cos² = 1 - sin(π/6) = 1 - 1/2 = 1/2."
+                },
+                {
+                    "label": "B",
+                    "text": "3/2",
+                    "soluzione": false,
+                    "feedback": "3/2 > 1 ma [sin(π/12) - cos(π/12)]² ≤ (|sin| + |cos|)² ≤ 2. Il calcolo corretto: [sin - cos]² = 1 - 2sin·cos = 1 - sin(π/6) = 1 - 1/2 = 1/2."
+                },
+                {
+                    "label": "C",
+                    "text": "1 - (√2/2)",
+                    "soluzione": false,
+                    "feedback": "1 - √2/2 ≈ 0,293 ≠ 1/2. La formula corretta usa [sin - cos]² = 1 - 2·sin·cos = 1 - sin(2·π/12) = 1 - sin(π/6) = 1 - 1/2 = 1/2."
+                },
+                {
+                    "label": "D",
+                    "text": "1/2",
+                    "soluzione": true,
+                    "feedback": "Corretto! Sviluppando il quadrato: [sin(π/12) - cos(π/12)]² = sin²(π/12) - 2sin(π/12)cos(π/12) + cos²(π/12) = 1 - sin(2·π/12) = 1 - sin(π/6) = 1 - 1/2 = 1/2. In alternativa si calcolano sin(π/12) = (√6-√2)/4 e cos(π/12) = (√6+√2)/4 e si sostituisce."
+                },
+                {
+                    "label": "E",
+                    "text": "1",
+                    "soluzione": false,
+                    "feedback": "1 sarebbe il risultato di [sin(π/12)]² + [cos(π/12)]² (identità fondamentale). Ma il quadrato della differenza include anche il termine -2sin·cos = -sin(π/6) = -1/2, quindi il risultato è 1 - 1/2 = 1/2."
+                }
+            ]
+        },
+        {
+            "id": "M38",
+            "question": "Una sfera è inscritta in un cubo. Qual è il rapporto fra il volume della sfera e quello del cubo?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "π/4",
+                    "soluzione": false,
+                    "feedback": "π/4 è il rapporto tra l'area del cerchio e quella del quadrato circoscritto (in 2D). In 3D, con la sfera inscritta nel cubo, il rapporto dei volumi è π/6."
+                },
+                {
+                    "label": "B",
+                    "text": "π/6",
+                    "soluzione": true,
+                    "feedback": "Corretto! Se il lato del cubo è l, allora il raggio della sfera iscritta è r = l/2. V_sfera = (4/3)π(l/2)³ = πl³/6. V_cubo = l³. Rapporto = π/6 ≈ 0,524."
+                },
+                {
+                    "label": "C",
+                    "text": "2π/3",
+                    "soluzione": false,
+                    "feedback": "2π/3 > 1, il che è impossibile: il volume della sfera non può superare quello del cubo che la contiene. Il rapporto corretto è π/6 ≈ 0,524."
+                },
+                {
+                    "label": "D",
+                    "text": "4π/3",
+                    "soluzione": false,
+                    "feedback": "4π/3 è il coefficiente nella formula del volume della sfera (V = 4/3·π·r³), non il rapporto richiesto. Con r = l/2: V_sfera/V_cubo = π/6."
+                },
+                {
+                    "label": "E",
+                    "text": "π/2",
+                    "soluzione": false,
+                    "feedback": "π/2 ≈ 1,57 > 1: impossibile, la sfera è contenuta nel cubo. V_sfera = (4/3)π(l/2)³ = πl³/6. Rapporto = π/6, non π/2."
+                }
+            ]
+        },
+        {
+            "id": "M39",
+            "question": "La metà di (1/2)⁵⁰ è uguale a:",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "(1/4)²⁵",
+                    "soluzione": false,
+                    "feedback": "(1/4)²⁵ = (2⁻²)²⁵ = 2⁻⁵⁰ = (1/2)⁵⁰. Questo è il valore di partenza, non la sua metà. La metà è (1/2)⁵⁰ · (1/2) = (1/2)⁵¹."
+                },
+                {
+                    "label": "B",
+                    "text": "(1/2)⁵¹",
+                    "soluzione": true,
+                    "feedback": "Corretto! La metà di (1/2)⁵⁰ è: (1/2)⁵⁰ ÷ 2 = (1/2)⁵⁰ · (1/2) = (1/2)⁵⁰⁺¹ = (1/2)⁵¹."
+                },
+                {
+                    "label": "C",
+                    "text": "(1/4)⁵⁰",
+                    "soluzione": false,
+                    "feedback": "(1/4)⁵⁰ = 2⁻¹⁰⁰. Invece (1/2)⁵¹ = 2⁻⁵¹. Sono valori molto diversi: 2⁻¹⁰⁰ ≪ 2⁻⁵¹."
+                },
+                {
+                    "label": "D",
+                    "text": "(1/2)²⁵",
+                    "soluzione": false,
+                    "feedback": "(1/2)²⁵ è la radice quadrata di (1/2)⁵⁰, non la sua metà. La metà si ottiene moltiplicando per 1/2: esponente 50 + 1 = 51."
+                },
+                {
+                    "label": "E",
+                    "text": "(1/2)⁴⁹",
+                    "soluzione": false,
+                    "feedback": "(1/2)⁴⁹ sarebbe il doppio di (1/2)⁵⁰, non la metà. Dimezzare significa moltiplicare per (1/2), che somma 1 all'esponente: (1/2)⁵¹."
+                }
+            ]
+        },
+        {
+            "id": "M40",
+            "question": "Fra tre anni Matteo avrà il doppio dell'età che Sara aveva tre anni fa, mentre ora il quadruplo degli anni di lui è pari al quintuplo degli anni di lei. Quale delle seguenti affermazioni è vera?",
+            "image": null,
+            "imageExplanation": null,
+            "category": "matematica",
+            "choices": [
+                {
+                    "label": "A",
+                    "text": "Per conoscere le età di Sara e Matteo ci vuole un ulteriore dato",
+                    "soluzione": false,
+                    "feedback": "Non è necessario un ulteriore dato: le due condizioni formano un sistema di 2 equazioni in 2 incognite con soluzione unica. M + 3 = 2(S - 3) e 4M = 5S → S = 12, M = 15."
+                },
+                {
+                    "label": "B",
+                    "text": "Si può dedurre che Sara è più vecchia di Matteo",
+                    "soluzione": false,
+                    "feedback": "È il contrario: risolvendo il sistema si trova S = 12 e M = 15. Matteo (15 anni) è più vecchio di Sara (12 anni)."
+                },
+                {
+                    "label": "C",
+                    "text": "Fra un anno Sara avrà tanti anni quanti ne aveva Matteo un anno fa",
+                    "soluzione": false,
+                    "feedback": "Fra un anno Sara avrà 13 anni. Un anno fa Matteo ne aveva 14. 13 ≠ 14, quindi questa affermazione è falsa."
+                },
+                {
+                    "label": "D",
+                    "text": "Si possono dedurre le età di Sara e di Matteo",
+                    "soluzione": true,
+                    "feedback": "Corretto! Sistema: {M + 3 = 2(S - 3); 4M = 5S}. Prima eq. → M = 2S - 9. Sostituendo: 4(2S - 9) = 5S → 8S - 36 = 5S → 3S = 36 → S = 12. Quindi M = 2·12 - 9 = 15. Sara ha 12 anni, Matteo 15."
+                },
+                {
+                    "label": "E",
+                    "text": "I due hanno la stessa età",
+                    "soluzione": false,
+                    "feedback": "Sara ha 12 anni e Matteo ne ha 15: non hanno la stessa età. La differenza è di 3 anni."
+                }
+            ]
         }
     ]
 }
