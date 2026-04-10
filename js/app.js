@@ -134,6 +134,41 @@ function escapeHtml(str) {
     return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+/**
+ * Renderizza il testo di una risposta in modo sicuro.
+ *
+ * Sintassi speciale supportata nel JSON:
+ *   [frac:n/d]        → frazione verticale      es. [frac:-11/6]
+ *   [periodic:cifre]  → lineetta sopra le cifre  es. 2,[periodic:6]
+ *
+ * Permette anche tag HTML innocui inline: <span style="...">, <sup>, <sub>, <b>, <i>.
+ * Qualsiasi altro markup viene neutralizzato.
+ */
+function safeRenderText(str) {
+    let s = String(str);
+
+    // 1. Espandi [frac:n/d] — segnaposto prima dell'escape globale
+    s = s.replace(/\[frac:(-?[^\/\]]+)\/(-?[^\]]+)\]/g, function(_, num, den) {
+        const n = escapeHtml(num.trim());
+        const d = escapeHtml(den.trim());
+        return `<span style="display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;font-size:0.9em;line-height:1.2;margin:0 3px;"><span style="border-bottom:1px solid currentColor;padding:0 3px;text-align:center;">${n}</span><span style="padding:0 3px;text-align:center;">${d}</span></span>`;
+    });
+
+    // 2. Espandi [periodic:cifre]
+    s = s.replace(/\[periodic:([0-9,]+)\]/g, function(_, cifre) {
+        return `<span style="text-decoration:overline;">${escapeHtml(cifre)}</span>`;
+    });
+
+    // 3. Se non rimane HTML da gestire, escape e fine
+    if (!s.includes('<')) return escapeHtml(s);
+
+    // 4. Split sui tag già prodotti (sicuri) e fai escape solo delle parti testuali
+    const parts = s.split(/(<span[^>]*>|<\/span>|<\/?(?:sup|sub|b|i)>)/);
+    return parts.map(function(part, i) {
+        return i % 2 === 1 ? part : escapeHtml(part);
+    }).join('');
+}
+
 function setupImage(imgElement, src, fallbackMessage = 'Immagine non disponibile') {
     if (!imgElement) return;
 
@@ -279,7 +314,7 @@ function renderQuestion(question) {
             const btn = document.createElement('button');
             btn.className = 'choice-btn';
 
-            btn.innerHTML = `<span class="choice-label">${choice.label}</span><span>${escapeHtml(choice.text)}</span>`;
+            btn.innerHTML = `<span class="choice-label">${choice.label}</span><span>${safeRenderText(choice.text)}</span>`;
 
             if (choice.image) {
                 btn.dataset.choiceImage = choice.image;
