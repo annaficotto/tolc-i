@@ -2,10 +2,11 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOLC Trainer — Matematica 1</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="../js/theme.js"></script>
 </head>
 
 <body>
@@ -64,12 +65,12 @@
             <div class="sim-config">
                 <div class="config-row">
                     <div class="form-group"><label for="sim-num-questions">N° Domande</label><input type="number"
-                            id="sim-num-questions" value="20" min="1" max="200" /></div>
+                            id="sim-num-questions" value="20" min="1" max="200"></div>
                     <div class="form-group"><label for="sim-minutes">Durata (minuti)</label><input type="number"
-                            id="sim-minutes" value="90" min="5" max="180" /></div>
+                            id="sim-minutes" value="90" min="5" max="180"></div>
                 </div>
                 <div class="form-group"><label for="sim-penalty">Penalità risposta errata</label><input type="number"
-                        id="sim-penalty" value="0" min="0" max="1" step="0.05" /></div>
+                        id="sim-penalty" value="0" min="0" max="1" step="0.05"></div>
                 <button class="btn btn-primary" id="btn-sim-start">→ Inizia Simulazione</button>
             </div>
         </div>
@@ -158,12 +159,6 @@
 
     <script src="../js/auth.js"></script>
     <script src="../js/app.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggle = document.getElementById('theme-toggle');
-            if (toggle) toggle.textContent = document.body.classList.contains('light') ? '☾' : '☀';
-        });
-    </script>
 </body>
 
 </html>
